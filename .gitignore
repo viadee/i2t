@@ -3,3 +3,5 @@
 .project
 .checkstyle
 /target
+/output
+/src/test/resources/output
