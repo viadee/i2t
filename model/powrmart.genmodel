@@ -1,0 +1,1428 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/Thesis EMF/src"
+    modelPluginID="Thesis_EMF" redirection="" modelName="Powrmart" generateSchema="true"
+    importerID="org.eclipse.xsd.ecore.importer" complianceLevel="5.0" copyrightFields="false"
+    providerRootExtendsClass="" optimizedHasChildren="true">
+  <foreignModel>powrmart.xsd</foreignModel>
+  <genPackages prefix="Powrmart" resource="XML" disposableProviderFactory="true" loadInitialization="true"
+      literalsInterface="false" ecorePackage="powrmart.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="powrmart.ecore#//AGGFUNCTIONType">
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//AGGFUNCTIONType/COUNT"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//AGGFUNCTIONType/MIN"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//AGGFUNCTIONType/MAX"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//AGGFUNCTIONType/NONE"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="powrmart.ecore#//DATATYPEType">
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//DATATYPEType/STRING"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//DATATYPEType/NUMERIC"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//DATATYPEType/BOOLEAN"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//DATATYPEType/XML"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="powrmart.ecore#//DAYType">
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//DAYType/MONDAY"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//DAYType/TUESDAY"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//DAYType/WEDNESDAY"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//DAYType/THURSDAY"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//DAYType/FRIDAY"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//DAYType/SATURDAY"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//DAYType/SUNDAY"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="powrmart.ecore#//ENDTYPEType">
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//ENDTYPEType/ENDON"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//ENDTYPEType/ENDAFTER"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//ENDTYPEType/RUNFOREVER"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="powrmart.ecore#//FAILPARENTIFINSTANCEDIDNOTRUNType">
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//FAILPARENTIFINSTANCEDIDNOTRUNType/YES"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//FAILPARENTIFINSTANCEDIDNOTRUNType/NO"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="powrmart.ecore#//FAILPARENTIFINSTANCEFAILSType">
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//FAILPARENTIFINSTANCEFAILSType/YES"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//FAILPARENTIFINSTANCEFAILSType/NO"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="powrmart.ecore#//IGNOREINCOMPAREType">
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//IGNOREINCOMPAREType/YES"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//IGNOREINCOMPAREType/NO"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="powrmart.ecore#//IGNORENULLINPUTSType">
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//IGNORENULLINPUTSType/YES"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//IGNORENULLINPUTSType/NO"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="powrmart.ecore#//ISCLIENTEDITABLEType">
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//ISCLIENTEDITABLEType/YES"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//ISCLIENTEDITABLEType/NO"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="powrmart.ecore#//ISCLIENTVISIBLEType">
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//ISCLIENTVISIBLEType/YES"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//ISCLIENTVISIBLEType/NO"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="powrmart.ecore#//ISDEFAULTType">
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//ISDEFAULTType/YES"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//ISDEFAULTType/NO"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="powrmart.ecore#//ISENABLEDType">
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//ISENABLEDType/YES"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//ISENABLEDType/NO"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="powrmart.ecore#//ISENABLEDType1">
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//ISENABLEDType1/YES"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//ISENABLEDType1/NO"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="powrmart.ecore#//ISEXPRESSIONVARIABLEType">
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//ISEXPRESSIONVARIABLEType/YES"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//ISEXPRESSIONVARIABLEType/NO"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="powrmart.ecore#//ISFILENAMEFIELDType">
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//ISFILENAMEFIELDType/YES"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//ISFILENAMEFIELDType/NO"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="powrmart.ecore#//ISNONEType">
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//ISNONEType/YES"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//ISNONEType/NO"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="powrmart.ecore#//ISNULLType">
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//ISNULLType/YES"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//ISNULLType/NO"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="powrmart.ecore#//ISOPTIONALType">
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//ISOPTIONALType/YES"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//ISOPTIONALType/NO"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="powrmart.ecore#//ISOPTIONALType1">
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//ISOPTIONALType1/YES"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//ISOPTIONALType1/NO"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="powrmart.ecore#//ISOUTPUTPORTType">
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//ISOUTPUTPORTType/YES"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//ISOUTPUTPORTType/NO"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="powrmart.ecore#//ISPARAMType">
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//ISPARAMType/YES"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//ISPARAMType/NO"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="powrmart.ecore#//ISPERSISTENTType">
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//ISPERSISTENTType/YES"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//ISPERSISTENTType/NO"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="powrmart.ecore#//ISPROFILEMAPPINGType">
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//ISPROFILEMAPPINGType/YES"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//ISPROFILEMAPPINGType/NO"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="powrmart.ecore#//ISREFERENCEType">
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//ISREFERENCEType/YES"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//ISREFERENCEType/NO"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="powrmart.ecore#//ISREPARTITIONPOINTType">
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//ISREPARTITIONPOINTType/YES"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//ISREPARTITIONPOINTType/NO"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="powrmart.ecore#//ISREUSABLEType">
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//ISREUSABLEType/YES"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//ISREUSABLEType/NO"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="powrmart.ecore#//ISRUNNABLESERVICEType">
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//ISRUNNABLESERVICEType/YES"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//ISRUNNABLESERVICEType/NO"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="powrmart.ecore#//ISSERVICEType">
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//ISSERVICEType/YES"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//ISSERVICEType/NO"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="powrmart.ecore#//ISSHAREREADType">
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//ISSHAREREADType/YES"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//ISSHAREREADType/NO"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="powrmart.ecore#//ISSHAREWRITEType">
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//ISSHAREWRITEType/YES"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//ISSHAREWRITEType/NO"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="powrmart.ecore#//ISSORTKEYType">
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//ISSORTKEYType/YES"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//ISSORTKEYType/NO"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="powrmart.ecore#//ISVALIDType">
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//ISVALIDType/YES"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//ISVALIDType/NO"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="powrmart.ecore#//ISVALIDType1">
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//ISVALIDType1/YES"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//ISVALIDType1/NO"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="powrmart.ecore#//ISVALIDType2">
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//ISVALIDType2/YES"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//ISVALIDType2/NO"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="powrmart.ecore#//ISVALIDType3">
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//ISVALIDType3/YES"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//ISVALIDType3/NO"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="powrmart.ecore#//MACROTYPEType">
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//MACROTYPEType/Public"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//MACROTYPEType/Private"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="powrmart.ecore#//NULLABLEType">
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//NULLABLEType/NOTNULL"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//NULLABLEType/NULL"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="powrmart.ecore#//NULLABLEType1">
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//NULLABLEType1/NOTNULL"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//NULLABLEType1/NULL"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="powrmart.ecore#//NULLCHARTYPEType">
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//NULLCHARTYPEType/BINARY"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//NULLCHARTYPEType/ASCII"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="powrmart.ecore#//OBJECTTYPEType">
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//OBJECTTYPEType/SOURCE"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//OBJECTTYPEType/TARGET"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//OBJECTTYPEType/TRANSFORMATION"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//OBJECTTYPEType/MAPPING"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//OBJECTTYPEType/MAPPLET"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="powrmart.ecore#//OCCURRENCEType">
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//OCCURRENCEType/FIRST"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//OCCURRENCEType/SECOND"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//OCCURRENCEType/THIRD"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//OCCURRENCEType/FOURTH"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//OCCURRENCEType/LAST"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="powrmart.ecore#//OUTERJOINRELType">
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//OUTERJOINRELType/YES"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//OUTERJOINRELType/NO"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="powrmart.ecore#//PARENTTYPEType">
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//PARENTTYPEType/WORKLET"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//PARENTTYPEType/WORKFLOW"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="powrmart.ecore#//PARENTTYPEType1">
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//PARENTTYPEType1/WORKLET"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//PARENTTYPEType1/WORKFLOW"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="powrmart.ecore#//PARENTTYPEType2">
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//PARENTTYPEType2/WORKLET"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//PARENTTYPEType2/WORKFLOW"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="powrmart.ecore#//PARENTTYPEType3">
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//PARENTTYPEType3/MAPPING"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//PARENTTYPEType3/MAPPLET"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="powrmart.ecore#//REFERENCETYPEType">
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//REFERENCETYPEType/GLOBAL"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//REFERENCETYPEType/LOCAL"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="powrmart.ecore#//REUSABLESCHEDULERType">
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//REUSABLESCHEDULERType/YES"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//REUSABLESCHEDULERType/NO"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="powrmart.ecore#//REUSABLEType">
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//REUSABLEType/YES"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//REUSABLEType/NO"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="powrmart.ecore#//REUSABLEType1">
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//REUSABLEType1/YES"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//REUSABLEType1/NO"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="powrmart.ecore#//REUSABLEType2">
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//REUSABLEType2/YES"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//REUSABLEType2/NO"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="powrmart.ecore#//REUSABLEType3">
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//REUSABLEType3/YES"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//REUSABLEType3/NO"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="powrmart.ecore#//REUSABLEType4">
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//REUSABLEType4/YES"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//REUSABLEType4/NO"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="powrmart.ecore#//REUSABLEType5">
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//REUSABLEType5/YES"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//REUSABLEType5/NO"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="powrmart.ecore#//REUSABLEType6">
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//REUSABLEType6/YES"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//REUSABLEType6/NO"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="powrmart.ecore#//REVERSEASSIGNMENTType">
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//REVERSEASSIGNMENTType/YES"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//REVERSEASSIGNMENTType/NO"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="powrmart.ecore#//RUNFOREVERType">
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//RUNFOREVERType/YES"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//RUNFOREVERType/NO"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="powrmart.ecore#//RUNONCEType">
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//RUNONCEType/YES"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//RUNONCEType/NO"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="powrmart.ecore#//SCHEDULETYPEType">
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//SCHEDULETYPEType/ONDEMAND"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//SCHEDULETYPEType/CONTINUOUS"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//SCHEDULETYPEType/ONSERVERINIT"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="powrmart.ecore#//SCHEDULETYPEType1">
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//SCHEDULETYPEType1/ONCE"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//SCHEDULETYPEType1/RECURRING"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//SCHEDULETYPEType1/CUSTOM"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="powrmart.ecore#//SHAREDType">
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//SHAREDType/SHARED"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//SHAREDType/NOTSHARED"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="powrmart.ecore#//SORTDIRECTIONType">
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//SORTDIRECTIONType/ASCENDING"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//SORTDIRECTIONType/DESCENDING"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="powrmart.ecore#//STAGEFILEPERSISTType">
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//STAGEFILEPERSISTType/YES"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//STAGEFILEPERSISTType/NO"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="powrmart.ecore#//STAGEFILEREINITType">
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//STAGEFILEREINITType/YES"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//STAGEFILEREINITType/NO"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="powrmart.ecore#//SUBTYPEType">
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//SUBTYPEType/STRUCTURETYPE"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//SUBTYPEType/STRUCTUREFIELDTYPE"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//SUBTYPEType/ABAPTYPE"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//SUBTYPEType/NONE"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="powrmart.ecore#//SUBTYPEType1">
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//SUBTYPEType1/STRUCTURETYPE"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//SUBTYPEType1/STRUCTUREFIELDTYPE"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//SUBTYPEType1/ABAPTYPE"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//SUBTYPEType1/NONE"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="powrmart.ecore#//SUSPENDONERRORType">
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//SUSPENDONERRORType/YES"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//SUSPENDONERRORType/NO"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="powrmart.ecore#//TASKSMUSTRUNONSERVERType">
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//TASKSMUSTRUNONSERVERType/YES"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//TASKSMUSTRUNONSERVERType/NO"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="powrmart.ecore#//TIMERTYPEType">
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//TIMERTYPEType/STARTATABSOLUTETIME"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//TIMERTYPEType/STARTATABSOLUTEVARIABLE"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//TIMERTYPEType/STARTRELATIVETOPREVIOUSTASK"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//TIMERTYPEType/STARTRELATIVETOPARENTWORKFLOW"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//TIMERTYPEType/STARTRELATIVETOTOPLEVELWORKFLOW"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="powrmart.ecore#//TREATINPUTLINKASANDType">
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//TREATINPUTLINKASANDType/YES"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//TREATINPUTLINKASANDType/NO"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="powrmart.ecore#//TYPEType">
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//TYPEType/SCHEMA"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//TYPEType/ADAPTER"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//TYPEType/TABLE"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="powrmart.ecore#//TYPEType1">
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//TYPEType1/INPUT"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//TYPEType1/OUTPUT"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//TYPEType1/TABLE"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//TYPEType1/CHANGING"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//TYPEType1/NONE"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="powrmart.ecore#//TYPEType2">
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//TYPEType2/DTD"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//TYPEType2/SCHEMA"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="powrmart.ecore#//TYPEType3">
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//TYPEType3/INPUT"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//TYPEType3/OUTPUT"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//TYPEType3/TABLE"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//TYPEType3/CHANGING"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//TYPEType3/NONE"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="powrmart.ecore#//TYPEType4">
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//TYPEType4/SOURCE"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//TYPEType4/FUNCTION"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//TYPEType4/CODEBLOCK"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//TYPEType4/NONE"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="powrmart.ecore#//TYPEType5">
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//TYPEType5/SOURCE"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//TYPEType5/TARGET"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//TYPEType5/TRANSFORMATION"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//TYPEType5/MAPPLET"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="powrmart.ecore#//TYPEType6">
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//TYPEType6/INPUT"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//TYPEType6/OUTPUT"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//TYPEType6/TABLE"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//TYPEType6/CHANGING"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//TYPEType6/NONE"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="powrmart.ecore#//TYPEType7">
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//TYPEType7/INPUT"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//TYPEType7/OUTPUT"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//TYPEType7/TABLE"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//TYPEType7/CHANGING"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//TYPEType7/NONE"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="powrmart.ecore#//TYPEType8">
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//TYPEType8/DAILY"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//TYPEType8/MONTHLY"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//TYPEType8/WEEKLY"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="powrmart.ecore#//USERDEFINEDType">
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//USERDEFINEDType/YES"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//USERDEFINEDType/NO"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="powrmart.ecore#//USERDEFINEDType1">
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//USERDEFINEDType1/YES"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//USERDEFINEDType1/NO"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="powrmart.ecore#//VALUETYPEType">
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//VALUETYPEType/CONSTANT"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//VALUETYPEType/VARIABLE"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//VALUETYPEType/SOURCEFIELD"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//VALUETYPEType/DEFAULT"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//VALUETYPEType/NONE"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="powrmart.ecore#//VALUETYPEType1">
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//VALUETYPEType1/CONSTANT"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//VALUETYPEType1/VARIABLE"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//VALUETYPEType1/SOURCEFIELD"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//VALUETYPEType1/DEFAULT"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//VALUETYPEType1/NONE"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="powrmart.ecore#//VALUETYPEType2">
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//VALUETYPEType2/CONSTANT"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//VALUETYPEType2/VARIABLE"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//VALUETYPEType2/SOURCEFIELD"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//VALUETYPEType2/DEFAULT"/>
+      <genEnumLiterals ecoreEnumLiteral="powrmart.ecore#//VALUETYPEType2/NONE"/>
+    </genEnums>
+    <genDataTypes ecoreDataType="powrmart.ecore#//AGGFUNCTIONTypeObject"/>
+    <genDataTypes ecoreDataType="powrmart.ecore#//DATATYPETypeObject"/>
+    <genDataTypes ecoreDataType="powrmart.ecore#//DAYTypeObject"/>
+    <genDataTypes ecoreDataType="powrmart.ecore#//ENDTYPETypeObject"/>
+    <genDataTypes ecoreDataType="powrmart.ecore#//FAILPARENTIFINSTANCEDIDNOTRUNTypeObject"/>
+    <genDataTypes ecoreDataType="powrmart.ecore#//FAILPARENTIFINSTANCEFAILSTypeObject"/>
+    <genDataTypes ecoreDataType="powrmart.ecore#//IGNOREINCOMPARETypeObject"/>
+    <genDataTypes ecoreDataType="powrmart.ecore#//IGNORENULLINPUTSTypeObject"/>
+    <genDataTypes ecoreDataType="powrmart.ecore#//ISCLIENTEDITABLETypeObject"/>
+    <genDataTypes ecoreDataType="powrmart.ecore#//ISCLIENTVISIBLETypeObject"/>
+    <genDataTypes ecoreDataType="powrmart.ecore#//ISDEFAULTTypeObject"/>
+    <genDataTypes ecoreDataType="powrmart.ecore#//ISENABLEDTypeObject"/>
+    <genDataTypes ecoreDataType="powrmart.ecore#//ISENABLEDTypeObject1"/>
+    <genDataTypes ecoreDataType="powrmart.ecore#//ISEXPRESSIONVARIABLETypeObject"/>
+    <genDataTypes ecoreDataType="powrmart.ecore#//ISFILENAMEFIELDTypeObject"/>
+    <genDataTypes ecoreDataType="powrmart.ecore#//ISNONETypeObject"/>
+    <genDataTypes ecoreDataType="powrmart.ecore#//ISNULLTypeObject"/>
+    <genDataTypes ecoreDataType="powrmart.ecore#//ISOPTIONALTypeObject"/>
+    <genDataTypes ecoreDataType="powrmart.ecore#//ISOPTIONALTypeObject1"/>
+    <genDataTypes ecoreDataType="powrmart.ecore#//ISOUTPUTPORTTypeObject"/>
+    <genDataTypes ecoreDataType="powrmart.ecore#//ISPARAMTypeObject"/>
+    <genDataTypes ecoreDataType="powrmart.ecore#//ISPERSISTENTTypeObject"/>
+    <genDataTypes ecoreDataType="powrmart.ecore#//ISPROFILEMAPPINGTypeObject"/>
+    <genDataTypes ecoreDataType="powrmart.ecore#//ISREFERENCETypeObject"/>
+    <genDataTypes ecoreDataType="powrmart.ecore#//ISREPARTITIONPOINTTypeObject"/>
+    <genDataTypes ecoreDataType="powrmart.ecore#//ISREUSABLETypeObject"/>
+    <genDataTypes ecoreDataType="powrmart.ecore#//ISRUNNABLESERVICETypeObject"/>
+    <genDataTypes ecoreDataType="powrmart.ecore#//ISSERVICETypeObject"/>
+    <genDataTypes ecoreDataType="powrmart.ecore#//ISSHAREREADTypeObject"/>
+    <genDataTypes ecoreDataType="powrmart.ecore#//ISSHAREWRITETypeObject"/>
+    <genDataTypes ecoreDataType="powrmart.ecore#//ISSORTKEYTypeObject"/>
+    <genDataTypes ecoreDataType="powrmart.ecore#//ISVALIDTypeObject"/>
+    <genDataTypes ecoreDataType="powrmart.ecore#//ISVALIDTypeObject1"/>
+    <genDataTypes ecoreDataType="powrmart.ecore#//ISVALIDTypeObject2"/>
+    <genDataTypes ecoreDataType="powrmart.ecore#//ISVALIDTypeObject3"/>
+    <genDataTypes ecoreDataType="powrmart.ecore#//MACROTYPETypeObject"/>
+    <genDataTypes ecoreDataType="powrmart.ecore#//NULLABLETypeObject"/>
+    <genDataTypes ecoreDataType="powrmart.ecore#//NULLABLETypeObject1"/>
+    <genDataTypes ecoreDataType="powrmart.ecore#//NULLCHARTYPETypeObject"/>
+    <genDataTypes ecoreDataType="powrmart.ecore#//OBJECTTYPETypeObject"/>
+    <genDataTypes ecoreDataType="powrmart.ecore#//OCCURRENCETypeObject"/>
+    <genDataTypes ecoreDataType="powrmart.ecore#//OUTERJOINRELTypeObject"/>
+    <genDataTypes ecoreDataType="powrmart.ecore#//PARENTTYPETypeObject"/>
+    <genDataTypes ecoreDataType="powrmart.ecore#//PARENTTYPETypeObject1"/>
+    <genDataTypes ecoreDataType="powrmart.ecore#//PARENTTYPETypeObject2"/>
+    <genDataTypes ecoreDataType="powrmart.ecore#//PARENTTYPETypeObject3"/>
+    <genDataTypes ecoreDataType="powrmart.ecore#//REFERENCETYPETypeObject"/>
+    <genDataTypes ecoreDataType="powrmart.ecore#//REUSABLESCHEDULERTypeObject"/>
+    <genDataTypes ecoreDataType="powrmart.ecore#//REUSABLETypeObject"/>
+    <genDataTypes ecoreDataType="powrmart.ecore#//REUSABLETypeObject1"/>
+    <genDataTypes ecoreDataType="powrmart.ecore#//REUSABLETypeObject2"/>
+    <genDataTypes ecoreDataType="powrmart.ecore#//REUSABLETypeObject3"/>
+    <genDataTypes ecoreDataType="powrmart.ecore#//REUSABLETypeObject4"/>
+    <genDataTypes ecoreDataType="powrmart.ecore#//REUSABLETypeObject5"/>
+    <genDataTypes ecoreDataType="powrmart.ecore#//REUSABLETypeObject6"/>
+    <genDataTypes ecoreDataType="powrmart.ecore#//REVERSEASSIGNMENTTypeObject"/>
+    <genDataTypes ecoreDataType="powrmart.ecore#//RUNFOREVERTypeObject"/>
+    <genDataTypes ecoreDataType="powrmart.ecore#//RUNONCETypeObject"/>
+    <genDataTypes ecoreDataType="powrmart.ecore#//SCHEDULETYPETypeObject"/>
+    <genDataTypes ecoreDataType="powrmart.ecore#//SCHEDULETYPETypeObject1"/>
+    <genDataTypes ecoreDataType="powrmart.ecore#//SHAREDTypeObject"/>
+    <genDataTypes ecoreDataType="powrmart.ecore#//SORTDIRECTIONTypeObject"/>
+    <genDataTypes ecoreDataType="powrmart.ecore#//STAGEFILEPERSISTTypeObject"/>
+    <genDataTypes ecoreDataType="powrmart.ecore#//STAGEFILEREINITTypeObject"/>
+    <genDataTypes ecoreDataType="powrmart.ecore#//SUBTYPETypeObject"/>
+    <genDataTypes ecoreDataType="powrmart.ecore#//SUBTYPETypeObject1"/>
+    <genDataTypes ecoreDataType="powrmart.ecore#//SUSPENDONERRORTypeObject"/>
+    <genDataTypes ecoreDataType="powrmart.ecore#//TASKSMUSTRUNONSERVERTypeObject"/>
+    <genDataTypes ecoreDataType="powrmart.ecore#//TIMERTYPETypeObject"/>
+    <genDataTypes ecoreDataType="powrmart.ecore#//TREATINPUTLINKASANDTypeObject"/>
+    <genDataTypes ecoreDataType="powrmart.ecore#//TYPETypeObject"/>
+    <genDataTypes ecoreDataType="powrmart.ecore#//TYPETypeObject1"/>
+    <genDataTypes ecoreDataType="powrmart.ecore#//TYPETypeObject2"/>
+    <genDataTypes ecoreDataType="powrmart.ecore#//TYPETypeObject3"/>
+    <genDataTypes ecoreDataType="powrmart.ecore#//TYPETypeObject4"/>
+    <genDataTypes ecoreDataType="powrmart.ecore#//TYPETypeObject5"/>
+    <genDataTypes ecoreDataType="powrmart.ecore#//TYPETypeObject6"/>
+    <genDataTypes ecoreDataType="powrmart.ecore#//TYPETypeObject7"/>
+    <genDataTypes ecoreDataType="powrmart.ecore#//TYPETypeObject8"/>
+    <genDataTypes ecoreDataType="powrmart.ecore#//USERDEFINEDTypeObject"/>
+    <genDataTypes ecoreDataType="powrmart.ecore#//USERDEFINEDTypeObject1"/>
+    <genDataTypes ecoreDataType="powrmart.ecore#//VALUETYPETypeObject"/>
+    <genDataTypes ecoreDataType="powrmart.ecore#//VALUETYPETypeObject1"/>
+    <genDataTypes ecoreDataType="powrmart.ecore#//VALUETYPETypeObject2"/>
+    <genClasses ecoreClass="powrmart.ecore#//ASSOCIATEDSOURCEINSTANCEType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//ASSOCIATEDSOURCEINSTANCEType/nAME"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//ATTRIBUTEType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//ATTRIBUTEType/nAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//ATTRIBUTEType/pARTITIONNAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//ATTRIBUTEType/vALUE"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//CONFIGREFERENCEType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//CONFIGREFERENCEType/aTTRIBUTE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//CONFIGREFERENCEType/rEFOBJECTNAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//CONFIGREFERENCEType/tYPE"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//CONFIGType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//CONFIGType/aTTRIBUTE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//CONFIGType/dESCRIPTION"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//CONFIGType/iSDEFAULT"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//CONFIGType/nAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//CONFIGType/vERSIONNUMBER"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//CONNECTIONREFERENCEType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//CONNECTIONREFERENCEType/aTTRIBUTE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//CONNECTIONREFERENCEType/cNXREFNAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//CONNECTIONREFERENCEType/cOMPONENTVERSION"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//CONNECTIONREFERENCEType/cONNECTIONNAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//CONNECTIONREFERENCEType/cONNECTIONNUMBER"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//CONNECTIONREFERENCEType/cONNECTIONSUBTYPE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//CONNECTIONREFERENCEType/cONNECTIONTYPE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//CONNECTIONREFERENCEType/pARTITIONNAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//CONNECTIONREFERENCEType/vARIABLE"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//CONNECTORType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//CONNECTORType/fROMFIELD"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//CONNECTORType/fROMINSTANCE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//CONNECTORType/fROMINSTANCETYPE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//CONNECTORType/tOFIELD"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//CONNECTORType/tOINSTANCE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//CONNECTORType/tOINSTANCETYPE"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//CONWFRUNINFOType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//CONWFRUNINFOType/cONWFPARAMFILE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//CONWFRUNINFOType/cONWFRUNINSTNAME"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//CUSTOMType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//CUSTOMType/dAILYFREQUENCY"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//CUSTOMType/rEPEAT"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//DAILYFREQUENCYType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//DAILYFREQUENCYType/hOURS"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//DAILYFREQUENCYType/mINUTES"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//DAILYFREQUENCYType/rUNONCE"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//DocumentRoot">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//DocumentRoot/mixed"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/xMLNSPrefixMap"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/xSISchemaLocation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/aSSOCIATEDSOURCEINSTANCE"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/aTTRIBUTE"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/cONFIG"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/cONFIGREFERENCE"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/cONNECTIONREFERENCE"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/cONNECTOR"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/cONWFRUNINFO"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/cUSTOM"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/dAILYFREQUENCY"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/eNDOPTIONS"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/eRPINFO"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/eRPSRCINFO"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/eXPRMACRO"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/eXPRMACRODEPENDENCY"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/fIELDATTRIBUTE"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/fIELDDEPENDENCY"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/fILTER"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/fLATFILE"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/fOLDER"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/fOLDERVERSION"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/gROUP"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/hASHKEY"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/iNITPROP"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/iNSTANCE"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/kEYRANGE"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/kEYWORD"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/mACROARGUMENT"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/mACRODEPENDENCY"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/mAPDEPENDENCY"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/mAPPING"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/mAPPINGVARIABLE"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/mAPPLET"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/mETADATAEXTENSION"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/pARTITION"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/pOWERMART"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/rECURRING"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/rEPEAT"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/rEPOSITORY"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/rESOURCEREFERENCE"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/sAPCODEBLOCK"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/sAPFUNCINSTANCEPARAM"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/sAPFUNCINSTANCEPARAMFLD"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/sAPFUNCPARAM"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/sAPFUNCTION"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/sAPFUNCTIONINSTANCE"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/sAPOUTPUTPORT"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/sAPPROGRAM"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/sAPPROGRAMFLOWOBJECT"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/sAPSTRUCTURE"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/sAPSTRUCTUREFIELD"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/sAPTABLEINSTANCEPARAM"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/sAPTABLEPARAM"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/sAPVARIABLE"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/sCHEDULEINFO"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/sCHEDULEOPTIONS"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/sCHEDULER"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/sEBLJOIN"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/sEBLLINK"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/sEBLMVLINK"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/sEBLMVLINKREL"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/sEBLSRCINFO"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/sESSION"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/sESSIONCOMPONENT"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/sESSIONEXTENSION"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/sESSTRANSFORMATIONGROUP"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/sESSTRANSFORMATIONINST"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/sHORTCUT"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/sOURCE"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/sOURCEFIELD"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/sTARTOPTIONS"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/tABLEATTRIBUTE"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/tARGET"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/tARGETFIELD"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/tARGETINDEX"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/tARGETINDEXFIELD"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/tARGETLOADORDER"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/tASK"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/tASKINSTANCE"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/tIMER"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/tRANSFORMATION"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/tRANSFORMFIELD"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/tRANSFORMFIELDATTR"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/tRANSFORMFIELDATTRDEF"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/tRANSFORMRESOURCEREF"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/vALUEPAIR"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/wORKFLOW"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/wORKFLOWEVENT"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/wORKFLOWLINK"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/wORKFLOWVARIABLE"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/wORKLET"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/xMLINFO"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//DocumentRoot/xMLTEXT"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//ENDOPTIONSType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//ENDOPTIONSType/eNDAFTER"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//ENDOPTIONSType/eNDON"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//ENDOPTIONSType/eNDTYPE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//ENDOPTIONSType/rUNFOREVER"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//ERPINFOType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//ERPINFOType/sAPFUNCTION"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//ERPINFOType/sAPSTRUCTURE"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//ERPINFOType/sAPPROGRAM"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute powrmart.ecore#//ERPINFOType/group"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference powrmart.ecore#//ERPINFOType/sAPOUTPUTPORT"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference powrmart.ecore#//ERPINFOType/sAPVARIABLE"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference powrmart.ecore#//ERPINFOType/sAPPROGRAMFLOWOBJECT"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//ERPSRCINFOType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//ERPSRCINFOType/sEBLSRCINFO"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//EXPRMACRODEPENDENCYType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//EXPRMACRODEPENDENCYType/nAME"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//EXPRMACROType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//EXPRMACROType/mACROARGUMENT"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//EXPRMACROType/mACRODEPENDENCY"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//EXPRMACROType/dESCRIPTION"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//EXPRMACROType/eXPRESSION"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//EXPRMACROType/mACROTYPE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//EXPRMACROType/nAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//EXPRMACROType/oBJECTVERSION"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//EXPRMACROType/pROTOTYPE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//EXPRMACROType/rETURNTYPE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//EXPRMACROType/vERSIONNUMBER"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//FIELDATTRIBUTEType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//FIELDATTRIBUTEType/nAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//FIELDATTRIBUTEType/vALUE"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//FIELDDEPENDENCYType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//FIELDDEPENDENCYType/iNPUTFIELD"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//FIELDDEPENDENCYType/oUTPUTFIELD"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//FILTERType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//FILTERType/dAY"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//FILTERType/dAYOFMONTH"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//FILTERType/oCCURRENCE"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//FLATFILEType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//FLATFILEType/cODEPAGE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//FLATFILEType/cONSECDELIMITERSASONE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//FLATFILEType/dELIMITED"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//FLATFILEType/dELIMITERS"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//FLATFILEType/dELIMITERSINBINARY"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//FLATFILEType/eSCAPECHARACTER"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//FLATFILEType/fILENAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//FLATFILEType/fILETYPE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//FLATFILEType/kEEPESCAPECHAR"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//FLATFILEType/lINESEQUENTIAL"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//FLATFILEType/nULLCHARACTER"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//FLATFILEType/nULLCHARTYPE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//FLATFILEType/pADBYTES"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//FLATFILEType/qUOTECHARACTER"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//FLATFILEType/rEPEATABLE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//FLATFILEType/rOWDELIMITER"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//FLATFILEType/sHIFTSENSITIVEDATA"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//FLATFILEType/sKIPLEADINGBYTES"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//FLATFILEType/sKIPROWS"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//FLATFILEType/sKIPTRAILINGBYTES"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//FLATFILEType/sTAGEFILEPERSIST"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//FLATFILEType/sTAGEFILEREINIT"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//FLATFILEType/sTRIPTRAILINGBLANKS"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//FOLDERType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute powrmart.ecore#//FOLDERType/group"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference powrmart.ecore#//FOLDERType/fOLDERVERSION"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference powrmart.ecore#//FOLDERType/cONFIG"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference powrmart.ecore#//FOLDERType/sCHEDULER"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference powrmart.ecore#//FOLDERType/tASK"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference powrmart.ecore#//FOLDERType/sESSION"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference powrmart.ecore#//FOLDERType/wORKLET"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference powrmart.ecore#//FOLDERType/wORKFLOW"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference powrmart.ecore#//FOLDERType/sOURCE"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference powrmart.ecore#//FOLDERType/tARGET"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference powrmart.ecore#//FOLDERType/tRANSFORMATION"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference powrmart.ecore#//FOLDERType/mAPPLET"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference powrmart.ecore#//FOLDERType/mAPPING"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference powrmart.ecore#//FOLDERType/sHORTCUT"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference powrmart.ecore#//FOLDERType/eXPRMACRO"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//FOLDERType/dESCRIPTION"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//FOLDERType/gROUP1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//FOLDERType/nAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//FOLDERType/oWNER"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//FOLDERType/pERMISSIONS"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//FOLDERType/sHARED"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//FOLDERType/uUID"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//FOLDERVERSIONType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//FOLDERVERSIONType/sOURCE"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//FOLDERVERSIONType/tARGET"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//FOLDERVERSIONType/tRANSFORMATION"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//FOLDERVERSIONType/mAPPLET"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//FOLDERVERSIONType/mAPPING"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//FOLDERVERSIONType/sHORTCUT"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//FOLDERVERSIONType/dESCRIPTION"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//FOLDERVERSIONType/nAME"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//GROUPType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//GROUPType/dESCRIPTION"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//GROUPType/eXPRESSION"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//GROUPType/nAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//GROUPType/oRDER"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//GROUPType/tYPE"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//HASHKEYType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//HASHKEYType/gROUP"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//HASHKEYType/nAME"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//INITPROPType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//INITPROPType/dESCRIPTION"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//INITPROPType/nAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//INITPROPType/uSERDEFINED"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//INITPROPType/vALUE"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//INSTANCEType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//INSTANCEType/tABLEATTRIBUTE"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//INSTANCEType/eXPRMACRODEPENDENCY"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//INSTANCEType/iNITPROP"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//INSTANCEType/aSSOCIATEDSOURCEINSTANCE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//INSTANCEType/aSSOCIATEDDSQ"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//INSTANCEType/aSSOCIATEDDSQTYPE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//INSTANCEType/dBDNAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//INSTANCEType/dESCRIPTION"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//INSTANCEType/nAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//INSTANCEType/rEUSABLE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//INSTANCEType/tRANSFORMATIONNAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//INSTANCEType/tRANSFORMATIONTYPE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//INSTANCEType/tYPE"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//KEYRANGEType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//KEYRANGEType/eNDRANGE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//KEYRANGEType/gROUP"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//KEYRANGEType/nAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//KEYRANGEType/sRCINSTANCENAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//KEYRANGEType/sTARTRANGE"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//KEYWORDType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//KEYWORDType/nAME"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//MACROARGUMENTType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//MACROARGUMENTType/aRGORDER"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//MACROARGUMENTType/dATATYPE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//MACROARGUMENTType/nAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//MACROARGUMENTType/pRECISION"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//MACROARGUMENTType/sCALE"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//MACRODEPENDENCYType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//MACRODEPENDENCYType/nAME"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//MAPDEPENDENCYType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//MAPDEPENDENCYType/fROMINSTANCE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//MAPDEPENDENCYType/fROMINSTANCETYPE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//MAPDEPENDENCYType/tOINSTANCE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//MAPDEPENDENCYType/tOINSTANCETYPE"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//MAPPINGType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//MAPPINGType/tRANSFORMATION"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//MAPPINGType/iNSTANCE"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//MAPPINGType/cONNECTOR"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//MAPPINGType/mAPDEPENDENCY"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//MAPPINGType/tARGETLOADORDER"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//MAPPINGType/mAPPINGVARIABLE"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//MAPPINGType/eRPINFO"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//MAPPINGType/mETADATAEXTENSION"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//MAPPINGType/cRCVALUE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//MAPPINGType/dESCRIPTION"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//MAPPINGType/iSPROFILEMAPPING"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//MAPPINGType/iSVALID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//MAPPINGType/nAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//MAPPINGType/oBJECTVERSION"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//MAPPINGType/vERSIONNUMBER"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//MAPPINGVARIABLEType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//MAPPINGVARIABLEType/aGGFUNCTION"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//MAPPINGVARIABLEType/dATATYPE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//MAPPINGVARIABLEType/dEFAULTVALUE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//MAPPINGVARIABLEType/dESCRIPTION"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//MAPPINGVARIABLEType/iSEXPRESSIONVARIABLE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//MAPPINGVARIABLEType/iSPARAM"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//MAPPINGVARIABLEType/nAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//MAPPINGVARIABLEType/pRECISION"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//MAPPINGVARIABLEType/sCALE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//MAPPINGVARIABLEType/uSERDEFINED"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//MAPPLETType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//MAPPLETType/tRANSFORMATION"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//MAPPLETType/iNSTANCE"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//MAPPLETType/cONNECTOR"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//MAPPLETType/mAPPINGVARIABLE"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//MAPPLETType/eRPINFO"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//MAPPLETType/mETADATAEXTENSION"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//MAPPLETType/cRCVALUE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//MAPPLETType/dESCRIPTION"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//MAPPLETType/iSVALID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//MAPPLETType/nAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//MAPPLETType/oBJECTVERSION"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//MAPPLETType/vERSIONNUMBER"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//METADATAEXTENSIONType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//METADATAEXTENSIONType/cOMPONENTVERSION"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//METADATAEXTENSIONType/dATATYPE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//METADATAEXTENSIONType/dESCRIPTION"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//METADATAEXTENSIONType/dOMAINNAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//METADATAEXTENSIONType/iSCLIENTEDITABLE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//METADATAEXTENSIONType/iSCLIENTVISIBLE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//METADATAEXTENSIONType/iSREUSABLE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//METADATAEXTENSIONType/iSSHAREREAD"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//METADATAEXTENSIONType/iSSHAREWRITE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//METADATAEXTENSIONType/mAXLENGTH"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//METADATAEXTENSIONType/nAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//METADATAEXTENSIONType/vALUE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//METADATAEXTENSIONType/vENDORNAME"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//PARTITIONType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//PARTITIONType/kEYRANGE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//PARTITIONType/dESCRIPTION"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//PARTITIONType/nAME"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//POWERMARTType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//POWERMARTType/rEPOSITORY"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//POWERMARTType/cREATIONDATE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//POWERMARTType/rEPOSITORYVERSION"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//RECURRINGType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//RECURRINGType/dAYS"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//RECURRINGType/hOURS"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//RECURRINGType/mINUTES"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//REPEATType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//REPEATType/fILTER"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//REPEATType/iNTERVAL"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//REPEATType/tYPE"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//REPOSITORYType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//REPOSITORYType/fOLDER"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//REPOSITORYType/cODEPAGE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//REPOSITORYType/dATABASETYPE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//REPOSITORYType/nAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//REPOSITORYType/pARENTREPOSITORY"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//REPOSITORYType/vERSION"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//RESOURCEREFERENCEType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//RESOURCEREFERENCEType/nAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//RESOURCEREFERENCEType/tYPE"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//SAPCODEBLOCKType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SAPCODEBLOCKType/cODEBLOCK"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SAPCODEBLOCKType/dESCRIPTION"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SAPCODEBLOCKType/dSQINSTNAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SAPCODEBLOCKType/nAME"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//SAPFUNCINSTANCEPARAMFLDType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SAPFUNCINSTANCEPARAMFLDType/nAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SAPFUNCINSTANCEPARAMFLDType/vALUE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SAPFUNCINSTANCEPARAMFLDType/vALUETYPE"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//SAPFUNCINSTANCEPARAMType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//SAPFUNCINSTANCEPARAMType/sAPFUNCINSTANCEPARAMFLD"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SAPFUNCINSTANCEPARAMType/nAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SAPFUNCINSTANCEPARAMType/tYPE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SAPFUNCINSTANCEPARAMType/vALUE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SAPFUNCINSTANCEPARAMType/vALUETYPE"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//SAPFUNCPARAMType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SAPFUNCPARAMType/dATATYPE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SAPFUNCPARAMType/dEF"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SAPFUNCPARAMType/dEFAULTVALUE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SAPFUNCPARAMType/iSOPTIONAL"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SAPFUNCPARAMType/iSREFERENCE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SAPFUNCPARAMType/nAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SAPFUNCPARAMType/oRDER"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SAPFUNCPARAMType/pRECISION"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SAPFUNCPARAMType/sCALE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SAPFUNCPARAMType/sUBTYPE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SAPFUNCPARAMType/tYPE"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//SAPFUNCTIONINSTANCEType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//SAPFUNCTIONINSTANCEType/sAPFUNCINSTANCEPARAM"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//SAPFUNCTIONINSTANCEType/sAPTABLEINSTANCEPARAM"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SAPFUNCTIONINSTANCEType/dSQINSTNAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SAPFUNCTIONINSTANCEType/fUNCTIONNAME"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//SAPFUNCTIONType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//SAPFUNCTIONType/sAPFUNCPARAM"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//SAPFUNCTIONType/sAPTABLEPARAM"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SAPFUNCTIONType/dESCRIPTION"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SAPFUNCTIONType/nAME"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//SAPOUTPUTPORTType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SAPOUTPUTPORTType/dSQINSTNAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SAPOUTPUTPORTType/fIELDNAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SAPOUTPUTPORTType/pORTNAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SAPOUTPUTPORTType/vARNAME"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//SAPPROGRAMFLOWOBJECTType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//SAPPROGRAMFLOWOBJECTType/sAPFUNCTIONINSTANCE"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//SAPPROGRAMFLOWOBJECTType/sAPCODEBLOCK"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SAPPROGRAMFLOWOBJECTType/dSQINSTNAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SAPPROGRAMFLOWOBJECTType/jOINBITMAP"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SAPPROGRAMFLOWOBJECTType/oRDER"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SAPPROGRAMFLOWOBJECTType/rEFDBDNAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SAPPROGRAMFLOWOBJECTType/rEFSOURCENAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SAPPROGRAMFLOWOBJECTType/rEFSOURCEINSTNAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SAPPROGRAMFLOWOBJECTType/tYPE"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//SAPPROGRAMType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SAPPROGRAMType/cLIENTSPACE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SAPPROGRAMType/hOSTNAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SAPPROGRAMType/iNSTALLTIME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SAPPROGRAMType/iSVALID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SAPPROGRAMType/nAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SAPPROGRAMType/pROGRAMTYPE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SAPPROGRAMType/uSERNAME"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//SAPSTRUCTUREFIELDType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SAPSTRUCTUREFIELDType/dATATYPE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SAPSTRUCTUREFIELDType/nAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SAPSTRUCTUREFIELDType/oRDER"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SAPSTRUCTUREFIELDType/pRECISION"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SAPSTRUCTUREFIELDType/sCALE"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//SAPSTRUCTUREType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//SAPSTRUCTUREType/sAPSTRUCTUREFIELD"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SAPSTRUCTUREType/nAME"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//SAPTABLEINSTANCEPARAMType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//SAPTABLEINSTANCEPARAMType/sAPFUNCINSTANCEPARAMFLD"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SAPTABLEINSTANCEPARAMType/nAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SAPTABLEINSTANCEPARAMType/tYPE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SAPTABLEINSTANCEPARAMType/vALUE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SAPTABLEINSTANCEPARAMType/vALUETYPE"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//SAPTABLEPARAMType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SAPTABLEPARAMType/dEF"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SAPTABLEPARAMType/iSOPTIONAL"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SAPTABLEPARAMType/nAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SAPTABLEPARAMType/oRDER"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SAPTABLEPARAMType/tYPE"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//SAPVARIABLEType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SAPVARIABLEType/dATATYPE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SAPVARIABLEType/dEFAULTVALUE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SAPVARIABLEType/dSQINSTNAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SAPVARIABLEType/iSOUTPUTPORT"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SAPVARIABLEType/nAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SAPVARIABLEType/pRECISION"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SAPVARIABLEType/sCALE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SAPVARIABLEType/sUBTYPE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SAPVARIABLEType/vARDEF"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//SCHEDULEINFO">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//SCHEDULEINFO/sCHEDULEINFO"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//SCHEDULEINFOType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//SCHEDULEINFOType/sTARTOPTIONS"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//SCHEDULEINFOType/sCHEDULEOPTIONS"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//SCHEDULEINFOType/eNDOPTIONS"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SCHEDULEINFOType/sCHEDULETYPE"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//SCHEDULEOPTIONSType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//SCHEDULEOPTIONSType/rECURRING"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//SCHEDULEOPTIONSType/cUSTOM"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SCHEDULEOPTIONSType/sCHEDULETYPE"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//SCHEDULERType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SCHEDULERType/dESCRIPTION"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SCHEDULERType/nAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SCHEDULERType/rEUSABLE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SCHEDULERType/vERSIONNUMBER"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//SEBLJOINType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SEBLJOINType/dESTCOL"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SEBLJOINType/fKTABLE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SEBLJOINType/nAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SEBLJOINType/oUTERJOINREL"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SEBLJOINType/pKTABLE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SEBLJOINType/sRCCOL"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//SEBLLINKType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SEBLLINKType/cHILDBC"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SEBLLINKType/dESTBCBASETABLE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SEBLLINKType/dESTCOL"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SEBLLINKType/iNTERCHILDCOL"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SEBLLINKType/iNTERPARENTCOL"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SEBLLINKType/iNTERTABLE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SEBLLINKType/nAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SEBLLINKType/pARENTBC"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SEBLLINKType/pRIMARYID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SEBLLINKType/sRCCOL"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//SEBLMVLINKRELType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SEBLMVLINKRELType/dESTMVLINK"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SEBLMVLINKRELType/fIELD"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SEBLMVLINKRELType/sRCMVLINK"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//SEBLMVLINKType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SEBLMVLINKType/bCNAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SEBLMVLINKType/dESTBC"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SEBLMVLINKType/dESTLINK"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SEBLMVLINKType/mVLINK"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SEBLMVLINKType/pRIMARYID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SEBLMVLINKType/sRCFIELD"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//SEBLSRCINFOType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//SEBLSRCINFOType/sEBLJOIN"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//SEBLSRCINFOType/sEBLLINK"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//SEBLSRCINFOType/sEBLMVLINK"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//SEBLSRCINFOType/sEBLMVLINKREL"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//SESSIONCOMPONENTType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//SESSIONCOMPONENTType/tASK"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//SESSIONCOMPONENTType/vALUEPAIR"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//SESSIONCOMPONENTType/aTTRIBUTE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SESSIONCOMPONENTType/iSNONE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SESSIONCOMPONENTType/rEFOBJECTNAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SESSIONCOMPONENTType/rEUSABLE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SESSIONCOMPONENTType/tYPE"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//SESSIONEXTENSIONType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//SESSIONEXTENSIONType/cONNECTIONREFERENCE"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//SESSIONEXTENSIONType/aTTRIBUTE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SESSIONEXTENSIONType/cOMPONENTVERSION"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SESSIONEXTENSIONType/dSQINSTNAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SESSIONEXTENSIONType/dSQINSTTYPE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SESSIONEXTENSIONType/nAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SESSIONEXTENSIONType/sINSTANCENAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SESSIONEXTENSIONType/sUBTYPE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SESSIONEXTENSIONType/tRANSFORMATIONTYPE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SESSIONEXTENSIONType/tYPE"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//SESSIONType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//SESSIONType/tASK"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//SESSIONType/sESSTRANSFORMATIONINST"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//SESSIONType/cONFIGREFERENCE"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//SESSIONType/sESSIONCOMPONENT"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//SESSIONType/sESSIONEXTENSION"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//SESSIONType/aTTRIBUTE"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//SESSIONType/mETADATAEXTENSION"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute powrmart.ecore#//SESSIONType/group"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference powrmart.ecore#//SESSIONType/rESOURCEREFERENCE"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference powrmart.ecore#//SESSIONType/tRANSFORMRESOURCEREF"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SESSIONType/dESCRIPTION"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SESSIONType/iSVALID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SESSIONType/mAPPINGNAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SESSIONType/mAPPINGVERSION"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SESSIONType/nAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SESSIONType/pARENT"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SESSIONType/pARENTTYPE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SESSIONType/rEUSABLE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SESSIONType/sORTORDER"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SESSIONType/vERSIONNUMBER"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//SESSTRANSFORMATIONGROUPType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SESSTRANSFORMATIONGROUPType/gROUP"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SESSTRANSFORMATIONGROUPType/pARTITIONTYPE"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//SESSTRANSFORMATIONINSTType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//SESSTRANSFORMATIONINSTType/sESSTRANSFORMATIONGROUP"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//SESSTRANSFORMATIONINSTType/pARTITION"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//SESSTRANSFORMATIONINSTType/hASHKEY"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//SESSTRANSFORMATIONINSTType/fLATFILE"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//SESSTRANSFORMATIONINSTType/aTTRIBUTE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SESSTRANSFORMATIONINSTType/iSREPARTITIONPOINT"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SESSTRANSFORMATIONINSTType/pARTITIONTYPE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SESSTRANSFORMATIONINSTType/pIPELINE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SESSTRANSFORMATIONINSTType/sINSTANCENAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SESSTRANSFORMATIONINSTType/sTAGE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SESSTRANSFORMATIONINSTType/tRANSFORMATIONNAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SESSTRANSFORMATIONINSTType/tRANSFORMATIONTYPE"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//SHORTCUTType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SHORTCUTType/cOMMENTS"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SHORTCUTType/dBDNAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SHORTCUTType/fOLDERNAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SHORTCUTType/fOLDERVERSIONNAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SHORTCUTType/nAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SHORTCUTType/oBJECTSUBTYPE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SHORTCUTType/oBJECTTYPE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SHORTCUTType/rEFERENCEDDBD"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SHORTCUTType/rEFERENCETYPE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SHORTCUTType/rEFOBJECTNAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SHORTCUTType/rEPOSITORYNAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SHORTCUTType/tEMPLATEID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SHORTCUTType/vERSIONNUMBER"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//SOURCEFIELDType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//SOURCEFIELDType/sOURCEFIELD"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//SOURCEFIELDType/fIELDATTRIBUTE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SOURCEFIELDType/bUSINESSNAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SOURCEFIELDType/dATATYPE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SOURCEFIELDType/dESCRIPTION"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SOURCEFIELDType/fIELDNUMBER"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SOURCEFIELDType/fIELDTYPE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SOURCEFIELDType/gROUP"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SOURCEFIELDType/hIDDEN"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SOURCEFIELDType/kEYTYPE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SOURCEFIELDType/lENGTH"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SOURCEFIELDType/lEVEL"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SOURCEFIELDType/nAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SOURCEFIELDType/nULLABLE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SOURCEFIELDType/oCCURS"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SOURCEFIELDType/oFFSET"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SOURCEFIELDType/pHYSICALLENGTH"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SOURCEFIELDType/pHYSICALOFFSET"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SOURCEFIELDType/pICTURETEXT"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SOURCEFIELDType/pRECISION"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SOURCEFIELDType/rEDEFINES"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SOURCEFIELDType/rEFERENCEDDBD"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SOURCEFIELDType/rEFERENCEDFIELD"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SOURCEFIELDType/rEFERENCEDTABLE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SOURCEFIELDType/sCALE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SOURCEFIELDType/sHIFTSTATE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SOURCEFIELDType/uSAGE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SOURCEFIELDType/uSAGEFLAGS"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//SOURCEType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//SOURCEType/fLATFILE"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//SOURCEType/xMLINFO"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//SOURCEType/eRPSRCINFO"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//SOURCEType/gROUP"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//SOURCEType/tABLEATTRIBUTE"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//SOURCEType/sOURCEFIELD"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//SOURCEType/mETADATAEXTENSION"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SOURCEType/bUSINESSNAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SOURCEType/cOMPONENTVERSION"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SOURCEType/cRCVALUE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SOURCEType/dATABASESUBTYPE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SOURCEType/dATABASETYPE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SOURCEType/dBDNAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SOURCEType/dESCRIPTION"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SOURCEType/iBMCOMP"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SOURCEType/nAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SOURCEType/oBJECTVERSION"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SOURCEType/oWNERNAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//SOURCEType/vERSIONNUMBER"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//STARTOPTIONSType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//STARTOPTIONSType/sTARTDATE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//STARTOPTIONSType/sTARTTIME"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//TABLEATTRIBUTEType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TABLEATTRIBUTEType/nAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TABLEATTRIBUTEType/vALUE"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//TARGETFIELDType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//TARGETFIELDType/fIELDATTRIBUTE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TARGETFIELDType/bUSINESSNAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TARGETFIELDType/dATATYPE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TARGETFIELDType/dESCRIPTION"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TARGETFIELDType/fIELDNUMBER"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TARGETFIELDType/gROUP"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TARGETFIELDType/iSFILENAMEFIELD"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TARGETFIELDType/kEYTYPE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TARGETFIELDType/nAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TARGETFIELDType/nULLABLE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TARGETFIELDType/pICTURETEXT"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TARGETFIELDType/pRECISION"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TARGETFIELDType/rEFERENCEDFIELD"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TARGETFIELDType/rEFERENCEDTABLE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TARGETFIELDType/sCALE"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//TARGETINDEXFIELDType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TARGETINDEXFIELDType/nAME"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//TARGETINDEXType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//TARGETINDEXType/tARGETINDEXFIELD"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TARGETINDEXType/dESCRIPTION"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TARGETINDEXType/nAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TARGETINDEXType/uNIQUE"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//TARGETLOADORDERType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TARGETLOADORDERType/oRDER"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TARGETLOADORDERType/tARGETINSTANCE"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//TARGETType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//TARGETType/kEYWORD"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//TARGETType/fLATFILE"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//TARGETType/xMLINFO"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//TARGETType/gROUP"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//TARGETType/tARGETFIELD"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//TARGETType/tARGETINDEX"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//TARGETType/tABLEATTRIBUTE"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//TARGETType/mETADATAEXTENSION"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TARGETType/bUSINESSNAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TARGETType/cOMPONENTVERSION"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TARGETType/cONSTRAINT"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TARGETType/cRCVALUE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TARGETType/dATABASETYPE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TARGETType/dESCRIPTION"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TARGETType/nAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TARGETType/oBJECTVERSION"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TARGETType/tABLEOPTIONS"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TARGETType/tABLETYPE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TARGETType/vERSIONNUMBER"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//TASKINSTANCEType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//TASKINSTANCEType/aTTRIBUTE"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//TASKINSTANCEType/wORKFLOWVARIABLE"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//TASKINSTANCEType/vALUEPAIR"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//TASKINSTANCEType/cONFIGREFERENCE"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//TASKINSTANCEType/sESSIONCOMPONENT"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//TASKINSTANCEType/sESSIONEXTENSION"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute powrmart.ecore#//TASKINSTANCEType/group"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference powrmart.ecore#//TASKINSTANCEType/rESOURCEREFERENCE"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference powrmart.ecore#//TASKINSTANCEType/tRANSFORMRESOURCEREF"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TASKINSTANCEType/dESCRIPTION"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TASKINSTANCEType/fAILPARENTIFINSTANCEDIDNOTRUN"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TASKINSTANCEType/fAILPARENTIFINSTANCEFAILS"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TASKINSTANCEType/iSENABLED"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TASKINSTANCEType/nAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TASKINSTANCEType/rEUSABLE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TASKINSTANCEType/sERVEROVERRIDE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TASKINSTANCEType/tASKNAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TASKINSTANCEType/tASKTYPE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TASKINSTANCEType/tREATINPUTLINKASAND"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//TASKType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//TASKType/aTTRIBUTE"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//TASKType/eXPRMACRODEPENDENCY"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//TASKType/tIMER"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//TASKType/vALUEPAIR"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//TASKType/rESOURCEREFERENCE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TASKType/dESCRIPTION"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TASKType/nAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TASKType/pARENT"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TASKType/pARENTTYPE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TASKType/rEUSABLE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TASKType/tYPE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TASKType/vERSIONNUMBER"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//TIMERType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//TIMERType/sTARTOPTIONS"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//TIMERType/rECURRING"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TIMERType/tIMERTYPE"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//TRANSFORMATIONType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//TRANSFORMATIONType/gROUP"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//TRANSFORMATIONType/sOURCEFIELD"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//TRANSFORMATIONType/tRANSFORMFIELD"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//TRANSFORMATIONType/tABLEATTRIBUTE"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//TRANSFORMATIONType/iNITPROP"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//TRANSFORMATIONType/mETADATAEXTENSION"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//TRANSFORMATIONType/tRANSFORMFIELDATTRDEF"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//TRANSFORMATIONType/fIELDDEPENDENCY"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//TRANSFORMATIONType/fLATFILE"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//TRANSFORMATIONType/eXPRMACRODEPENDENCY"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TRANSFORMATIONType/cOMPONENTVERSION"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TRANSFORMATIONType/cRCVALUE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TRANSFORMATIONType/dESCRIPTION"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TRANSFORMATIONType/iSVSAMNORMALIZER"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TRANSFORMATIONType/nAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TRANSFORMATIONType/oBJECTVERSION"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TRANSFORMATIONType/pARENT"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TRANSFORMATIONType/pARENTTYPE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TRANSFORMATIONType/rEFDBDNAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TRANSFORMATIONType/rEFSOURCENAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TRANSFORMATIONType/rEUSABLE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TRANSFORMATIONType/tEMPLATEID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TRANSFORMATIONType/tEMPLATENAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TRANSFORMATIONType/tYPE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TRANSFORMATIONType/vERSIONNUMBER"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//TRANSFORMFIELDATTRDEFType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TRANSFORMFIELDATTRDEFType/dATATYPE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TRANSFORMFIELDATTRDEFType/dEFAULTVALUE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TRANSFORMFIELDATTRDEFType/dESCRIPTION"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TRANSFORMFIELDATTRDEFType/nAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TRANSFORMFIELDATTRDEFType/oRDER"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TRANSFORMFIELDATTRDEFType/tYPE"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//TRANSFORMFIELDATTRType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TRANSFORMFIELDATTRType/nAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TRANSFORMFIELDATTRType/vALUE"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//TRANSFORMFIELDType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//TRANSFORMFIELDType/tRANSFORMFIELDATTR"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TRANSFORMFIELDType/dATATYPE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TRANSFORMFIELDType/dEFAULTVALUE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TRANSFORMFIELDType/dESCRIPTION"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TRANSFORMFIELDType/eXPRESSION"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TRANSFORMFIELDType/eXPRESSIONDESCRIPTION"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TRANSFORMFIELDType/eXPRESSIONTYPE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TRANSFORMFIELDType/fIELDNUMBER"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TRANSFORMFIELDType/gROUP"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TRANSFORMFIELDType/iGNOREINCOMPARE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TRANSFORMFIELDType/iGNORENULLINPUTS"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TRANSFORMFIELDType/iSSORTKEY"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TRANSFORMFIELDType/mAPPLETGROUP"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TRANSFORMFIELDType/nAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TRANSFORMFIELDType/oUTPUTGROUP"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TRANSFORMFIELDType/pICTURETEXT"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TRANSFORMFIELDType/pORTTYPE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TRANSFORMFIELDType/pRECISION"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TRANSFORMFIELDType/rEFFIELD"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TRANSFORMFIELDType/rEFINSTANCETYPE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TRANSFORMFIELDType/rEFSOURCEFIELD"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TRANSFORMFIELDType/rEFTRANSFORMATION"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TRANSFORMFIELDType/sCALE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TRANSFORMFIELDType/sEQUENCEGENERATORVALUE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TRANSFORMFIELDType/sORTDIRECTION"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//TRANSFORMRESOURCEREFType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//TRANSFORMRESOURCEREFType/rESOURCEREFERENCE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TRANSFORMRESOURCEREFType/sINSTANCENAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//TRANSFORMRESOURCEREFType/tRANSFORMATIONTYPE"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//VALUEPAIRType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//VALUEPAIRType/cOMMENTS"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//VALUEPAIRType/nAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//VALUEPAIRType/rEVERSEASSIGNMENT"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//VALUEPAIRType/vALUE"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//WORKFLOWEVENTType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//WORKFLOWEVENTType/dESCRIPTION"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//WORKFLOWEVENTType/nAME"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//WORKFLOWLINKType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//WORKFLOWLINKType/eXPRMACRODEPENDENCY"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//WORKFLOWLINKType/cONDITION"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//WORKFLOWLINKType/fROMTASK"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//WORKFLOWLINKType/tOTASK"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//WORKFLOWType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//WORKFLOWType/sCHEDULER"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//WORKFLOWType/tASK"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//WORKFLOWType/sESSION"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//WORKFLOWType/wORKLET"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//WORKFLOWType/tASKINSTANCE"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//WORKFLOWType/wORKFLOWLINK"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//WORKFLOWType/wORKFLOWVARIABLE"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//WORKFLOWType/wORKFLOWEVENT"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//WORKFLOWType/aTTRIBUTE"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//WORKFLOWType/mETADATAEXTENSION"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//WORKFLOWType/cONWFRUNINFO"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//WORKFLOWType/dESCRIPTION"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//WORKFLOWType/iSENABLED"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//WORKFLOWType/iSRUNNABLESERVICE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//WORKFLOWType/iSSERVICE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//WORKFLOWType/iSVALID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//WORKFLOWType/nAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//WORKFLOWType/rEUSABLESCHEDULER"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//WORKFLOWType/sCHEDULERNAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//WORKFLOWType/sERVERDOMAINNAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//WORKFLOWType/sERVERNAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//WORKFLOWType/sERVICELEVELNAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//WORKFLOWType/sUSPENDONERROR"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//WORKFLOWType/sUSPENSIONEMAIL"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//WORKFLOWType/tASKSMUSTRUNONSERVER"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//WORKFLOWType/vERSIONNUMBER"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//WORKFLOWVARIABLEType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//WORKFLOWVARIABLEType/dATATYPE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//WORKFLOWVARIABLEType/dEFAULTVALUE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//WORKFLOWVARIABLEType/dESCRIPTION"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//WORKFLOWVARIABLEType/iSNULL"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//WORKFLOWVARIABLEType/iSPERSISTENT"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//WORKFLOWVARIABLEType/nAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//WORKFLOWVARIABLEType/uSERDEFINED"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//WORKLETType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//WORKLETType/tASK"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//WORKLETType/sESSION"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//WORKLETType/wORKLET"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//WORKLETType/tASKINSTANCE"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//WORKLETType/wORKFLOWLINK"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//WORKLETType/wORKFLOWVARIABLE"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//WORKLETType/wORKFLOWEVENT"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//WORKLETType/aTTRIBUTE"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//WORKLETType/mETADATAEXTENSION"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//WORKLETType/dESCRIPTION"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//WORKLETType/iSVALID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//WORKLETType/nAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//WORKLETType/pARENT"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//WORKLETType/pARENTTYPE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//WORKLETType/rEUSABLE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//WORKLETType/vERSIONNUMBER"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//XMLINFOType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference powrmart.ecore#//XMLINFOType/xMLTEXT"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//XMLINFOType/tEXT"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//XMLINFOType/tYPE"/>
+    </genClasses>
+    <genClasses ecoreClass="powrmart.ecore#//XMLTEXTType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//XMLTEXTType/nAMESPACE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//XMLTEXTType/tEXT"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute powrmart.ecore#//XMLTEXTType/tYPE"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

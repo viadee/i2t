@@ -1,0 +1,1596 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ecore:nsPrefix="Powrmart" ecore:package="Powrmart">
+  <xsd:element name="ASSOCIATED_SOURCE_INSTANCE" type="ASSOCIATED_SOURCE_INSTANCE_._type"/>
+  <xsd:element name="ATTRIBUTE" type="ATTRIBUTE_._type"/>
+  <xsd:element name="CONFIG" type="CONFIG_._type"/>
+  <xsd:element name="CONFIGREFERENCE" type="CONFIGREFERENCE_._type"/>
+  <xsd:element name="CONNECTIONREFERENCE" type="CONNECTIONREFERENCE_._type"/>
+  <xsd:element name="CONNECTOR" type="CONNECTOR_._type"/>
+  <xsd:element name="CONWFRUNINFO" type="CONWFRUNINFO_._type"/>
+  <xsd:element name="CUSTOM" type="CUSTOM_._type"/>
+  <xsd:element name="DAILYFREQUENCY" type="DAILYFREQUENCY_._type"/>
+  <xsd:element name="ENDOPTIONS" type="ENDOPTIONS_._type"/>
+  <xsd:element name="ERPINFO" type="ERPINFO_._type"/>
+  <xsd:element name="ERPSRCINFO" type="ERPSRCINFO_._type"/>
+  <xsd:element name="EXPRMACRO" type="EXPRMACRO_._type"/>
+  <xsd:element name="EXPRMACRODEPENDENCY" type="EXPRMACRODEPENDENCY_._type"/>
+  <xsd:element name="FIELDATTRIBUTE" type="FIELDATTRIBUTE_._type"/>
+  <xsd:element name="FIELDDEPENDENCY" type="FIELDDEPENDENCY_._type"/>
+  <xsd:element name="FILTER" type="FILTER_._type"/>
+  <xsd:element name="FLATFILE" type="FLATFILE_._type"/>
+  <xsd:element name="FOLDER" type="FOLDER_._type"/>
+  <xsd:element name="FOLDERVERSION" type="FOLDERVERSION_._type"/>
+  <xsd:element name="GROUP" type="GROUP_._type"/>
+  <xsd:element name="HASHKEY" type="HASHKEY_._type"/>
+  <xsd:element name="INITPROP" type="INITPROP_._type"/>
+  <xsd:element name="INSTANCE" type="INSTANCE_._type"/>
+  <xsd:element name="KEYRANGE" type="KEYRANGE_._type"/>
+  <xsd:element name="KEYWORD" type="KEYWORD_._type"/>
+  <xsd:element name="MACROARGUMENT" type="MACROARGUMENT_._type"/>
+  <xsd:element name="MACRODEPENDENCY" type="MACRODEPENDENCY_._type"/>
+  <xsd:element name="MAPDEPENDENCY" type="MAPDEPENDENCY_._type"/>
+  <xsd:element name="MAPPING" type="MAPPING_._type"/>
+  <xsd:element name="MAPPINGVARIABLE" type="MAPPINGVARIABLE_._type"/>
+  <xsd:element name="MAPPLET" type="MAPPLET_._type"/>
+  <xsd:element name="METADATAEXTENSION" type="METADATAEXTENSION_._type"/>
+  <xsd:element name="PARTITION" type="PARTITION_._type"/>
+  <xsd:element name="POWERMART" type="POWERMART_._type"/>
+  <xsd:element name="RECURRING" type="RECURRING_._type"/>
+  <xsd:element name="REPEAT" type="REPEAT_._type"/>
+  <xsd:element name="REPOSITORY" type="REPOSITORY_._type"/>
+  <xsd:element name="RESOURCEREFERENCE" type="RESOURCEREFERENCE_._type"/>
+  <xsd:element name="SAPCODEBLOCK" type="SAPCODEBLOCK_._type"/>
+  <xsd:element name="SAPFUNCINSTANCEPARAM" type="SAPFUNCINSTANCEPARAM_._type"/>
+  <xsd:element name="SAPFUNCINSTANCEPARAMFLD" type="SAPFUNCINSTANCEPARAMFLD_._type"/>
+  <xsd:element name="SAPFUNCPARAM" type="SAPFUNCPARAM_._type"/>
+  <xsd:element name="SAPFUNCTION" type="SAPFUNCTION_._type"/>
+  <xsd:element name="SAPFUNCTIONINSTANCE" type="SAPFUNCTIONINSTANCE_._type"/>
+  <xsd:element name="SAPOUTPUTPORT" type="SAPOUTPUTPORT_._type"/>
+  <xsd:element name="SAPPROGRAM" type="SAPPROGRAM_._type"/>
+  <xsd:element name="SAPPROGRAMFLOWOBJECT" type="SAPPROGRAMFLOWOBJECT_._type"/>
+  <xsd:element name="SAPSTRUCTURE" type="SAPSTRUCTURE_._type"/>
+  <xsd:element name="SAPSTRUCTUREFIELD" type="SAPSTRUCTUREFIELD_._type"/>
+  <xsd:element name="SAPTABLEINSTANCEPARAM" type="SAPTABLEINSTANCEPARAM_._type"/>
+  <xsd:element name="SAPTABLEPARAM" type="SAPTABLEPARAM_._type"/>
+  <xsd:element name="SAPVARIABLE" type="SAPVARIABLE_._type"/>
+  <xsd:element name="SCHEDULEINFO" type="SCHEDULEINFO_._type"/>
+  <xsd:element name="SCHEDULEOPTIONS" type="SCHEDULEOPTIONS_._type"/>
+  <xsd:element name="SCHEDULER" type="SCHEDULER_._type"/>
+  <xsd:element name="SEBLJOIN" type="SEBLJOIN_._type"/>
+  <xsd:element name="SEBLLINK" type="SEBLLINK_._type"/>
+  <xsd:element name="SEBLMVLINK" type="SEBLMVLINK_._type"/>
+  <xsd:element name="SEBLMVLINKREL" type="SEBLMVLINKREL_._type"/>
+  <xsd:element name="SEBLSRCINFO" type="SEBLSRCINFO_._type"/>
+  <xsd:element name="SESSION" type="SESSION_._type"/>
+  <xsd:element name="SESSIONCOMPONENT" type="SESSIONCOMPONENT_._type"/>
+  <xsd:element name="SESSIONEXTENSION" type="SESSIONEXTENSION_._type"/>
+  <xsd:element name="SESSTRANSFORMATIONGROUP" type="SESSTRANSFORMATIONGROUP_._type"/>
+  <xsd:element name="SESSTRANSFORMATIONINST" type="SESSTRANSFORMATIONINST_._type"/>
+  <xsd:element name="SHORTCUT" type="SHORTCUT_._type"/>
+  <xsd:element name="SOURCE" type="SOURCE_._type"/>
+  <xsd:element name="SOURCEFIELD" type="SOURCEFIELD_._type"/>
+  <xsd:element name="STARTOPTIONS" type="STARTOPTIONS_._type"/>
+  <xsd:element name="TABLEATTRIBUTE" type="TABLEATTRIBUTE_._type"/>
+  <xsd:element name="TARGET" type="TARGET_._type"/>
+  <xsd:element name="TARGETFIELD" type="TARGETFIELD_._type"/>
+  <xsd:element name="TARGETINDEX" type="TARGETINDEX_._type"/>
+  <xsd:element name="TARGETINDEXFIELD" type="TARGETINDEXFIELD_._type"/>
+  <xsd:element name="TARGETLOADORDER" type="TARGETLOADORDER_._type"/>
+  <xsd:element name="TASK" type="TASK_._type"/>
+  <xsd:element name="TASKINSTANCE" type="TASKINSTANCE_._type"/>
+  <xsd:element name="TIMER" type="TIMER_._type"/>
+  <xsd:element name="TRANSFORMATION" type="TRANSFORMATION_._type"/>
+  <xsd:element name="TRANSFORMFIELD" type="TRANSFORMFIELD_._type"/>
+  <xsd:element name="TRANSFORMFIELDATTR" type="TRANSFORMFIELDATTR_._type"/>
+  <xsd:element name="TRANSFORMFIELDATTRDEF" type="TRANSFORMFIELDATTRDEF_._type"/>
+  <xsd:element name="TRANSFORMRESOURCEREF" type="TRANSFORMRESOURCEREF_._type"/>
+  <xsd:element name="VALUEPAIR" type="VALUEPAIR_._type"/>
+  <xsd:element name="WORKFLOW" type="WORKFLOW_._type"/>
+  <xsd:element name="WORKFLOWEVENT" type="WORKFLOWEVENT_._type"/>
+  <xsd:element name="WORKFLOWLINK" type="WORKFLOWLINK_._type"/>
+  <xsd:element name="WORKFLOWVARIABLE" type="WORKFLOWVARIABLE_._type"/>
+  <xsd:element name="WORKLET" type="WORKLET_._type"/>
+  <xsd:element name="XMLINFO" type="XMLINFO_._type"/>
+  <xsd:element name="XMLTEXT" type="XMLTEXT_._type"/>
+  <xsd:simpleType ecore:name="AGGFUNCTIONType" name="AGGFUNCTION_._type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="COUNT"/>
+      <xsd:enumeration value="MIN"/>
+      <xsd:enumeration value="MAX"/>
+      <xsd:enumeration value="NONE"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType ecore:name="ASSOCIATEDSOURCEINSTANCEType" name="ASSOCIATED_SOURCE_INSTANCE_._type">
+    <xsd:attribute ecore:name="nAME" name="NAME" type="xsd:anySimpleType" use="required"/>
+  </xsd:complexType>
+  <xsd:complexType ecore:name="ATTRIBUTEType" name="ATTRIBUTE_._type">
+    <xsd:attribute ecore:name="nAME" name="NAME" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="pARTITIONNAME" name="PARTITIONNAME" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="vALUE" name="VALUE" type="xsd:anySimpleType" use="required"/>
+  </xsd:complexType>
+  <xsd:complexType ecore:name="CONFIGREFERENCEType" name="CONFIGREFERENCE_._type">
+    <xsd:sequence>
+      <xsd:element ecore:name="aTTRIBUTE" maxOccurs="unbounded" minOccurs="0" ref="ATTRIBUTE"/>
+    </xsd:sequence>
+    <xsd:attribute ecore:name="rEFOBJECTNAME" name="REFOBJECTNAME" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="tYPE" name="TYPE" type="xsd:anySimpleType" use="required"/>
+  </xsd:complexType>
+  <xsd:complexType ecore:name="CONFIGType" name="CONFIG_._type">
+    <xsd:sequence>
+      <xsd:element ecore:name="aTTRIBUTE" maxOccurs="unbounded" minOccurs="0" ref="ATTRIBUTE"/>
+    </xsd:sequence>
+    <xsd:attribute ecore:name="dESCRIPTION" name="DESCRIPTION" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="iSDEFAULT" name="ISDEFAULT" type="ISDEFAULT_._type"/>
+    <xsd:attribute ecore:name="nAME" name="NAME" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="vERSIONNUMBER" name="VERSIONNUMBER" type="xsd:anySimpleType"/>
+  </xsd:complexType>
+  <xsd:complexType ecore:name="CONNECTIONREFERENCEType" name="CONNECTIONREFERENCE_._type">
+    <xsd:sequence>
+      <xsd:element ecore:name="aTTRIBUTE" maxOccurs="unbounded" minOccurs="0" ref="ATTRIBUTE"/>
+    </xsd:sequence>
+    <xsd:attribute ecore:name="cNXREFNAME" name="CNXREFNAME" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="cOMPONENTVERSION" name="COMPONENTVERSION" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="cONNECTIONNAME" name="CONNECTIONNAME" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="cONNECTIONNUMBER" name="CONNECTIONNUMBER" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="cONNECTIONSUBTYPE" name="CONNECTIONSUBTYPE" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="cONNECTIONTYPE" name="CONNECTIONTYPE" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="pARTITIONNAME" name="PARTITIONNAME" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="vARIABLE" name="VARIABLE" type="xsd:anySimpleType"/>
+  </xsd:complexType>
+  <xsd:complexType ecore:name="CONNECTORType" name="CONNECTOR_._type">
+    <xsd:attribute ecore:name="fROMFIELD" name="FROMFIELD" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="fROMINSTANCE" name="FROMINSTANCE" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="fROMINSTANCETYPE" name="FROMINSTANCETYPE" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="tOFIELD" name="TOFIELD" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="tOINSTANCE" name="TOINSTANCE" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="tOINSTANCETYPE" name="TOINSTANCETYPE" type="xsd:anySimpleType" use="required"/>
+  </xsd:complexType>
+  <xsd:complexType ecore:name="CONWFRUNINFOType" name="CONWFRUNINFO_._type">
+    <xsd:attribute ecore:name="cONWFPARAMFILE" name="CONWFPARAMFILE" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="cONWFRUNINSTNAME" name="CONWFRUNINSTNAME" type="xsd:anySimpleType"/>
+  </xsd:complexType>
+  <xsd:complexType ecore:name="CUSTOMType" name="CUSTOM_._type">
+    <xsd:sequence>
+      <xsd:element ecore:name="dAILYFREQUENCY" ref="DAILYFREQUENCY"/>
+      <xsd:element ecore:name="rEPEAT" minOccurs="0" ref="REPEAT"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType ecore:name="DAILYFREQUENCYType" name="DAILYFREQUENCY_._type">
+    <xsd:attribute ecore:name="hOURS" name="HOURS" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="mINUTES" name="MINUTES" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="rUNONCE" name="RUNONCE" type="RUNONCE_._type"/>
+  </xsd:complexType>
+  <xsd:simpleType ecore:name="DATATYPEType" name="DATATYPE_._type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="STRING"/>
+      <xsd:enumeration value="NUMERIC"/>
+      <xsd:enumeration value="BOOLEAN"/>
+      <xsd:enumeration value="XML"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType ecore:name="DAYType" name="DAY_._type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="MONDAY"/>
+      <xsd:enumeration value="TUESDAY"/>
+      <xsd:enumeration value="WEDNESDAY"/>
+      <xsd:enumeration value="THURSDAY"/>
+      <xsd:enumeration value="FRIDAY"/>
+      <xsd:enumeration value="SATURDAY"/>
+      <xsd:enumeration value="SUNDAY"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType ecore:name="ENDOPTIONSType" name="ENDOPTIONS_._type">
+    <xsd:attribute ecore:name="eNDAFTER" name="ENDAFTER" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="eNDON" name="ENDON" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="eNDTYPE" name="ENDTYPE" type="ENDTYPE_._type" use="required"/>
+    <xsd:attribute ecore:name="rUNFOREVER" name="RUNFOREVER" type="RUNFOREVER_._type"/>
+  </xsd:complexType>
+  <xsd:simpleType ecore:name="ENDTYPEType" name="ENDTYPE_._type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="ENDON"/>
+      <xsd:enumeration value="ENDAFTER"/>
+      <xsd:enumeration value="RUNFOREVER"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType ecore:name="ERPINFOType" name="ERPINFO_._type">
+    <xsd:sequence>
+      <xsd:element ecore:name="sAPFUNCTION" maxOccurs="unbounded" minOccurs="0" ref="SAPFUNCTION"/>
+      <xsd:element ecore:name="sAPSTRUCTURE" maxOccurs="unbounded" minOccurs="0" ref="SAPSTRUCTURE"/>
+      <xsd:element ecore:name="sAPPROGRAM" maxOccurs="unbounded" minOccurs="0" ref="SAPPROGRAM"/>
+      <xsd:choice ecore:featureMap="group" maxOccurs="unbounded">
+        <xsd:element ecore:name="sAPOUTPUTPORT" ecore:upperBound="-1" minOccurs="0" ref="SAPOUTPUTPORT"/>
+        <xsd:element ecore:name="sAPVARIABLE" ecore:upperBound="-1" minOccurs="0" ref="SAPVARIABLE"/>
+        <xsd:element ecore:name="sAPPROGRAMFLOWOBJECT" ecore:upperBound="-1" minOccurs="0" ref="SAPPROGRAMFLOWOBJECT"/>
+      </xsd:choice>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType ecore:name="ERPSRCINFOType" name="ERPSRCINFO_._type">
+    <xsd:sequence>
+      <xsd:element ecore:name="sEBLSRCINFO" minOccurs="0" ref="SEBLSRCINFO"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType ecore:name="EXPRMACRODEPENDENCYType" name="EXPRMACRODEPENDENCY_._type">
+    <xsd:attribute ecore:name="nAME" name="NAME" type="xsd:anySimpleType" use="required"/>
+  </xsd:complexType>
+  <xsd:complexType ecore:name="EXPRMACROType" name="EXPRMACRO_._type">
+    <xsd:sequence>
+      <xsd:element ecore:name="mACROARGUMENT" maxOccurs="unbounded" minOccurs="0" ref="MACROARGUMENT"/>
+      <xsd:element ecore:name="mACRODEPENDENCY" maxOccurs="unbounded" minOccurs="0" ref="MACRODEPENDENCY"/>
+    </xsd:sequence>
+    <xsd:attribute ecore:name="dESCRIPTION" name="DESCRIPTION" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="eXPRESSION" name="EXPRESSION" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="mACROTYPE" name="MACROTYPE" type="MACROTYPE_._type"/>
+    <xsd:attribute ecore:name="nAME" name="NAME" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="oBJECTVERSION" name="OBJECTVERSION" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="pROTOTYPE" name="PROTOTYPE" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="rETURNTYPE" name="RETURNTYPE" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="vERSIONNUMBER" name="VERSIONNUMBER" type="xsd:anySimpleType"/>
+  </xsd:complexType>
+  <xsd:simpleType ecore:name="FAILPARENTIFINSTANCEDIDNOTRUNType" name="FAIL_PARENT_IF_INSTANCE_DID_NOT_RUN_._type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="YES"/>
+      <xsd:enumeration value="NO"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType ecore:name="FAILPARENTIFINSTANCEFAILSType" name="FAIL_PARENT_IF_INSTANCE_FAILS_._type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="YES"/>
+      <xsd:enumeration value="NO"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType ecore:name="FIELDATTRIBUTEType" name="FIELDATTRIBUTE_._type">
+    <xsd:attribute ecore:name="nAME" name="NAME" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="vALUE" name="VALUE" type="xsd:anySimpleType" use="required"/>
+  </xsd:complexType>
+  <xsd:complexType ecore:name="FIELDDEPENDENCYType" name="FIELDDEPENDENCY_._type">
+    <xsd:attribute ecore:name="iNPUTFIELD" name="INPUTFIELD" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="oUTPUTFIELD" name="OUTPUTFIELD" type="xsd:anySimpleType" use="required"/>
+  </xsd:complexType>
+  <xsd:complexType ecore:name="FILTERType" name="FILTER_._type">
+    <xsd:attribute ecore:name="dAY" name="DAY" type="DAY_._type"/>
+    <xsd:attribute ecore:name="dAYOFMONTH" name="DAYOFMONTH" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="oCCURRENCE" name="OCCURRENCE" type="OCCURRENCE_._type"/>
+  </xsd:complexType>
+  <xsd:complexType ecore:name="FLATFILEType" name="FLATFILE_._type">
+    <xsd:attribute ecore:name="cODEPAGE" name="CODEPAGE" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="cONSECDELIMITERSASONE" name="CONSECDELIMITERSASONE" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="dELIMITED" name="DELIMITED" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="dELIMITERS" name="DELIMITERS" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="dELIMITERSINBINARY" name="DELIMITERS_IN_BINARY" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="eSCAPECHARACTER" name="ESCAPE_CHARACTER" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="fILENAME" name="FILENAME" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="fILETYPE" name="FILETYPE" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="kEEPESCAPECHAR" name="KEEPESCAPECHAR" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="lINESEQUENTIAL" name="LINESEQUENTIAL" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="nULLCHARACTER" name="NULL_CHARACTER" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="nULLCHARTYPE" name="NULLCHARTYPE" type="NULLCHARTYPE_._type"/>
+    <xsd:attribute ecore:name="pADBYTES" name="PADBYTES" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="qUOTECHARACTER" name="QUOTE_CHARACTER" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="rEPEATABLE" name="REPEATABLE" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="rOWDELIMITER" name="ROWDELIMITER" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="sHIFTSENSITIVEDATA" name="SHIFTSENSITIVEDATA" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="sKIPLEADINGBYTES" name="SKIPLEADINGBYTES" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="sKIPROWS" name="SKIPROWS" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="sKIPTRAILINGBYTES" name="SKIPTRAILINGBYTES" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="sTAGEFILEPERSIST" name="STAGEFILEPERSIST" type="STAGEFILEPERSIST_._type"/>
+    <xsd:attribute ecore:name="sTAGEFILEREINIT" name="STAGEFILEREINIT" type="STAGEFILEREINIT_._type"/>
+    <xsd:attribute ecore:name="sTRIPTRAILINGBLANKS" name="STRIPTRAILINGBLANKS" type="xsd:anySimpleType"/>
+  </xsd:complexType>
+  <xsd:complexType ecore:name="FOLDERType" name="FOLDER_._type">
+    <xsd:sequence>
+      <xsd:choice ecore:featureMap="group" maxOccurs="unbounded">
+        <xsd:element ecore:name="fOLDERVERSION" ecore:upperBound="-1" minOccurs="0" ref="FOLDERVERSION"/>
+        <xsd:element ecore:name="cONFIG" ecore:upperBound="-1" minOccurs="0" ref="CONFIG"/>
+        <xsd:element ecore:name="sCHEDULER" ecore:upperBound="-1" minOccurs="0" ref="SCHEDULER"/>
+        <xsd:element ecore:name="tASK" ecore:upperBound="-1" minOccurs="0" ref="TASK"/>
+        <xsd:element ecore:name="sESSION" ecore:upperBound="-1" minOccurs="0" ref="SESSION"/>
+        <xsd:element ecore:name="wORKLET" ecore:upperBound="-1" minOccurs="0" ref="WORKLET"/>
+        <xsd:element ecore:name="wORKFLOW" ecore:upperBound="-1" minOccurs="0" ref="WORKFLOW"/>
+        <xsd:element ecore:name="sOURCE" ecore:upperBound="-1" minOccurs="0" ref="SOURCE"/>
+        <xsd:element ecore:name="tARGET" ecore:upperBound="-1" minOccurs="0" ref="TARGET"/>
+        <xsd:element ecore:name="tRANSFORMATION" ecore:upperBound="-1" minOccurs="0" ref="TRANSFORMATION"/>
+        <xsd:element ecore:name="mAPPLET" ecore:upperBound="-1" minOccurs="0" ref="MAPPLET"/>
+        <xsd:element ecore:name="mAPPING" ecore:upperBound="-1" minOccurs="0" ref="MAPPING"/>
+        <xsd:element ecore:name="sHORTCUT" ecore:upperBound="-1" minOccurs="0" ref="SHORTCUT"/>
+        <xsd:element ecore:name="eXPRMACRO" ecore:upperBound="-1" minOccurs="0" ref="EXPRMACRO"/>
+      </xsd:choice>
+    </xsd:sequence>
+    <xsd:attribute ecore:name="dESCRIPTION" name="DESCRIPTION" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="gROUP1" name="GROUP" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="nAME" name="NAME" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="oWNER" name="OWNER" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="pERMISSIONS" name="PERMISSIONS" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="sHARED" name="SHARED" type="SHARED_._type"/>
+    <xsd:attribute ecore:name="uUID" name="UUID" type="xsd:anySimpleType"/>
+  </xsd:complexType>
+  <xsd:complexType ecore:name="FOLDERVERSIONType" name="FOLDERVERSION_._type">
+    <xsd:sequence>
+      <xsd:element ecore:name="sOURCE" maxOccurs="unbounded" minOccurs="0" ref="SOURCE"/>
+      <xsd:element ecore:name="tARGET" maxOccurs="unbounded" minOccurs="0" ref="TARGET"/>
+      <xsd:element ecore:name="tRANSFORMATION" maxOccurs="unbounded" minOccurs="0" ref="TRANSFORMATION"/>
+      <xsd:element ecore:name="mAPPLET" maxOccurs="unbounded" minOccurs="0" ref="MAPPLET"/>
+      <xsd:element ecore:name="mAPPING" maxOccurs="unbounded" minOccurs="0" ref="MAPPING"/>
+      <xsd:element ecore:name="sHORTCUT" maxOccurs="unbounded" minOccurs="0" ref="SHORTCUT"/>
+    </xsd:sequence>
+    <xsd:attribute ecore:name="dESCRIPTION" name="DESCRIPTION" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="nAME" name="NAME" type="xsd:anySimpleType" use="required"/>
+  </xsd:complexType>
+  <xsd:complexType ecore:name="GROUPType" name="GROUP_._type">
+    <xsd:attribute ecore:name="dESCRIPTION" name="DESCRIPTION" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="eXPRESSION" name="EXPRESSION" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="nAME" name="NAME" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="oRDER" name="ORDER" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="tYPE" name="TYPE" type="xsd:anySimpleType" use="required"/>
+  </xsd:complexType>
+  <xsd:complexType ecore:name="HASHKEYType" name="HASHKEY_._type">
+    <xsd:attribute ecore:name="gROUP" name="GROUP" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="nAME" name="NAME" type="xsd:anySimpleType" use="required"/>
+  </xsd:complexType>
+  <xsd:simpleType ecore:name="IGNOREINCOMPAREType" name="IGNORE_IN_COMPARE_._type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="YES"/>
+      <xsd:enumeration value="NO"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType ecore:name="IGNORENULLINPUTSType" name="IGNORE_NULL_INPUTS_._type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="YES"/>
+      <xsd:enumeration value="NO"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType ecore:name="INITPROPType" name="INITPROP_._type">
+    <xsd:attribute ecore:name="dESCRIPTION" name="DESCRIPTION" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="nAME" name="NAME" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="uSERDEFINED" name="USERDEFINED" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="vALUE" name="VALUE" type="xsd:anySimpleType" use="required"/>
+  </xsd:complexType>
+  <xsd:complexType ecore:name="INSTANCEType" name="INSTANCE_._type">
+    <xsd:sequence>
+      <xsd:element ecore:name="tABLEATTRIBUTE" maxOccurs="unbounded" minOccurs="0" ref="TABLEATTRIBUTE"/>
+      <xsd:element ecore:name="eXPRMACRODEPENDENCY" maxOccurs="unbounded" minOccurs="0" ref="EXPRMACRODEPENDENCY"/>
+      <xsd:element ecore:name="iNITPROP" maxOccurs="unbounded" minOccurs="0" ref="INITPROP"/>
+      <xsd:element ecore:name="aSSOCIATEDSOURCEINSTANCE" maxOccurs="unbounded" minOccurs="0" ref="ASSOCIATED_SOURCE_INSTANCE"/>
+    </xsd:sequence>
+    <xsd:attribute ecore:name="aSSOCIATEDDSQ" name="ASSOCIATED_DSQ" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="aSSOCIATEDDSQTYPE" name="ASSOCIATED_DSQ_TYPE" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="dBDNAME" name="DBDNAME" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="dESCRIPTION" name="DESCRIPTION" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="nAME" name="NAME" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="rEUSABLE" name="REUSABLE" type="REUSABLE_._6_._type"/>
+    <xsd:attribute ecore:name="tRANSFORMATIONNAME" name="TRANSFORMATION_NAME" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="tRANSFORMATIONTYPE" name="TRANSFORMATION_TYPE" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="tYPE" name="TYPE" type="TYPE_._5_._type"/>
+  </xsd:complexType>
+  <xsd:simpleType ecore:name="ISCLIENTEDITABLEType" name="ISCLIENTEDITABLE_._type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="YES"/>
+      <xsd:enumeration value="NO"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType ecore:name="ISCLIENTVISIBLEType" name="ISCLIENTVISIBLE_._type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="YES"/>
+      <xsd:enumeration value="NO"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType ecore:name="ISDEFAULTType" name="ISDEFAULT_._type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="YES"/>
+      <xsd:enumeration value="NO"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType ecore:name="ISENABLEDType" name="ISENABLED_._type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="YES"/>
+      <xsd:enumeration value="NO"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType ecore:name="ISENABLEDType1" name="ISENABLED_._1_._type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="YES"/>
+      <xsd:enumeration value="NO"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType ecore:name="ISEXPRESSIONVARIABLEType" name="ISEXPRESSIONVARIABLE_._type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="YES"/>
+      <xsd:enumeration value="NO"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType ecore:name="ISFILENAMEFIELDType" name="ISFILENAMEFIELD_._type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="YES"/>
+      <xsd:enumeration value="NO"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType ecore:name="ISNONEType" name="ISNONE_._type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="YES"/>
+      <xsd:enumeration value="NO"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType ecore:name="ISNULLType" name="ISNULL_._type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="YES"/>
+      <xsd:enumeration value="NO"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType ecore:name="ISOPTIONALType" name="ISOPTIONAL_._type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="YES"/>
+      <xsd:enumeration value="NO"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType ecore:name="ISOPTIONALType1" name="ISOPTIONAL_._1_._type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="YES"/>
+      <xsd:enumeration value="NO"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType ecore:name="ISOUTPUTPORTType" name="ISOUTPUTPORT_._type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="YES"/>
+      <xsd:enumeration value="NO"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType ecore:name="ISPARAMType" name="ISPARAM_._type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="YES"/>
+      <xsd:enumeration value="NO"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType ecore:name="ISPERSISTENTType" name="ISPERSISTENT_._type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="YES"/>
+      <xsd:enumeration value="NO"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType ecore:name="ISPROFILEMAPPINGType" name="ISPROFILEMAPPING_._type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="YES"/>
+      <xsd:enumeration value="NO"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType ecore:name="ISREFERENCEType" name="ISREFERENCE_._type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="YES"/>
+      <xsd:enumeration value="NO"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType ecore:name="ISREPARTITIONPOINTType" name="ISREPARTITIONPOINT_._type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="YES"/>
+      <xsd:enumeration value="NO"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType ecore:name="ISREUSABLEType" name="ISREUSABLE_._type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="YES"/>
+      <xsd:enumeration value="NO"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType ecore:name="ISRUNNABLESERVICEType" name="ISRUNNABLESERVICE_._type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="YES"/>
+      <xsd:enumeration value="NO"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType ecore:name="ISSERVICEType" name="ISSERVICE_._type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="YES"/>
+      <xsd:enumeration value="NO"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType ecore:name="ISSHAREREADType" name="ISSHAREREAD_._type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="YES"/>
+      <xsd:enumeration value="NO"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType ecore:name="ISSHAREWRITEType" name="ISSHAREWRITE_._type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="YES"/>
+      <xsd:enumeration value="NO"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType ecore:name="ISSORTKEYType" name="ISSORTKEY_._type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="YES"/>
+      <xsd:enumeration value="NO"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType ecore:name="ISVALIDType" name="ISVALID_._type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="YES"/>
+      <xsd:enumeration value="NO"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType ecore:name="ISVALIDType1" name="ISVALID_._1_._type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="YES"/>
+      <xsd:enumeration value="NO"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType ecore:name="ISVALIDType2" name="ISVALID_._2_._type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="YES"/>
+      <xsd:enumeration value="NO"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType ecore:name="ISVALIDType3" name="ISVALID_._3_._type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="YES"/>
+      <xsd:enumeration value="NO"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType ecore:name="KEYRANGEType" name="KEYRANGE_._type">
+    <xsd:attribute ecore:name="eNDRANGE" name="ENDRANGE" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="gROUP" name="GROUP" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="nAME" name="NAME" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="sRCINSTANCENAME" name="SRCINSTANCENAME" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="sTARTRANGE" name="STARTRANGE" type="xsd:anySimpleType"/>
+  </xsd:complexType>
+  <xsd:complexType ecore:name="KEYWORDType" name="KEYWORD_._type">
+    <xsd:attribute ecore:name="nAME" name="NAME" type="xsd:anySimpleType" use="required"/>
+  </xsd:complexType>
+  <xsd:complexType ecore:name="MACROARGUMENTType" name="MACROARGUMENT_._type">
+    <xsd:attribute ecore:name="aRGORDER" name="ARGORDER" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="dATATYPE" name="DATATYPE" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="nAME" name="NAME" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="pRECISION" name="PRECISION" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="sCALE" name="SCALE" type="xsd:anySimpleType"/>
+  </xsd:complexType>
+  <xsd:complexType ecore:name="MACRODEPENDENCYType" name="MACRODEPENDENCY_._type">
+    <xsd:attribute ecore:name="nAME" name="NAME" type="xsd:anySimpleType" use="required"/>
+  </xsd:complexType>
+  <xsd:simpleType ecore:name="MACROTYPEType" name="MACROTYPE_._type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Public"/>
+      <xsd:enumeration value="Private"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType ecore:name="MAPDEPENDENCYType" name="MAPDEPENDENCY_._type">
+    <xsd:attribute ecore:name="fROMINSTANCE" name="FROMINSTANCE" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="fROMINSTANCETYPE" name="FROMINSTANCETYPE" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="tOINSTANCE" name="TOINSTANCE" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="tOINSTANCETYPE" name="TOINSTANCETYPE" type="xsd:anySimpleType" use="required"/>
+  </xsd:complexType>
+  <xsd:complexType ecore:name="MAPPINGType" name="MAPPING_._type">
+    <xsd:sequence>
+      <xsd:element ecore:name="tRANSFORMATION" maxOccurs="unbounded" minOccurs="0" ref="TRANSFORMATION"/>
+      <xsd:element ecore:name="iNSTANCE" maxOccurs="unbounded" minOccurs="0" ref="INSTANCE"/>
+      <xsd:element ecore:name="cONNECTOR" maxOccurs="unbounded" minOccurs="0" ref="CONNECTOR"/>
+      <xsd:element ecore:name="mAPDEPENDENCY" maxOccurs="unbounded" minOccurs="0" ref="MAPDEPENDENCY"/>
+      <xsd:element ecore:name="tARGETLOADORDER" maxOccurs="unbounded" minOccurs="0" ref="TARGETLOADORDER"/>
+      <xsd:element ecore:name="mAPPINGVARIABLE" maxOccurs="unbounded" minOccurs="0" ref="MAPPINGVARIABLE"/>
+      <xsd:element ecore:name="eRPINFO" maxOccurs="unbounded" minOccurs="0" ref="ERPINFO"/>
+      <xsd:element ecore:name="mETADATAEXTENSION" maxOccurs="unbounded" minOccurs="0" ref="METADATAEXTENSION"/>
+    </xsd:sequence>
+    <xsd:attribute ecore:name="cRCVALUE" name="CRCVALUE" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="dESCRIPTION" name="DESCRIPTION" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="iSPROFILEMAPPING" name="ISPROFILEMAPPING" type="ISPROFILEMAPPING_._type"/>
+    <xsd:attribute ecore:name="iSVALID" name="ISVALID" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="nAME" name="NAME" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="oBJECTVERSION" name="OBJECTVERSION" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="vERSIONNUMBER" name="VERSIONNUMBER" type="xsd:anySimpleType"/>
+  </xsd:complexType>
+  <xsd:complexType ecore:name="MAPPINGVARIABLEType" name="MAPPINGVARIABLE_._type">
+    <xsd:attribute ecore:name="aGGFUNCTION" name="AGGFUNCTION" type="AGGFUNCTION_._type"/>
+    <xsd:attribute ecore:name="dATATYPE" name="DATATYPE" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="dEFAULTVALUE" name="DEFAULTVALUE" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="dESCRIPTION" name="DESCRIPTION" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="iSEXPRESSIONVARIABLE" name="ISEXPRESSIONVARIABLE" type="ISEXPRESSIONVARIABLE_._type"/>
+    <xsd:attribute ecore:name="iSPARAM" name="ISPARAM" type="ISPARAM_._type"/>
+    <xsd:attribute ecore:name="nAME" name="NAME" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="pRECISION" name="PRECISION" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="sCALE" name="SCALE" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="uSERDEFINED" name="USERDEFINED" type="USERDEFINED_._1_._type"/>
+  </xsd:complexType>
+  <xsd:complexType ecore:name="MAPPLETType" name="MAPPLET_._type">
+    <xsd:sequence>
+      <xsd:element ecore:name="tRANSFORMATION" maxOccurs="unbounded" minOccurs="0" ref="TRANSFORMATION"/>
+      <xsd:element ecore:name="iNSTANCE" maxOccurs="unbounded" minOccurs="0" ref="INSTANCE"/>
+      <xsd:element ecore:name="cONNECTOR" maxOccurs="unbounded" minOccurs="0" ref="CONNECTOR"/>
+      <xsd:element ecore:name="mAPPINGVARIABLE" maxOccurs="unbounded" minOccurs="0" ref="MAPPINGVARIABLE"/>
+      <xsd:element ecore:name="eRPINFO" maxOccurs="unbounded" minOccurs="0" ref="ERPINFO"/>
+      <xsd:element ecore:name="mETADATAEXTENSION" maxOccurs="unbounded" minOccurs="0" ref="METADATAEXTENSION"/>
+    </xsd:sequence>
+    <xsd:attribute ecore:name="cRCVALUE" name="CRCVALUE" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="dESCRIPTION" name="DESCRIPTION" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="iSVALID" name="ISVALID" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="nAME" name="NAME" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="oBJECTVERSION" name="OBJECTVERSION" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="vERSIONNUMBER" name="VERSIONNUMBER" type="xsd:anySimpleType"/>
+  </xsd:complexType>
+  <xsd:complexType ecore:name="METADATAEXTENSIONType" name="METADATAEXTENSION_._type">
+    <xsd:attribute ecore:name="cOMPONENTVERSION" name="COMPONENTVERSION" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="dATATYPE" name="DATATYPE" type="DATATYPE_._type" use="required"/>
+    <xsd:attribute ecore:name="dESCRIPTION" name="DESCRIPTION" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="dOMAINNAME" name="DOMAINNAME" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="iSCLIENTEDITABLE" name="ISCLIENTEDITABLE" type="ISCLIENTEDITABLE_._type"/>
+    <xsd:attribute ecore:name="iSCLIENTVISIBLE" name="ISCLIENTVISIBLE" type="ISCLIENTVISIBLE_._type"/>
+    <xsd:attribute ecore:name="iSREUSABLE" name="ISREUSABLE" type="ISREUSABLE_._type"/>
+    <xsd:attribute ecore:name="iSSHAREREAD" name="ISSHAREREAD" type="ISSHAREREAD_._type"/>
+    <xsd:attribute ecore:name="iSSHAREWRITE" name="ISSHAREWRITE" type="ISSHAREWRITE_._type"/>
+    <xsd:attribute ecore:name="mAXLENGTH" name="MAXLENGTH" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="nAME" name="NAME" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="vALUE" name="VALUE" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="vENDORNAME" name="VENDORNAME" type="xsd:anySimpleType" use="required"/>
+  </xsd:complexType>
+  <xsd:simpleType ecore:name="NULLABLEType" name="NULLABLE_._type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="NOTNULL"/>
+      <xsd:enumeration value="NULL"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType ecore:name="NULLABLEType1" name="NULLABLE_._1_._type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="NOTNULL"/>
+      <xsd:enumeration value="NULL"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType ecore:name="NULLCHARTYPEType" name="NULLCHARTYPE_._type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="BINARY"/>
+      <xsd:enumeration value="ASCII"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType ecore:name="OBJECTTYPEType" name="OBJECTTYPE_._type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="SOURCE"/>
+      <xsd:enumeration value="TARGET"/>
+      <xsd:enumeration value="TRANSFORMATION"/>
+      <xsd:enumeration value="MAPPING"/>
+      <xsd:enumeration value="MAPPLET"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType ecore:name="OCCURRENCEType" name="OCCURRENCE_._type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="FIRST"/>
+      <xsd:enumeration value="SECOND"/>
+      <xsd:enumeration value="THIRD"/>
+      <xsd:enumeration value="FOURTH"/>
+      <xsd:enumeration value="LAST"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType ecore:name="OUTERJOINRELType" name="OUTERJOINREL_._type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="YES"/>
+      <xsd:enumeration value="NO"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType ecore:name="PARENTTYPEType" name="PARENT_TYPE_._type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="WORKLET"/>
+      <xsd:enumeration value="WORKFLOW"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType ecore:name="PARENTTYPEType1" name="PARENT_TYPE_._1_._type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="WORKLET"/>
+      <xsd:enumeration value="WORKFLOW"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType ecore:name="PARENTTYPEType2" name="PARENT_TYPE_._2_._type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="WORKLET"/>
+      <xsd:enumeration value="WORKFLOW"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType ecore:name="PARENTTYPEType3" name="PARENT_TYPE_._3_._type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="MAPPING"/>
+      <xsd:enumeration value="MAPPLET"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType ecore:name="PARTITIONType" name="PARTITION_._type">
+    <xsd:sequence>
+      <xsd:element ecore:name="kEYRANGE" maxOccurs="unbounded" minOccurs="0" ref="KEYRANGE"/>
+    </xsd:sequence>
+    <xsd:attribute ecore:name="dESCRIPTION" name="DESCRIPTION" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="nAME" name="NAME" type="xsd:anySimpleType" use="required"/>
+  </xsd:complexType>
+  <xsd:complexType ecore:name="POWERMARTType" name="POWERMART_._type">
+    <xsd:sequence>
+      <xsd:element ecore:name="rEPOSITORY" maxOccurs="unbounded" minOccurs="0" ref="REPOSITORY"/>
+    </xsd:sequence>
+    <xsd:attribute ecore:name="cREATIONDATE" name="CREATION_DATE" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="rEPOSITORYVERSION" name="REPOSITORY_VERSION" type="xsd:anySimpleType"/>
+  </xsd:complexType>
+  <xsd:complexType ecore:name="RECURRINGType" name="RECURRING_._type">
+    <xsd:attribute ecore:name="dAYS" name="DAYS" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="hOURS" name="HOURS" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="mINUTES" name="MINUTES" type="xsd:anySimpleType"/>
+  </xsd:complexType>
+  <xsd:simpleType ecore:name="REFERENCETYPEType" name="REFERENCETYPE_._type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="GLOBAL"/>
+      <xsd:enumeration value="LOCAL"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType ecore:name="REPEATType" name="REPEAT_._type">
+    <xsd:sequence>
+      <xsd:element ecore:name="fILTER" maxOccurs="unbounded" minOccurs="0" ref="FILTER"/>
+    </xsd:sequence>
+    <xsd:attribute ecore:name="iNTERVAL" name="INTERVAL" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="tYPE" name="TYPE" type="TYPE_._8_._type"/>
+  </xsd:complexType>
+  <xsd:complexType ecore:name="REPOSITORYType" name="REPOSITORY_._type">
+    <xsd:sequence>
+      <xsd:element ecore:name="fOLDER" maxOccurs="unbounded" minOccurs="0" ref="FOLDER"/>
+    </xsd:sequence>
+    <xsd:attribute ecore:name="cODEPAGE" name="CODEPAGE" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="dATABASETYPE" name="DATABASETYPE" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="nAME" name="NAME" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="pARENTREPOSITORY" name="PARENTREPOSITORY" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="vERSION" name="VERSION" type="xsd:anySimpleType"/>
+  </xsd:complexType>
+  <xsd:complexType ecore:name="RESOURCEREFERENCEType" name="RESOURCEREFERENCE_._type">
+    <xsd:attribute ecore:name="nAME" name="NAME" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="tYPE" name="TYPE" type="xsd:anySimpleType" use="required"/>
+  </xsd:complexType>
+  <xsd:simpleType ecore:name="REUSABLESCHEDULERType" name="REUSABLE_SCHEDULER_._type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="YES"/>
+      <xsd:enumeration value="NO"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType ecore:name="REUSABLEType" name="REUSABLE_._type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="YES"/>
+      <xsd:enumeration value="NO"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType ecore:name="REUSABLEType1" name="REUSABLE_._1_._type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="YES"/>
+      <xsd:enumeration value="NO"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType ecore:name="REUSABLEType2" name="REUSABLE_._2_._type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="YES"/>
+      <xsd:enumeration value="NO"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType ecore:name="REUSABLEType3" name="REUSABLE_._3_._type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="YES"/>
+      <xsd:enumeration value="NO"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType ecore:name="REUSABLEType4" name="REUSABLE_._4_._type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="YES"/>
+      <xsd:enumeration value="NO"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType ecore:name="REUSABLEType5" name="REUSABLE_._5_._type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="YES"/>
+      <xsd:enumeration value="NO"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType ecore:name="REUSABLEType6" name="REUSABLE_._6_._type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="YES"/>
+      <xsd:enumeration value="NO"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType ecore:name="REVERSEASSIGNMENTType" name="REVERSEASSIGNMENT_._type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="YES"/>
+      <xsd:enumeration value="NO"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType ecore:name="RUNFOREVERType" name="RUNFOREVER_._type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="YES"/>
+      <xsd:enumeration value="NO"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType ecore:name="RUNONCEType" name="RUNONCE_._type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="YES"/>
+      <xsd:enumeration value="NO"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType ecore:name="SAPCODEBLOCKType" name="SAPCODEBLOCK_._type">
+    <xsd:attribute ecore:name="cODEBLOCK" name="CODEBLOCK" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="dESCRIPTION" name="DESCRIPTION" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="dSQINSTNAME" name="DSQINSTNAME" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="nAME" name="NAME" type="xsd:anySimpleType" use="required"/>
+  </xsd:complexType>
+  <xsd:complexType ecore:name="SAPFUNCINSTANCEPARAMFLDType" name="SAPFUNCINSTANCEPARAMFLD_._type">
+    <xsd:attribute ecore:name="nAME" name="NAME" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="vALUE" name="VALUE" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="vALUETYPE" name="VALUETYPE" type="VALUETYPE_._2_._type" use="required"/>
+  </xsd:complexType>
+  <xsd:complexType ecore:name="SAPFUNCINSTANCEPARAMType" name="SAPFUNCINSTANCEPARAM_._type">
+    <xsd:sequence>
+      <xsd:element ecore:name="sAPFUNCINSTANCEPARAMFLD" maxOccurs="unbounded" minOccurs="0" ref="SAPFUNCINSTANCEPARAMFLD"/>
+    </xsd:sequence>
+    <xsd:attribute ecore:name="nAME" name="NAME" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="tYPE" name="TYPE" type="TYPE_._1_._type" use="required"/>
+    <xsd:attribute ecore:name="vALUE" name="VALUE" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="vALUETYPE" name="VALUETYPE" type="VALUETYPE_._type" use="required"/>
+  </xsd:complexType>
+  <xsd:complexType ecore:name="SAPFUNCPARAMType" name="SAPFUNCPARAM_._type">
+    <xsd:attribute ecore:name="dATATYPE" name="DATATYPE" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="dEF" name="DEF" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="dEFAULTVALUE" name="DEFAULTVALUE" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="iSOPTIONAL" name="ISOPTIONAL" type="ISOPTIONAL_._1_._type"/>
+    <xsd:attribute ecore:name="iSREFERENCE" name="ISREFERENCE" type="ISREFERENCE_._type"/>
+    <xsd:attribute ecore:name="nAME" name="NAME" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="oRDER" name="ORDER" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="pRECISION" name="PRECISION" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="sCALE" name="SCALE" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="sUBTYPE" name="SUBTYPE" type="SUBTYPE_._1_._type" use="required"/>
+    <xsd:attribute ecore:name="tYPE" name="TYPE" type="TYPE_._3_._type" use="required"/>
+  </xsd:complexType>
+  <xsd:complexType ecore:name="SAPFUNCTIONINSTANCEType" name="SAPFUNCTIONINSTANCE_._type">
+    <xsd:sequence>
+      <xsd:element ecore:name="sAPFUNCINSTANCEPARAM" maxOccurs="unbounded" minOccurs="0" ref="SAPFUNCINSTANCEPARAM"/>
+      <xsd:element ecore:name="sAPTABLEINSTANCEPARAM" maxOccurs="unbounded" minOccurs="0" ref="SAPTABLEINSTANCEPARAM"/>
+    </xsd:sequence>
+    <xsd:attribute ecore:name="dSQINSTNAME" name="DSQINSTNAME" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="fUNCTIONNAME" name="FUNCTIONNAME" type="xsd:anySimpleType" use="required"/>
+  </xsd:complexType>
+  <xsd:complexType ecore:name="SAPFUNCTIONType" name="SAPFUNCTION_._type">
+    <xsd:sequence>
+      <xsd:element ecore:name="sAPFUNCPARAM" maxOccurs="unbounded" minOccurs="0" ref="SAPFUNCPARAM"/>
+      <xsd:element ecore:name="sAPTABLEPARAM" maxOccurs="unbounded" minOccurs="0" ref="SAPTABLEPARAM"/>
+    </xsd:sequence>
+    <xsd:attribute ecore:name="dESCRIPTION" name="DESCRIPTION" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="nAME" name="NAME" type="xsd:anySimpleType" use="required"/>
+  </xsd:complexType>
+  <xsd:complexType ecore:name="SAPOUTPUTPORTType" name="SAPOUTPUTPORT_._type">
+    <xsd:attribute ecore:name="dSQINSTNAME" name="DSQINSTNAME" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="fIELDNAME" name="FIELDNAME" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="pORTNAME" name="PORTNAME" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="vARNAME" name="VARNAME" type="xsd:anySimpleType"/>
+  </xsd:complexType>
+  <xsd:complexType ecore:name="SAPPROGRAMFLOWOBJECTType" name="SAPPROGRAMFLOWOBJECT_._type">
+    <xsd:sequence>
+      <xsd:element ecore:name="sAPFUNCTIONINSTANCE" minOccurs="0" ref="SAPFUNCTIONINSTANCE"/>
+      <xsd:element ecore:name="sAPCODEBLOCK" minOccurs="0" ref="SAPCODEBLOCK"/>
+    </xsd:sequence>
+    <xsd:attribute ecore:name="dSQINSTNAME" name="DSQINSTNAME" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="jOINBITMAP" name="JOINBITMAP" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="oRDER" name="ORDER" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="rEFDBDNAME" name="REF_DBD_NAME" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="rEFSOURCENAME" name="REF_SOURCE_NAME" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="rEFSOURCEINSTNAME" name="REF_SOURCEINSTNAME" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="tYPE" name="TYPE" type="TYPE_._4_._type" use="required"/>
+  </xsd:complexType>
+  <xsd:complexType ecore:name="SAPPROGRAMType" name="SAPPROGRAM_._type">
+    <xsd:attribute ecore:name="cLIENTSPACE" name="CLIENTSPACE" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="hOSTNAME" name="HOSTNAME" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="iNSTALLTIME" name="INSTALLTIME" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="iSVALID" name="ISVALID" type="ISVALID_._3_._type"/>
+    <xsd:attribute ecore:name="nAME" name="NAME" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="pROGRAMTYPE" name="PROGRAMTYPE" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="uSERNAME" name="USERNAME" type="xsd:anySimpleType"/>
+  </xsd:complexType>
+  <xsd:complexType ecore:name="SAPSTRUCTUREFIELDType" name="SAPSTRUCTUREFIELD_._type">
+    <xsd:attribute ecore:name="dATATYPE" name="DATATYPE" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="nAME" name="NAME" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="oRDER" name="ORDER" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="pRECISION" name="PRECISION" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="sCALE" name="SCALE" type="xsd:anySimpleType"/>
+  </xsd:complexType>
+  <xsd:complexType ecore:name="SAPSTRUCTUREType" name="SAPSTRUCTURE_._type">
+    <xsd:sequence>
+      <xsd:element ecore:name="sAPSTRUCTUREFIELD" maxOccurs="unbounded" minOccurs="0" ref="SAPSTRUCTUREFIELD"/>
+    </xsd:sequence>
+    <xsd:attribute ecore:name="nAME" name="NAME" type="xsd:anySimpleType" use="required"/>
+  </xsd:complexType>
+  <xsd:complexType ecore:name="SAPTABLEINSTANCEPARAMType" name="SAPTABLEINSTANCEPARAM_._type">
+    <xsd:sequence>
+      <xsd:element ecore:name="sAPFUNCINSTANCEPARAMFLD" maxOccurs="unbounded" minOccurs="0" ref="SAPFUNCINSTANCEPARAMFLD"/>
+    </xsd:sequence>
+    <xsd:attribute ecore:name="nAME" name="NAME" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="tYPE" name="TYPE" type="TYPE_._7_._type" use="required"/>
+    <xsd:attribute ecore:name="vALUE" name="VALUE" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="vALUETYPE" name="VALUETYPE" type="VALUETYPE_._1_._type" use="required"/>
+  </xsd:complexType>
+  <xsd:complexType ecore:name="SAPTABLEPARAMType" name="SAPTABLEPARAM_._type">
+    <xsd:attribute ecore:name="dEF" name="DEF" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="iSOPTIONAL" name="ISOPTIONAL" type="ISOPTIONAL_._type"/>
+    <xsd:attribute ecore:name="nAME" name="NAME" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="oRDER" name="ORDER" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="tYPE" name="TYPE" type="TYPE_._6_._type" use="required"/>
+  </xsd:complexType>
+  <xsd:complexType ecore:name="SAPVARIABLEType" name="SAPVARIABLE_._type">
+    <xsd:attribute ecore:name="dATATYPE" name="DATATYPE" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="dEFAULTVALUE" name="DEFAULTVALUE" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="dSQINSTNAME" name="DSQINSTNAME" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="iSOUTPUTPORT" name="ISOUTPUTPORT" type="ISOUTPUTPORT_._type"/>
+    <xsd:attribute ecore:name="nAME" name="NAME" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="pRECISION" name="PRECISION" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="sCALE" name="SCALE" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="sUBTYPE" name="SUBTYPE" type="SUBTYPE_._type" use="required"/>
+    <xsd:attribute ecore:name="vARDEF" name="VARDEF" type="xsd:anySimpleType"/>
+  </xsd:complexType>
+  <xsd:complexType name="SCHEDULEINFO">
+    <xsd:sequence>
+      <xsd:element ecore:name="sCHEDULEINFO" ref="SCHEDULEINFO"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType ecore:name="SCHEDULEINFOType" name="SCHEDULEINFO_._type">
+    <xsd:sequence>
+      <xsd:element ecore:name="sTARTOPTIONS" minOccurs="0" ref="STARTOPTIONS"/>
+      <xsd:element ecore:name="sCHEDULEOPTIONS" minOccurs="0" ref="SCHEDULEOPTIONS"/>
+      <xsd:element ecore:name="eNDOPTIONS" minOccurs="0" ref="ENDOPTIONS"/>
+    </xsd:sequence>
+    <xsd:attribute ecore:name="sCHEDULETYPE" name="SCHEDULETYPE" type="SCHEDULETYPE_._type"/>
+  </xsd:complexType>
+  <xsd:complexType ecore:name="SCHEDULEOPTIONSType" name="SCHEDULEOPTIONS_._type">
+    <xsd:sequence>
+      <xsd:element ecore:name="rECURRING" minOccurs="0" ref="RECURRING"/>
+      <xsd:element ecore:name="cUSTOM" minOccurs="0" ref="CUSTOM"/>
+    </xsd:sequence>
+    <xsd:attribute ecore:name="sCHEDULETYPE" name="SCHEDULETYPE" type="SCHEDULETYPE_._1_._type" use="required"/>
+  </xsd:complexType>
+  <xsd:complexType ecore:name="SCHEDULERType" name="SCHEDULER_._type">
+    <xsd:complexContent>
+      <xsd:extension base="SCHEDULEINFO">
+        <xsd:attribute ecore:name="dESCRIPTION" name="DESCRIPTION" type="xsd:anySimpleType"/>
+        <xsd:attribute ecore:name="nAME" name="NAME" type="xsd:anySimpleType" use="required"/>
+        <xsd:attribute ecore:name="rEUSABLE" name="REUSABLE" type="REUSABLE_._1_._type" use="required"/>
+        <xsd:attribute ecore:name="vERSIONNUMBER" name="VERSIONNUMBER" type="xsd:anySimpleType"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:simpleType ecore:name="SCHEDULETYPEType" name="SCHEDULETYPE_._type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="ONDEMAND"/>
+      <xsd:enumeration value="CONTINUOUS"/>
+      <xsd:enumeration value="ONSERVERINIT"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType ecore:name="SCHEDULETYPEType1" name="SCHEDULETYPE_._1_._type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="ONCE"/>
+      <xsd:enumeration value="RECURRING"/>
+      <xsd:enumeration value="CUSTOM"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType ecore:name="SEBLJOINType" name="SEBLJOIN_._type">
+    <xsd:attribute ecore:name="dESTCOL" name="DESTCOL" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="fKTABLE" name="FKTABLE" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="nAME" name="NAME" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="oUTERJOINREL" name="OUTERJOINREL" type="OUTERJOINREL_._type"/>
+    <xsd:attribute ecore:name="pKTABLE" name="PKTABLE" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="sRCCOL" name="SRCCOL" type="xsd:anySimpleType" use="required"/>
+  </xsd:complexType>
+  <xsd:complexType ecore:name="SEBLLINKType" name="SEBLLINK_._type">
+    <xsd:attribute ecore:name="cHILDBC" name="CHILDBC" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="dESTBCBASETABLE" name="DESTBCBASETABLE" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="dESTCOL" name="DESTCOL" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="iNTERCHILDCOL" name="INTERCHILDCOL" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="iNTERPARENTCOL" name="INTERPARENTCOL" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="iNTERTABLE" name="INTERTABLE" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="nAME" name="NAME" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="pARENTBC" name="PARENTBC" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="pRIMARYID" name="PRIMARYID" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="sRCCOL" name="SRCCOL" type="xsd:anySimpleType" use="required"/>
+  </xsd:complexType>
+  <xsd:complexType ecore:name="SEBLMVLINKRELType" name="SEBLMVLINKREL_._type">
+    <xsd:attribute ecore:name="dESTMVLINK" name="DESTMVLINK" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="fIELD" name="FIELD" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="sRCMVLINK" name="SRCMVLINK" type="xsd:anySimpleType"/>
+  </xsd:complexType>
+  <xsd:complexType ecore:name="SEBLMVLINKType" name="SEBLMVLINK_._type">
+    <xsd:attribute ecore:name="bCNAME" name="BCNAME" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="dESTBC" name="DESTBC" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="dESTLINK" name="DESTLINK" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="mVLINK" name="MVLINK" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="pRIMARYID" name="PRIMARYID" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="sRCFIELD" name="SRCFIELD" type="xsd:anySimpleType" use="required"/>
+  </xsd:complexType>
+  <xsd:complexType ecore:name="SEBLSRCINFOType" name="SEBLSRCINFO_._type">
+    <xsd:sequence>
+      <xsd:element ecore:name="sEBLJOIN" maxOccurs="unbounded" minOccurs="0" ref="SEBLJOIN"/>
+      <xsd:element ecore:name="sEBLLINK" maxOccurs="unbounded" minOccurs="0" ref="SEBLLINK"/>
+      <xsd:element ecore:name="sEBLMVLINK" maxOccurs="unbounded" minOccurs="0" ref="SEBLMVLINK"/>
+      <xsd:element ecore:name="sEBLMVLINKREL" maxOccurs="unbounded" minOccurs="0" ref="SEBLMVLINKREL"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType ecore:name="SESSIONCOMPONENTType" name="SESSIONCOMPONENT_._type">
+    <xsd:sequence>
+      <xsd:element ecore:name="tASK" minOccurs="0" ref="TASK"/>
+      <xsd:element ecore:name="vALUEPAIR" maxOccurs="unbounded" minOccurs="0" ref="VALUEPAIR"/>
+      <xsd:element ecore:name="aTTRIBUTE" maxOccurs="unbounded" minOccurs="0" ref="ATTRIBUTE"/>
+    </xsd:sequence>
+    <xsd:attribute ecore:name="iSNONE" name="ISNONE" type="ISNONE_._type"/>
+    <xsd:attribute ecore:name="rEFOBJECTNAME" name="REFOBJECTNAME" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="rEUSABLE" name="REUSABLE" type="REUSABLE_._5_._type" use="required"/>
+    <xsd:attribute ecore:name="tYPE" name="TYPE" type="xsd:anySimpleType" use="required"/>
+  </xsd:complexType>
+  <xsd:complexType ecore:name="SESSIONEXTENSIONType" name="SESSIONEXTENSION_._type">
+    <xsd:sequence>
+      <xsd:element ecore:name="cONNECTIONREFERENCE" maxOccurs="unbounded" minOccurs="0" ref="CONNECTIONREFERENCE"/>
+      <xsd:element ecore:name="aTTRIBUTE" maxOccurs="unbounded" minOccurs="0" ref="ATTRIBUTE"/>
+    </xsd:sequence>
+    <xsd:attribute ecore:name="cOMPONENTVERSION" name="COMPONENTVERSION" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="dSQINSTNAME" name="DSQINSTNAME" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="dSQINSTTYPE" name="DSQINSTTYPE" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="nAME" name="NAME" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="sINSTANCENAME" name="SINSTANCENAME" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="sUBTYPE" name="SUBTYPE" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="tRANSFORMATIONTYPE" name="TRANSFORMATIONTYPE" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="tYPE" name="TYPE" type="xsd:anySimpleType" use="required"/>
+  </xsd:complexType>
+  <xsd:complexType ecore:name="SESSIONType" name="SESSION_._type">
+    <xsd:sequence>
+      <xsd:element ecore:name="tASK" maxOccurs="unbounded" minOccurs="0" ref="TASK"/>
+      <xsd:element ecore:name="sESSTRANSFORMATIONINST" maxOccurs="unbounded" minOccurs="0" ref="SESSTRANSFORMATIONINST"/>
+      <xsd:element ecore:name="cONFIGREFERENCE" minOccurs="0" ref="CONFIGREFERENCE"/>
+      <xsd:element ecore:name="sESSIONCOMPONENT" maxOccurs="unbounded" minOccurs="0" ref="SESSIONCOMPONENT"/>
+      <xsd:element ecore:name="sESSIONEXTENSION" maxOccurs="unbounded" minOccurs="0" ref="SESSIONEXTENSION"/>
+      <xsd:element ecore:name="aTTRIBUTE" maxOccurs="unbounded" minOccurs="0" ref="ATTRIBUTE"/>
+      <xsd:element ecore:name="mETADATAEXTENSION" maxOccurs="unbounded" minOccurs="0" ref="METADATAEXTENSION"/>
+      <xsd:choice ecore:featureMap="group" maxOccurs="unbounded">
+        <xsd:element ecore:name="rESOURCEREFERENCE" ecore:upperBound="-1" minOccurs="0" ref="RESOURCEREFERENCE"/>
+        <xsd:element ecore:name="tRANSFORMRESOURCEREF" ecore:upperBound="-1" minOccurs="0" ref="TRANSFORMRESOURCEREF"/>
+      </xsd:choice>
+    </xsd:sequence>
+    <xsd:attribute ecore:name="dESCRIPTION" name="DESCRIPTION" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="iSVALID" name="ISVALID" type="ISVALID_._type"/>
+    <xsd:attribute ecore:name="mAPPINGNAME" name="MAPPINGNAME" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="mAPPINGVERSION" name="MAPPINGVERSION" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="nAME" name="NAME" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="pARENT" name="PARENT" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="pARENTTYPE" name="PARENT_TYPE" type="PARENT_TYPE_._type"/>
+    <xsd:attribute ecore:name="rEUSABLE" name="REUSABLE" type="REUSABLE_._4_._type" use="required"/>
+    <xsd:attribute ecore:name="sORTORDER" name="SORTORDER" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="vERSIONNUMBER" name="VERSIONNUMBER" type="xsd:anySimpleType"/>
+  </xsd:complexType>
+  <xsd:complexType ecore:name="SESSTRANSFORMATIONGROUPType" name="SESSTRANSFORMATIONGROUP_._type">
+    <xsd:attribute ecore:name="gROUP" name="GROUP" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="pARTITIONTYPE" name="PARTITIONTYPE" type="xsd:anySimpleType"/>
+  </xsd:complexType>
+  <xsd:complexType ecore:name="SESSTRANSFORMATIONINSTType" name="SESSTRANSFORMATIONINST_._type">
+    <xsd:sequence>
+      <xsd:element ecore:name="sESSTRANSFORMATIONGROUP" maxOccurs="unbounded" minOccurs="0" ref="SESSTRANSFORMATIONGROUP"/>
+      <xsd:element ecore:name="pARTITION" maxOccurs="unbounded" minOccurs="0" ref="PARTITION"/>
+      <xsd:element ecore:name="hASHKEY" maxOccurs="unbounded" minOccurs="0" ref="HASHKEY"/>
+      <xsd:element ecore:name="fLATFILE" maxOccurs="unbounded" minOccurs="0" ref="FLATFILE"/>
+      <xsd:element ecore:name="aTTRIBUTE" maxOccurs="unbounded" minOccurs="0" ref="ATTRIBUTE"/>
+    </xsd:sequence>
+    <xsd:attribute ecore:name="iSREPARTITIONPOINT" name="ISREPARTITIONPOINT" type="ISREPARTITIONPOINT_._type"/>
+    <xsd:attribute ecore:name="pARTITIONTYPE" name="PARTITIONTYPE" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="pIPELINE" name="PIPELINE" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="sINSTANCENAME" name="SINSTANCENAME" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="sTAGE" name="STAGE" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="tRANSFORMATIONNAME" name="TRANSFORMATIONNAME" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="tRANSFORMATIONTYPE" name="TRANSFORMATIONTYPE" type="xsd:anySimpleType" use="required"/>
+  </xsd:complexType>
+  <xsd:simpleType ecore:name="SHAREDType" name="SHARED_._type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="SHARED"/>
+      <xsd:enumeration value="NOTSHARED"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType ecore:name="SHORTCUTType" name="SHORTCUT_._type">
+    <xsd:attribute ecore:name="cOMMENTS" name="COMMENTS" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="dBDNAME" name="DBDNAME" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="fOLDERNAME" name="FOLDERNAME" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="fOLDERVERSIONNAME" name="FOLDERVERSIONNAME" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="nAME" name="NAME" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="oBJECTSUBTYPE" name="OBJECTSUBTYPE" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="oBJECTTYPE" name="OBJECTTYPE" type="OBJECTTYPE_._type" use="required"/>
+    <xsd:attribute ecore:name="rEFERENCEDDBD" name="REFERENCEDDBD" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="rEFERENCETYPE" name="REFERENCETYPE" type="REFERENCETYPE_._type" use="required"/>
+    <xsd:attribute ecore:name="rEFOBJECTNAME" name="REFOBJECTNAME" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="rEPOSITORYNAME" name="REPOSITORYNAME" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="tEMPLATEID" name="TEMPLATEID" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="vERSIONNUMBER" name="VERSIONNUMBER" type="xsd:anySimpleType"/>
+  </xsd:complexType>
+  <xsd:simpleType ecore:name="SORTDIRECTIONType" name="SORTDIRECTION_._type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="ASCENDING"/>
+      <xsd:enumeration value="DESCENDING"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType ecore:name="SOURCEFIELDType" name="SOURCEFIELD_._type">
+    <xsd:sequence>
+      <xsd:element ecore:name="sOURCEFIELD" maxOccurs="unbounded" minOccurs="0" ref="SOURCEFIELD"/>
+      <xsd:element ecore:name="fIELDATTRIBUTE" maxOccurs="unbounded" minOccurs="0" ref="FIELDATTRIBUTE"/>
+    </xsd:sequence>
+    <xsd:attribute ecore:name="bUSINESSNAME" name="BUSINESSNAME" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="dATATYPE" name="DATATYPE" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="dESCRIPTION" name="DESCRIPTION" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="fIELDNUMBER" name="FIELDNUMBER" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="fIELDTYPE" name="FIELDTYPE" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="gROUP" name="GROUP" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="hIDDEN" name="HIDDEN" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="kEYTYPE" name="KEYTYPE" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="lENGTH" name="LENGTH" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="lEVEL" name="LEVEL" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="nAME" name="NAME" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="nULLABLE" name="NULLABLE" type="NULLABLE_._1_._type"/>
+    <xsd:attribute ecore:name="oCCURS" name="OCCURS" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="oFFSET" name="OFFSET" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="pHYSICALLENGTH" name="PHYSICALLENGTH" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="pHYSICALOFFSET" name="PHYSICALOFFSET" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="pICTURETEXT" name="PICTURETEXT" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="pRECISION" name="PRECISION" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="rEDEFINES" name="REDEFINES" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="rEFERENCEDDBD" name="REFERENCEDDBD" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="rEFERENCEDFIELD" name="REFERENCEDFIELD" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="rEFERENCEDTABLE" name="REFERENCEDTABLE" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="sCALE" name="SCALE" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="sHIFTSTATE" name="SHIFTSTATE" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="uSAGE" name="USAGE" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="uSAGEFLAGS" name="USAGE_FLAGS" type="xsd:anySimpleType"/>
+  </xsd:complexType>
+  <xsd:complexType ecore:name="SOURCEType" name="SOURCE_._type">
+    <xsd:sequence>
+      <xsd:element ecore:name="fLATFILE" minOccurs="0" ref="FLATFILE"/>
+      <xsd:element ecore:name="xMLINFO" minOccurs="0" ref="XMLINFO"/>
+      <xsd:element ecore:name="eRPSRCINFO" minOccurs="0" ref="ERPSRCINFO"/>
+      <xsd:element ecore:name="gROUP" maxOccurs="unbounded" minOccurs="0" ref="GROUP"/>
+      <xsd:element ecore:name="tABLEATTRIBUTE" maxOccurs="unbounded" minOccurs="0" ref="TABLEATTRIBUTE"/>
+      <xsd:element ecore:name="sOURCEFIELD" maxOccurs="unbounded" minOccurs="0" ref="SOURCEFIELD"/>
+      <xsd:element ecore:name="mETADATAEXTENSION" maxOccurs="unbounded" minOccurs="0" ref="METADATAEXTENSION"/>
+    </xsd:sequence>
+    <xsd:attribute ecore:name="bUSINESSNAME" name="BUSINESSNAME" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="cOMPONENTVERSION" name="COMPONENTVERSION" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="cRCVALUE" name="CRCVALUE" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="dATABASESUBTYPE" name="DATABASE_SUBTYPE" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="dATABASETYPE" name="DATABASETYPE" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="dBDNAME" name="DBDNAME" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="dESCRIPTION" name="DESCRIPTION" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="iBMCOMP" name="IBMCOMP" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="nAME" name="NAME" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="oBJECTVERSION" name="OBJECTVERSION" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="oWNERNAME" name="OWNERNAME" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="vERSIONNUMBER" name="VERSIONNUMBER" type="xsd:anySimpleType"/>
+  </xsd:complexType>
+  <xsd:simpleType ecore:name="STAGEFILEPERSISTType" name="STAGEFILEPERSIST_._type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="YES"/>
+      <xsd:enumeration value="NO"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType ecore:name="STAGEFILEREINITType" name="STAGEFILEREINIT_._type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="YES"/>
+      <xsd:enumeration value="NO"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType ecore:name="STARTOPTIONSType" name="STARTOPTIONS_._type">
+    <xsd:attribute ecore:name="sTARTDATE" name="STARTDATE" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="sTARTTIME" name="STARTTIME" type="xsd:anySimpleType"/>
+  </xsd:complexType>
+  <xsd:simpleType ecore:name="SUBTYPEType" name="SUBTYPE_._type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="STRUCTURETYPE"/>
+      <xsd:enumeration value="STRUCTUREFIELDTYPE"/>
+      <xsd:enumeration value="ABAPTYPE"/>
+      <xsd:enumeration value="NONE"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType ecore:name="SUBTYPEType1" name="SUBTYPE_._1_._type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="STRUCTURETYPE"/>
+      <xsd:enumeration value="STRUCTUREFIELDTYPE"/>
+      <xsd:enumeration value="ABAPTYPE"/>
+      <xsd:enumeration value="NONE"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType ecore:name="SUSPENDONERRORType" name="SUSPEND_ON_ERROR_._type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="YES"/>
+      <xsd:enumeration value="NO"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType ecore:name="TABLEATTRIBUTEType" name="TABLEATTRIBUTE_._type">
+    <xsd:attribute ecore:name="nAME" name="NAME" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="vALUE" name="VALUE" type="xsd:anySimpleType" use="required"/>
+  </xsd:complexType>
+  <xsd:complexType ecore:name="TARGETFIELDType" name="TARGETFIELD_._type">
+    <xsd:sequence>
+      <xsd:element ecore:name="fIELDATTRIBUTE" maxOccurs="unbounded" minOccurs="0" ref="FIELDATTRIBUTE"/>
+    </xsd:sequence>
+    <xsd:attribute ecore:name="bUSINESSNAME" name="BUSINESSNAME" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="dATATYPE" name="DATATYPE" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="dESCRIPTION" name="DESCRIPTION" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="fIELDNUMBER" name="FIELDNUMBER" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="gROUP" name="GROUP" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="iSFILENAMEFIELD" name="ISFILENAMEFIELD" type="ISFILENAMEFIELD_._type"/>
+    <xsd:attribute ecore:name="kEYTYPE" name="KEYTYPE" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="nAME" name="NAME" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="nULLABLE" name="NULLABLE" type="NULLABLE_._type"/>
+    <xsd:attribute ecore:name="pICTURETEXT" name="PICTURETEXT" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="pRECISION" name="PRECISION" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="rEFERENCEDFIELD" name="REFERENCEDFIELD" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="rEFERENCEDTABLE" name="REFERENCEDTABLE" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="sCALE" name="SCALE" type="xsd:anySimpleType"/>
+  </xsd:complexType>
+  <xsd:complexType ecore:name="TARGETINDEXFIELDType" name="TARGETINDEXFIELD_._type">
+    <xsd:attribute ecore:name="nAME" name="NAME" type="xsd:anySimpleType" use="required"/>
+  </xsd:complexType>
+  <xsd:complexType ecore:name="TARGETINDEXType" name="TARGETINDEX_._type">
+    <xsd:sequence>
+      <xsd:element ecore:name="tARGETINDEXFIELD" maxOccurs="unbounded" ref="TARGETINDEXFIELD"/>
+    </xsd:sequence>
+    <xsd:attribute ecore:name="dESCRIPTION" name="DESCRIPTION" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="nAME" name="NAME" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="uNIQUE" name="UNIQUE" type="xsd:anySimpleType"/>
+  </xsd:complexType>
+  <xsd:complexType ecore:name="TARGETLOADORDERType" name="TARGETLOADORDER_._type">
+    <xsd:attribute ecore:name="oRDER" name="ORDER" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="tARGETINSTANCE" name="TARGETINSTANCE" type="xsd:anySimpleType" use="required"/>
+  </xsd:complexType>
+  <xsd:complexType ecore:name="TARGETType" name="TARGET_._type">
+    <xsd:sequence>
+      <xsd:element ecore:name="kEYWORD" maxOccurs="unbounded" minOccurs="0" ref="KEYWORD"/>
+      <xsd:element ecore:name="fLATFILE" minOccurs="0" ref="FLATFILE"/>
+      <xsd:element ecore:name="xMLINFO" minOccurs="0" ref="XMLINFO"/>
+      <xsd:element ecore:name="gROUP" maxOccurs="unbounded" minOccurs="0" ref="GROUP"/>
+      <xsd:element ecore:name="tARGETFIELD" maxOccurs="unbounded" minOccurs="0" ref="TARGETFIELD"/>
+      <xsd:element ecore:name="tARGETINDEX" maxOccurs="unbounded" minOccurs="0" ref="TARGETINDEX"/>
+      <xsd:element ecore:name="tABLEATTRIBUTE" maxOccurs="unbounded" minOccurs="0" ref="TABLEATTRIBUTE"/>
+      <xsd:element ecore:name="mETADATAEXTENSION" maxOccurs="unbounded" minOccurs="0" ref="METADATAEXTENSION"/>
+    </xsd:sequence>
+    <xsd:attribute ecore:name="bUSINESSNAME" name="BUSINESSNAME" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="cOMPONENTVERSION" name="COMPONENTVERSION" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="cONSTRAINT" name="CONSTRAINT" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="cRCVALUE" name="CRCVALUE" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="dATABASETYPE" name="DATABASETYPE" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="dESCRIPTION" name="DESCRIPTION" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="nAME" name="NAME" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="oBJECTVERSION" name="OBJECTVERSION" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="tABLEOPTIONS" name="TABLEOPTIONS" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="tABLETYPE" name="TABLETYPE" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="vERSIONNUMBER" name="VERSIONNUMBER" type="xsd:anySimpleType"/>
+  </xsd:complexType>
+  <xsd:complexType ecore:name="TASKINSTANCEType" name="TASKINSTANCE_._type">
+    <xsd:sequence>
+      <xsd:element ecore:name="aTTRIBUTE" maxOccurs="unbounded" minOccurs="0" ref="ATTRIBUTE"/>
+      <xsd:element ecore:name="wORKFLOWVARIABLE" maxOccurs="unbounded" minOccurs="0" ref="WORKFLOWVARIABLE"/>
+      <xsd:element ecore:name="vALUEPAIR" maxOccurs="unbounded" minOccurs="0" ref="VALUEPAIR"/>
+      <xsd:element ecore:name="cONFIGREFERENCE" minOccurs="0" ref="CONFIGREFERENCE"/>
+      <xsd:element ecore:name="sESSIONCOMPONENT" maxOccurs="unbounded" minOccurs="0" ref="SESSIONCOMPONENT"/>
+      <xsd:element ecore:name="sESSIONEXTENSION" maxOccurs="unbounded" minOccurs="0" ref="SESSIONEXTENSION"/>
+      <xsd:choice ecore:featureMap="group" maxOccurs="unbounded">
+        <xsd:element ecore:name="rESOURCEREFERENCE" ecore:upperBound="-1" minOccurs="0" ref="RESOURCEREFERENCE"/>
+        <xsd:element ecore:name="tRANSFORMRESOURCEREF" ecore:upperBound="-1" minOccurs="0" ref="TRANSFORMRESOURCEREF"/>
+      </xsd:choice>
+    </xsd:sequence>
+    <xsd:attribute ecore:name="dESCRIPTION" name="DESCRIPTION" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="fAILPARENTIFINSTANCEDIDNOTRUN" name="FAIL_PARENT_IF_INSTANCE_DID_NOT_RUN" type="FAIL_PARENT_IF_INSTANCE_DID_NOT_RUN_._type"/>
+    <xsd:attribute ecore:name="fAILPARENTIFINSTANCEFAILS" name="FAIL_PARENT_IF_INSTANCE_FAILS" type="FAIL_PARENT_IF_INSTANCE_FAILS_._type"/>
+    <xsd:attribute ecore:name="iSENABLED" name="ISENABLED" type="ISENABLED_._1_._type"/>
+    <xsd:attribute ecore:name="nAME" name="NAME" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="rEUSABLE" name="REUSABLE" type="REUSABLE_._2_._type" use="required"/>
+    <xsd:attribute ecore:name="sERVEROVERRIDE" name="SERVER_OVERRIDE" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="tASKNAME" name="TASKNAME" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="tASKTYPE" name="TASKTYPE" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="tREATINPUTLINKASAND" name="TREAT_INPUTLINK_AS_AND" type="TREAT_INPUTLINK_AS_AND_._type"/>
+  </xsd:complexType>
+  <xsd:simpleType ecore:name="TASKSMUSTRUNONSERVERType" name="TASKS_MUST_RUN_ON_SERVER_._type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="YES"/>
+      <xsd:enumeration value="NO"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType ecore:name="TASKType" name="TASK_._type">
+    <xsd:sequence>
+      <xsd:element ecore:name="aTTRIBUTE" maxOccurs="unbounded" minOccurs="0" ref="ATTRIBUTE"/>
+      <xsd:element ecore:name="eXPRMACRODEPENDENCY" maxOccurs="unbounded" minOccurs="0" ref="EXPRMACRODEPENDENCY"/>
+      <xsd:element ecore:name="tIMER" minOccurs="0" ref="TIMER"/>
+      <xsd:element ecore:name="vALUEPAIR" maxOccurs="unbounded" minOccurs="0" ref="VALUEPAIR"/>
+      <xsd:element ecore:name="rESOURCEREFERENCE" maxOccurs="unbounded" minOccurs="0" ref="RESOURCEREFERENCE"/>
+    </xsd:sequence>
+    <xsd:attribute ecore:name="dESCRIPTION" name="DESCRIPTION" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="nAME" name="NAME" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="pARENT" name="PARENT" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="pARENTTYPE" name="PARENT_TYPE" type="PARENT_TYPE_._2_._type"/>
+    <xsd:attribute ecore:name="rEUSABLE" name="REUSABLE" type="REUSABLE_._type" use="required"/>
+    <xsd:attribute ecore:name="tYPE" name="TYPE" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="vERSIONNUMBER" name="VERSIONNUMBER" type="xsd:anySimpleType"/>
+  </xsd:complexType>
+  <xsd:complexType ecore:name="TIMERType" name="TIMER_._type">
+    <xsd:sequence>
+      <xsd:element ecore:name="sTARTOPTIONS" minOccurs="0" ref="STARTOPTIONS"/>
+      <xsd:element ecore:name="rECURRING" minOccurs="0" ref="RECURRING"/>
+    </xsd:sequence>
+    <xsd:attribute ecore:name="tIMERTYPE" name="TIMERTYPE" type="TIMERTYPE_._type" use="required"/>
+  </xsd:complexType>
+  <xsd:simpleType ecore:name="TIMERTYPEType" name="TIMERTYPE_._type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration ecore:name="STARTATABSOLUTETIME" value="START_AT_ABSOLUTE_TIME"/>
+      <xsd:enumeration ecore:name="STARTATABSOLUTEVARIABLE" value="START_AT_ABSOLUTE_VARIABLE"/>
+      <xsd:enumeration ecore:name="STARTRELATIVETOPREVIOUSTASK" value="START_RELATIVE_TO_PREVIOUSTASK"/>
+      <xsd:enumeration ecore:name="STARTRELATIVETOPARENTWORKFLOW" value="START_RELATIVE_TO_PARENT_WORKFLOW"/>
+      <xsd:enumeration ecore:name="STARTRELATIVETOTOPLEVELWORKFLOW" value="START_RELATIVE_TO_TOPLEVEL_WORKFLOW"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType ecore:name="TRANSFORMATIONType" name="TRANSFORMATION_._type">
+    <xsd:sequence>
+      <xsd:element ecore:name="gROUP" maxOccurs="unbounded" minOccurs="0" ref="GROUP"/>
+      <xsd:element ecore:name="sOURCEFIELD" maxOccurs="unbounded" minOccurs="0" ref="SOURCEFIELD"/>
+      <xsd:element ecore:name="tRANSFORMFIELD" maxOccurs="unbounded" minOccurs="0" ref="TRANSFORMFIELD"/>
+      <xsd:element ecore:name="tABLEATTRIBUTE" maxOccurs="unbounded" minOccurs="0" ref="TABLEATTRIBUTE"/>
+      <xsd:element ecore:name="iNITPROP" maxOccurs="unbounded" minOccurs="0" ref="INITPROP"/>
+      <xsd:element ecore:name="mETADATAEXTENSION" maxOccurs="unbounded" minOccurs="0" ref="METADATAEXTENSION"/>
+      <xsd:element ecore:name="tRANSFORMFIELDATTRDEF" maxOccurs="unbounded" minOccurs="0" ref="TRANSFORMFIELDATTRDEF"/>
+      <xsd:element ecore:name="fIELDDEPENDENCY" maxOccurs="unbounded" minOccurs="0" ref="FIELDDEPENDENCY"/>
+      <xsd:element ecore:name="fLATFILE" minOccurs="0" ref="FLATFILE"/>
+      <xsd:element ecore:name="eXPRMACRODEPENDENCY" maxOccurs="unbounded" minOccurs="0" ref="EXPRMACRODEPENDENCY"/>
+    </xsd:sequence>
+    <xsd:attribute ecore:name="cOMPONENTVERSION" name="COMPONENTVERSION" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="cRCVALUE" name="CRCVALUE" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="dESCRIPTION" name="DESCRIPTION" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="iSVSAMNORMALIZER" name="ISVSAM_NORMALIZER" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="nAME" name="NAME" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="oBJECTVERSION" name="OBJECTVERSION" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="pARENT" name="PARENT" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="pARENTTYPE" name="PARENT_TYPE" type="PARENT_TYPE_._3_._type"/>
+    <xsd:attribute ecore:name="rEFDBDNAME" name="REF_DBD_NAME" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="rEFSOURCENAME" name="REF_SOURCE_NAME" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="rEUSABLE" name="REUSABLE" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="tEMPLATEID" name="TEMPLATEID" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="tEMPLATENAME" name="TEMPLATENAME" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="tYPE" name="TYPE" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="vERSIONNUMBER" name="VERSIONNUMBER" type="xsd:anySimpleType"/>
+  </xsd:complexType>
+  <xsd:complexType ecore:name="TRANSFORMFIELDATTRDEFType" name="TRANSFORMFIELDATTRDEF_._type">
+    <xsd:attribute ecore:name="dATATYPE" name="DATATYPE" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="dEFAULTVALUE" name="DEFAULTVALUE" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="dESCRIPTION" name="DESCRIPTION" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="nAME" name="NAME" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="oRDER" name="ORDER" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="tYPE" name="TYPE" type="xsd:anySimpleType" use="required"/>
+  </xsd:complexType>
+  <xsd:complexType ecore:name="TRANSFORMFIELDATTRType" name="TRANSFORMFIELDATTR_._type">
+    <xsd:attribute ecore:name="nAME" name="NAME" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="vALUE" name="VALUE" type="xsd:anySimpleType" use="required"/>
+  </xsd:complexType>
+  <xsd:complexType ecore:name="TRANSFORMFIELDType" name="TRANSFORMFIELD_._type">
+    <xsd:sequence>
+      <xsd:element ecore:name="tRANSFORMFIELDATTR" maxOccurs="unbounded" minOccurs="0" ref="TRANSFORMFIELDATTR"/>
+    </xsd:sequence>
+    <xsd:attribute ecore:name="dATATYPE" name="DATATYPE" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="dEFAULTVALUE" name="DEFAULTVALUE" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="dESCRIPTION" name="DESCRIPTION" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="eXPRESSION" name="EXPRESSION" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="eXPRESSIONDESCRIPTION" name="EXPRESSION_DESCRIPTION" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="eXPRESSIONTYPE" name="EXPRESSIONTYPE" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="fIELDNUMBER" name="FIELDNUMBER" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="gROUP" name="GROUP" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="iGNOREINCOMPARE" name="IGNORE_IN_COMPARE" type="IGNORE_IN_COMPARE_._type"/>
+    <xsd:attribute ecore:name="iGNORENULLINPUTS" name="IGNORE_NULL_INPUTS" type="IGNORE_NULL_INPUTS_._type"/>
+    <xsd:attribute ecore:name="iSSORTKEY" name="ISSORTKEY" type="ISSORTKEY_._type"/>
+    <xsd:attribute ecore:name="mAPPLETGROUP" name="MAPPLETGROUP" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="nAME" name="NAME" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="oUTPUTGROUP" name="OUTPUTGROUP" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="pICTURETEXT" name="PICTURETEXT" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="pORTTYPE" name="PORTTYPE" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="pRECISION" name="PRECISION" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="rEFFIELD" name="REF_FIELD" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="rEFINSTANCETYPE" name="REF_INSTANCETYPE" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="rEFSOURCEFIELD" name="REF_SOURCE_FIELD" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="rEFTRANSFORMATION" name="REF_TRANSFORMATION" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="sCALE" name="SCALE" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="sEQUENCEGENERATORVALUE" name="SEQUENCE_GENERATOR_VALUE" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="sORTDIRECTION" name="SORTDIRECTION" type="SORTDIRECTION_._type"/>
+  </xsd:complexType>
+  <xsd:complexType ecore:name="TRANSFORMRESOURCEREFType" name="TRANSFORMRESOURCEREF_._type">
+    <xsd:sequence>
+      <xsd:element ecore:name="rESOURCEREFERENCE" maxOccurs="unbounded" ref="RESOURCEREFERENCE"/>
+    </xsd:sequence>
+    <xsd:attribute ecore:name="sINSTANCENAME" name="SINSTANCENAME" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="tRANSFORMATIONTYPE" name="TRANSFORMATIONTYPE" type="xsd:anySimpleType" use="required"/>
+  </xsd:complexType>
+  <xsd:simpleType ecore:name="TREATINPUTLINKASANDType" name="TREAT_INPUTLINK_AS_AND_._type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="YES"/>
+      <xsd:enumeration value="NO"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType ecore:name="TYPEType" name="TYPE_._type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="SCHEMA"/>
+      <xsd:enumeration value="ADAPTER"/>
+      <xsd:enumeration value="TABLE"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType ecore:name="TYPEType1" name="TYPE_._1_._type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="INPUT"/>
+      <xsd:enumeration value="OUTPUT"/>
+      <xsd:enumeration value="TABLE"/>
+      <xsd:enumeration value="CHANGING"/>
+      <xsd:enumeration value="NONE"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType ecore:name="TYPEType2" name="TYPE_._2_._type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="DTD"/>
+      <xsd:enumeration value="SCHEMA"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType ecore:name="TYPEType3" name="TYPE_._3_._type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="INPUT"/>
+      <xsd:enumeration value="OUTPUT"/>
+      <xsd:enumeration value="TABLE"/>
+      <xsd:enumeration value="CHANGING"/>
+      <xsd:enumeration value="NONE"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType ecore:name="TYPEType4" name="TYPE_._4_._type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="SOURCE"/>
+      <xsd:enumeration value="FUNCTION"/>
+      <xsd:enumeration value="CODEBLOCK"/>
+      <xsd:enumeration value="NONE"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType ecore:name="TYPEType5" name="TYPE_._5_._type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="SOURCE"/>
+      <xsd:enumeration value="TARGET"/>
+      <xsd:enumeration value="TRANSFORMATION"/>
+      <xsd:enumeration value="MAPPLET"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType ecore:name="TYPEType6" name="TYPE_._6_._type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="INPUT"/>
+      <xsd:enumeration value="OUTPUT"/>
+      <xsd:enumeration value="TABLE"/>
+      <xsd:enumeration value="CHANGING"/>
+      <xsd:enumeration value="NONE"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType ecore:name="TYPEType7" name="TYPE_._7_._type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="INPUT"/>
+      <xsd:enumeration value="OUTPUT"/>
+      <xsd:enumeration value="TABLE"/>
+      <xsd:enumeration value="CHANGING"/>
+      <xsd:enumeration value="NONE"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType ecore:name="TYPEType8" name="TYPE_._8_._type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="DAILY"/>
+      <xsd:enumeration value="MONTHLY"/>
+      <xsd:enumeration value="WEEKLY"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType ecore:name="USERDEFINEDType" name="USERDEFINED_._type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="YES"/>
+      <xsd:enumeration value="NO"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType ecore:name="USERDEFINEDType1" name="USERDEFINED_._1_._type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="YES"/>
+      <xsd:enumeration value="NO"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType ecore:name="VALUEPAIRType" name="VALUEPAIR_._type">
+    <xsd:attribute ecore:name="cOMMENTS" name="COMMENTS" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="nAME" name="NAME" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="rEVERSEASSIGNMENT" name="REVERSEASSIGNMENT" type="REVERSEASSIGNMENT_._type"/>
+    <xsd:attribute ecore:name="vALUE" name="VALUE" type="xsd:anySimpleType" use="required"/>
+  </xsd:complexType>
+  <xsd:simpleType ecore:name="VALUETYPEType" name="VALUETYPE_._type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="CONSTANT"/>
+      <xsd:enumeration value="VARIABLE"/>
+      <xsd:enumeration value="SOURCEFIELD"/>
+      <xsd:enumeration value="DEFAULT"/>
+      <xsd:enumeration value="NONE"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType ecore:name="VALUETYPEType1" name="VALUETYPE_._1_._type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="CONSTANT"/>
+      <xsd:enumeration value="VARIABLE"/>
+      <xsd:enumeration value="SOURCEFIELD"/>
+      <xsd:enumeration value="DEFAULT"/>
+      <xsd:enumeration value="NONE"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType ecore:name="VALUETYPEType2" name="VALUETYPE_._2_._type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="CONSTANT"/>
+      <xsd:enumeration value="VARIABLE"/>
+      <xsd:enumeration value="SOURCEFIELD"/>
+      <xsd:enumeration value="DEFAULT"/>
+      <xsd:enumeration value="NONE"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType ecore:name="WORKFLOWEVENTType" name="WORKFLOWEVENT_._type">
+    <xsd:attribute ecore:name="dESCRIPTION" name="DESCRIPTION" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="nAME" name="NAME" type="xsd:anySimpleType" use="required"/>
+  </xsd:complexType>
+  <xsd:complexType ecore:name="WORKFLOWLINKType" name="WORKFLOWLINK_._type">
+    <xsd:sequence>
+      <xsd:element ecore:name="eXPRMACRODEPENDENCY" maxOccurs="unbounded" minOccurs="0" ref="EXPRMACRODEPENDENCY"/>
+    </xsd:sequence>
+    <xsd:attribute ecore:name="cONDITION" name="CONDITION" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="fROMTASK" name="FROMTASK" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="tOTASK" name="TOTASK" type="xsd:anySimpleType" use="required"/>
+  </xsd:complexType>
+  <xsd:complexType ecore:name="WORKFLOWType" name="WORKFLOW_._type">
+    <xsd:sequence>
+      <xsd:element ecore:name="sCHEDULER" minOccurs="0" ref="SCHEDULER"/>
+      <xsd:element ecore:name="tASK" maxOccurs="unbounded" minOccurs="0" ref="TASK"/>
+      <xsd:element ecore:name="sESSION" maxOccurs="unbounded" minOccurs="0" ref="SESSION"/>
+      <xsd:element ecore:name="wORKLET" maxOccurs="unbounded" minOccurs="0" ref="WORKLET"/>
+      <xsd:element ecore:name="tASKINSTANCE" maxOccurs="unbounded" minOccurs="0" ref="TASKINSTANCE"/>
+      <xsd:element ecore:name="wORKFLOWLINK" maxOccurs="unbounded" minOccurs="0" ref="WORKFLOWLINK"/>
+      <xsd:element ecore:name="wORKFLOWVARIABLE" maxOccurs="unbounded" minOccurs="0" ref="WORKFLOWVARIABLE"/>
+      <xsd:element ecore:name="wORKFLOWEVENT" maxOccurs="unbounded" minOccurs="0" ref="WORKFLOWEVENT"/>
+      <xsd:element ecore:name="aTTRIBUTE" maxOccurs="unbounded" minOccurs="0" ref="ATTRIBUTE"/>
+      <xsd:element ecore:name="mETADATAEXTENSION" maxOccurs="unbounded" minOccurs="0" ref="METADATAEXTENSION"/>
+      <xsd:element ecore:name="cONWFRUNINFO" maxOccurs="unbounded" minOccurs="0" ref="CONWFRUNINFO"/>
+    </xsd:sequence>
+    <xsd:attribute ecore:name="dESCRIPTION" name="DESCRIPTION" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="iSENABLED" name="ISENABLED" type="ISENABLED_._type"/>
+    <xsd:attribute ecore:name="iSRUNNABLESERVICE" name="ISRUNNABLESERVICE" type="ISRUNNABLESERVICE_._type"/>
+    <xsd:attribute ecore:name="iSSERVICE" name="ISSERVICE" type="ISSERVICE_._type"/>
+    <xsd:attribute ecore:name="iSVALID" name="ISVALID" type="ISVALID_._1_._type"/>
+    <xsd:attribute ecore:name="nAME" name="NAME" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="rEUSABLESCHEDULER" name="REUSABLE_SCHEDULER" type="REUSABLE_SCHEDULER_._type"/>
+    <xsd:attribute ecore:name="sCHEDULERNAME" name="SCHEDULERNAME" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="sERVERDOMAINNAME" name="SERVER_DOMAINNAME" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="sERVERNAME" name="SERVERNAME" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="sERVICELEVELNAME" name="SERVICELEVELNAME" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="sUSPENDONERROR" name="SUSPEND_ON_ERROR" type="SUSPEND_ON_ERROR_._type"/>
+    <xsd:attribute ecore:name="sUSPENSIONEMAIL" name="SUSPENSION_EMAIL" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="tASKSMUSTRUNONSERVER" name="TASKS_MUST_RUN_ON_SERVER" type="TASKS_MUST_RUN_ON_SERVER_._type"/>
+    <xsd:attribute ecore:name="vERSIONNUMBER" name="VERSIONNUMBER" type="xsd:anySimpleType"/>
+  </xsd:complexType>
+  <xsd:complexType ecore:name="WORKFLOWVARIABLEType" name="WORKFLOWVARIABLE_._type">
+    <xsd:attribute ecore:name="dATATYPE" name="DATATYPE" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="dEFAULTVALUE" name="DEFAULTVALUE" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="dESCRIPTION" name="DESCRIPTION" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="iSNULL" name="ISNULL" type="ISNULL_._type"/>
+    <xsd:attribute ecore:name="iSPERSISTENT" name="ISPERSISTENT" type="ISPERSISTENT_._type"/>
+    <xsd:attribute ecore:name="nAME" name="NAME" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="uSERDEFINED" name="USERDEFINED" type="USERDEFINED_._type" use="required"/>
+  </xsd:complexType>
+  <xsd:complexType ecore:name="WORKLETType" name="WORKLET_._type">
+    <xsd:sequence>
+      <xsd:element ecore:name="tASK" maxOccurs="unbounded" minOccurs="0" ref="TASK"/>
+      <xsd:element ecore:name="sESSION" maxOccurs="unbounded" minOccurs="0" ref="SESSION"/>
+      <xsd:element ecore:name="wORKLET" maxOccurs="unbounded" minOccurs="0" ref="WORKLET"/>
+      <xsd:element ecore:name="tASKINSTANCE" maxOccurs="unbounded" minOccurs="0" ref="TASKINSTANCE"/>
+      <xsd:element ecore:name="wORKFLOWLINK" maxOccurs="unbounded" minOccurs="0" ref="WORKFLOWLINK"/>
+      <xsd:element ecore:name="wORKFLOWVARIABLE" maxOccurs="unbounded" minOccurs="0" ref="WORKFLOWVARIABLE"/>
+      <xsd:element ecore:name="wORKFLOWEVENT" maxOccurs="unbounded" minOccurs="0" ref="WORKFLOWEVENT"/>
+      <xsd:element ecore:name="aTTRIBUTE" maxOccurs="unbounded" minOccurs="0" ref="ATTRIBUTE"/>
+      <xsd:element ecore:name="mETADATAEXTENSION" maxOccurs="unbounded" minOccurs="0" ref="METADATAEXTENSION"/>
+    </xsd:sequence>
+    <xsd:attribute ecore:name="dESCRIPTION" name="DESCRIPTION" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="iSVALID" name="ISVALID" type="ISVALID_._2_._type"/>
+    <xsd:attribute ecore:name="nAME" name="NAME" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="pARENT" name="PARENT" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="pARENTTYPE" name="PARENT_TYPE" type="PARENT_TYPE_._1_._type"/>
+    <xsd:attribute ecore:name="rEUSABLE" name="REUSABLE" type="REUSABLE_._3_._type" use="required"/>
+    <xsd:attribute ecore:name="vERSIONNUMBER" name="VERSIONNUMBER" type="xsd:anySimpleType"/>
+  </xsd:complexType>
+  <xsd:complexType ecore:name="XMLINFOType" name="XMLINFO_._type">
+    <xsd:sequence>
+      <xsd:element ecore:name="xMLTEXT" maxOccurs="unbounded" minOccurs="0" ref="XMLTEXT"/>
+    </xsd:sequence>
+    <xsd:attribute ecore:name="tEXT" name="TEXT" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="tYPE" name="TYPE" type="TYPE_._2_._type"/>
+  </xsd:complexType>
+  <xsd:complexType ecore:name="XMLTEXTType" name="XMLTEXT_._type">
+    <xsd:attribute ecore:name="nAMESPACE" name="NAMESPACE" type="xsd:anySimpleType"/>
+    <xsd:attribute ecore:name="tEXT" name="TEXT" type="xsd:anySimpleType" use="required"/>
+    <xsd:attribute ecore:name="tYPE" name="TYPE" type="TYPE_._type" use="required"/>
+  </xsd:complexType>
+</xsd:schema>

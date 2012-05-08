@@ -1,0 +1,1805 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Informatica Repository DTD Grammar - Version 8.0 -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="POWERMART">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="REPOSITORY"/>
+      </xs:sequence>
+      <xs:attribute name="CREATION_DATE"/>
+      <xs:attribute name="REPOSITORY_VERSION"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="REPOSITORY">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="FOLDER"/>
+      </xs:sequence>
+      <xs:attribute name="NAME" use="required"/>
+      <xs:attribute name="DATABASETYPE"/>
+      <xs:attribute name="CODEPAGE"/>
+      <xs:attribute name="VERSION"/>
+      <xs:attribute name="PARENTREPOSITORY"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FOLDER">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="FOLDERVERSION"/>
+        <xs:element ref="CONFIG"/>
+        <xs:element ref="SCHEDULER"/>
+        <xs:element ref="TASK"/>
+        <xs:element ref="SESSION"/>
+        <xs:element ref="WORKLET"/>
+        <xs:element ref="WORKFLOW"/>
+        <xs:element ref="SOURCE"/>
+        <xs:element ref="TARGET"/>
+        <xs:element ref="TRANSFORMATION"/>
+        <xs:element ref="MAPPLET"/>
+        <xs:element ref="MAPPING"/>
+        <xs:element ref="SHORTCUT"/>
+        <xs:element ref="EXPRMACRO"/>
+      </xs:choice>
+      <xs:attribute name="NAME" use="required"/>
+      <xs:attribute name="DESCRIPTION"/>
+      <xs:attribute name="SHARED">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="SHARED"/>
+            <xs:enumeration value="NOTSHARED"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="OWNER"/>
+      <xs:attribute name="GROUP"/>
+      <xs:attribute name="PERMISSIONS"/>
+      <xs:attribute name="UUID"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FOLDERVERSION">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="SOURCE"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="TARGET"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="TRANSFORMATION"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="MAPPLET"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="MAPPING"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="SHORTCUT"/>
+      </xs:sequence>
+      <xs:attribute name="NAME" use="required"/>
+      <xs:attribute name="DESCRIPTION"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SOURCE">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" ref="FLATFILE"/>
+        <xs:choice minOccurs="0">
+          <xs:element ref="XMLINFO"/>
+          <xs:element ref="ERPSRCINFO"/>
+        </xs:choice>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="GROUP"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="TABLEATTRIBUTE"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="SOURCEFIELD"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="METADATAEXTENSION"/>
+      </xs:sequence>
+      <xs:attribute name="NAME" use="required"/>
+      <xs:attribute name="DBDNAME"/>
+      <xs:attribute name="BUSINESSNAME"/>
+      <xs:attribute name="DESCRIPTION"/>
+      <xs:attribute name="OBJECTVERSION"/>
+      <xs:attribute name="OWNERNAME"/>
+      <xs:attribute name="IBMCOMP"/>
+      <xs:attribute name="DATABASETYPE" use="required"/>
+      <xs:attribute name="DATABASE_SUBTYPE"/>
+      <xs:attribute name="VERSIONNUMBER"/>
+      <xs:attribute name="COMPONENTVERSION"/>
+      <xs:attribute name="CRCVALUE"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ERPSRCINFO">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" ref="SEBLSRCINFO"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SEBLSRCINFO">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="SEBLJOIN"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="SEBLLINK"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="SEBLMVLINK"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="SEBLMVLINKREL"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SEBLJOIN">
+    <xs:complexType>
+      <xs:attribute name="NAME" use="required"/>
+      <xs:attribute name="PKTABLE" use="required"/>
+      <xs:attribute name="FKTABLE" use="required"/>
+      <xs:attribute name="OUTERJOINREL">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="YES"/>
+            <xs:enumeration value="NO"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="SRCCOL" use="required"/>
+      <xs:attribute name="DESTCOL" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SEBLMVLINKREL">
+    <xs:complexType>
+      <xs:attribute name="SRCMVLINK"/>
+      <xs:attribute name="DESTMVLINK"/>
+      <xs:attribute name="FIELD" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SEBLMVLINK">
+    <xs:complexType>
+      <xs:attribute name="BCNAME" use="required"/>
+      <xs:attribute name="MVLINK" use="required"/>
+      <xs:attribute name="DESTLINK" use="required"/>
+      <xs:attribute name="DESTBC" use="required"/>
+      <xs:attribute name="SRCFIELD" use="required"/>
+      <xs:attribute name="PRIMARYID"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SEBLLINK">
+    <xs:complexType>
+      <xs:attribute name="NAME" use="required"/>
+      <xs:attribute name="PARENTBC" use="required"/>
+      <xs:attribute name="CHILDBC" use="required"/>
+      <xs:attribute name="DESTBCBASETABLE" use="required"/>
+      <xs:attribute name="SRCCOL" use="required"/>
+      <xs:attribute name="DESTCOL" use="required"/>
+      <xs:attribute name="INTERCHILDCOL" use="required"/>
+      <xs:attribute name="INTERPARENTCOL" use="required"/>
+      <xs:attribute name="INTERTABLE" use="required"/>
+      <xs:attribute name="PRIMARYID"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FLATFILE">
+    <xs:complexType>
+      <xs:attribute name="FILENAME"/>
+      <xs:attribute name="FILETYPE"/>
+      <xs:attribute name="DELIMITED"/>
+      <xs:attribute name="DELIMITERS"/>
+      <xs:attribute name="ROWDELIMITER"/>
+      <xs:attribute name="DELIMITERS_IN_BINARY"/>
+      <xs:attribute name="QUOTE_CHARACTER"/>
+      <xs:attribute name="NULL_CHARACTER"/>
+      <xs:attribute name="NULLCHARTYPE">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="BINARY"/>
+            <xs:enumeration value="ASCII"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="STAGEFILEREINIT">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="YES"/>
+            <xs:enumeration value="NO"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="STAGEFILEPERSIST">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="YES"/>
+            <xs:enumeration value="NO"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="REPEATABLE"/>
+      <xs:attribute name="CONSECDELIMITERSASONE"/>
+      <xs:attribute name="STRIPTRAILINGBLANKS"/>
+      <xs:attribute name="PADBYTES"/>
+      <xs:attribute name="SKIPLEADINGBYTES"/>
+      <xs:attribute name="SKIPTRAILINGBYTES"/>
+      <xs:attribute name="LINESEQUENTIAL"/>
+      <xs:attribute name="KEEPESCAPECHAR"/>
+      <xs:attribute name="SHIFTSENSITIVEDATA"/>
+      <xs:attribute name="ESCAPE_CHARACTER"/>
+      <xs:attribute name="SKIPROWS"/>
+      <xs:attribute name="CODEPAGE"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="XMLINFO">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="XMLTEXT"/>
+      </xs:sequence>
+      <xs:attribute name="TYPE">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="DTD"/>
+            <xs:enumeration value="SCHEMA"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="TEXT"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="XMLTEXT">
+    <xs:complexType>
+      <xs:attribute name="TYPE" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="SCHEMA"/>
+            <xs:enumeration value="ADAPTER"/>
+            <xs:enumeration value="TABLE"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="NAMESPACE"/>
+      <xs:attribute name="TEXT" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SOURCEFIELD">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="SOURCEFIELD"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="FIELDATTRIBUTE"/>
+      </xs:sequence>
+      <xs:attribute name="NAME" use="required"/>
+      <xs:attribute name="BUSINESSNAME"/>
+      <xs:attribute name="DESCRIPTION"/>
+      <xs:attribute name="DATATYPE"/>
+      <xs:attribute name="KEYTYPE"/>
+      <xs:attribute name="PRECISION"/>
+      <xs:attribute name="SCALE"/>
+      <xs:attribute name="NULLABLE">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="NOTNULL"/>
+            <xs:enumeration value="NULL"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="USAGE"/>
+      <xs:attribute name="USAGE_FLAGS"/>
+      <xs:attribute name="LEVEL"/>
+      <xs:attribute name="FIELDTYPE"/>
+      <xs:attribute name="PICTURETEXT"/>
+      <xs:attribute name="OCCURS"/>
+      <xs:attribute name="REDEFINES"/>
+      <xs:attribute name="REFERENCEDTABLE"/>
+      <xs:attribute name="REFERENCEDFIELD"/>
+      <xs:attribute name="REFERENCEDDBD"/>
+      <xs:attribute name="OFFSET"/>
+      <xs:attribute name="LENGTH"/>
+      <xs:attribute name="PHYSICALOFFSET"/>
+      <xs:attribute name="PHYSICALLENGTH"/>
+      <xs:attribute name="FIELDNUMBER"/>
+      <xs:attribute name="HIDDEN"/>
+      <xs:attribute name="GROUP"/>
+      <xs:attribute name="SHIFTSTATE"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TABLEATTRIBUTE">
+    <xs:complexType>
+      <xs:attribute name="NAME" use="required"/>
+      <xs:attribute name="VALUE" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FIELDATTRIBUTE">
+    <xs:complexType>
+      <xs:attribute name="NAME" use="required"/>
+      <xs:attribute name="VALUE" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GROUP">
+    <xs:complexType>
+      <xs:attribute name="NAME" use="required"/>
+      <xs:attribute name="DESCRIPTION"/>
+      <xs:attribute name="ORDER" use="required"/>
+      <xs:attribute name="TYPE" use="required"/>
+      <xs:attribute name="EXPRESSION"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="METADATAEXTENSION">
+    <xs:complexType>
+      <xs:attribute name="NAME" use="required"/>
+      <xs:attribute name="VENDORNAME" use="required"/>
+      <xs:attribute name="DOMAINNAME" use="required"/>
+      <xs:attribute name="DATATYPE" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="STRING"/>
+            <xs:enumeration value="NUMERIC"/>
+            <xs:enumeration value="BOOLEAN"/>
+            <xs:enumeration value="XML"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="VALUE" use="required"/>
+      <xs:attribute name="MAXLENGTH"/>
+      <xs:attribute name="DESCRIPTION"/>
+      <xs:attribute name="ISSHAREREAD">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="YES"/>
+            <xs:enumeration value="NO"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="ISSHAREWRITE">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="YES"/>
+            <xs:enumeration value="NO"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="ISCLIENTVISIBLE">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="YES"/>
+            <xs:enumeration value="NO"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="ISCLIENTEDITABLE">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="YES"/>
+            <xs:enumeration value="NO"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="ISREUSABLE">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="YES"/>
+            <xs:enumeration value="NO"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="COMPONENTVERSION"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CONWFRUNINFO">
+    <xs:complexType>
+      <xs:attribute name="CONWFRUNINSTNAME"/>
+      <xs:attribute name="CONWFPARAMFILE"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TARGET">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="KEYWORD"/>
+        <xs:element minOccurs="0" ref="FLATFILE"/>
+        <xs:element minOccurs="0" ref="XMLINFO"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="GROUP"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="TARGETFIELD"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="TARGETINDEX"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="TABLEATTRIBUTE"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="METADATAEXTENSION"/>
+      </xs:sequence>
+      <xs:attribute name="NAME" use="required"/>
+      <xs:attribute name="BUSINESSNAME"/>
+      <xs:attribute name="DESCRIPTION"/>
+      <xs:attribute name="OBJECTVERSION"/>
+      <xs:attribute name="CONSTRAINT"/>
+      <xs:attribute name="TABLEOPTIONS"/>
+      <xs:attribute name="TABLETYPE"/>
+      <xs:attribute name="DATABASETYPE" use="required"/>
+      <xs:attribute name="VERSIONNUMBER"/>
+      <xs:attribute name="COMPONENTVERSION"/>
+      <xs:attribute name="CRCVALUE"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="KEYWORD">
+    <xs:complexType>
+      <xs:attribute name="NAME" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TARGETFIELD">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="FIELDATTRIBUTE"/>
+      </xs:sequence>
+      <xs:attribute name="NAME" use="required"/>
+      <xs:attribute name="BUSINESSNAME"/>
+      <xs:attribute name="DESCRIPTION"/>
+      <xs:attribute name="DATATYPE" use="required"/>
+      <xs:attribute name="KEYTYPE"/>
+      <xs:attribute name="PRECISION" use="required"/>
+      <xs:attribute name="SCALE"/>
+      <xs:attribute name="FIELDNUMBER"/>
+      <xs:attribute name="NULLABLE">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="NOTNULL"/>
+            <xs:enumeration value="NULL"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="PICTURETEXT"/>
+      <xs:attribute name="REFERENCEDTABLE"/>
+      <xs:attribute name="REFERENCEDFIELD"/>
+      <xs:attribute name="GROUP"/>
+      <xs:attribute name="ISFILENAMEFIELD">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="YES"/>
+            <xs:enumeration value="NO"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TARGETINDEX">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="TARGETINDEXFIELD"/>
+      </xs:sequence>
+      <xs:attribute name="NAME" use="required"/>
+      <xs:attribute name="UNIQUE"/>
+      <xs:attribute name="DESCRIPTION"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TARGETINDEXFIELD">
+    <xs:complexType>
+      <xs:attribute name="NAME" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TRANSFORMATION">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="GROUP"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="SOURCEFIELD"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="TRANSFORMFIELD"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="TABLEATTRIBUTE"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="INITPROP"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="METADATAEXTENSION"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="TRANSFORMFIELDATTRDEF"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="FIELDDEPENDENCY"/>
+        <xs:element minOccurs="0" ref="FLATFILE"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="EXPRMACRODEPENDENCY"/>
+      </xs:sequence>
+      <xs:attribute name="NAME" use="required"/>
+      <xs:attribute name="DESCRIPTION"/>
+      <xs:attribute name="TYPE" use="required"/>
+      <xs:attribute name="OBJECTVERSION"/>
+      <xs:attribute name="REUSABLE"/>
+      <xs:attribute name="ISVSAM_NORMALIZER"/>
+      <xs:attribute name="REF_SOURCE_NAME"/>
+      <xs:attribute name="REF_DBD_NAME"/>
+      <xs:attribute name="TEMPLATEID"/>
+      <xs:attribute name="TEMPLATENAME"/>
+      <xs:attribute name="PARENT"/>
+      <xs:attribute name="PARENT_TYPE">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="MAPPING"/>
+            <xs:enumeration value="MAPPLET"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="VERSIONNUMBER"/>
+      <xs:attribute name="COMPONENTVERSION"/>
+      <xs:attribute name="CRCVALUE"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TRANSFORMFIELDATTRDEF">
+    <xs:complexType>
+      <xs:attribute name="NAME" use="required"/>
+      <xs:attribute name="TYPE" use="required"/>
+      <xs:attribute name="DATATYPE" use="required"/>
+      <xs:attribute name="DESCRIPTION"/>
+      <xs:attribute name="DEFAULTVALUE"/>
+      <xs:attribute name="ORDER" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FIELDDEPENDENCY">
+    <xs:complexType>
+      <xs:attribute name="INPUTFIELD" use="required"/>
+      <xs:attribute name="OUTPUTFIELD" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TRANSFORMFIELD">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="TRANSFORMFIELDATTR"/>
+      </xs:sequence>
+      <xs:attribute name="NAME" use="required"/>
+      <xs:attribute name="DESCRIPTION"/>
+      <xs:attribute name="DATATYPE" use="required"/>
+      <xs:attribute name="PORTTYPE" use="required"/>
+      <xs:attribute name="PRECISION" use="required"/>
+      <xs:attribute name="SCALE"/>
+      <xs:attribute name="PICTURETEXT"/>
+      <xs:attribute name="DEFAULTVALUE"/>
+      <xs:attribute name="EXPRESSION"/>
+      <xs:attribute name="EXPRESSIONTYPE"/>
+      <xs:attribute name="EXPRESSION_DESCRIPTION"/>
+      <xs:attribute name="FIELDNUMBER"/>
+      <xs:attribute name="REF_SOURCE_FIELD"/>
+      <xs:attribute name="MAPPLETGROUP"/>
+      <xs:attribute name="REF_FIELD"/>
+      <xs:attribute name="REF_TRANSFORMATION"/>
+      <xs:attribute name="REF_INSTANCETYPE"/>
+      <xs:attribute name="SEQUENCE_GENERATOR_VALUE"/>
+      <xs:attribute name="GROUP"/>
+      <xs:attribute name="OUTPUTGROUP"/>
+      <xs:attribute name="ISSORTKEY">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="YES"/>
+            <xs:enumeration value="NO"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="SORTDIRECTION">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="ASCENDING"/>
+            <xs:enumeration value="DESCENDING"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="IGNORE_NULL_INPUTS">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="YES"/>
+            <xs:enumeration value="NO"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="IGNORE_IN_COMPARE">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="YES"/>
+            <xs:enumeration value="NO"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TRANSFORMFIELDATTR">
+    <xs:complexType>
+      <xs:attribute name="NAME" use="required"/>
+      <xs:attribute name="VALUE" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="INITPROP">
+    <xs:complexType>
+      <xs:attribute name="NAME" use="required"/>
+      <xs:attribute name="VALUE" use="required"/>
+      <xs:attribute name="DESCRIPTION"/>
+      <xs:attribute name="USERDEFINED"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MAPPING">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="TRANSFORMATION"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="INSTANCE"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="CONNECTOR"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="MAPDEPENDENCY"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="TARGETLOADORDER"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="MAPPINGVARIABLE"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="ERPINFO"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="METADATAEXTENSION"/>
+      </xs:sequence>
+      <xs:attribute name="NAME" use="required"/>
+      <xs:attribute name="DESCRIPTION"/>
+      <xs:attribute name="OBJECTVERSION"/>
+      <xs:attribute name="ISVALID"/>
+      <xs:attribute name="ISPROFILEMAPPING">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="YES"/>
+            <xs:enumeration value="NO"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="VERSIONNUMBER"/>
+      <xs:attribute name="CRCVALUE"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="INSTANCE">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="TABLEATTRIBUTE"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="EXPRMACRODEPENDENCY"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="INITPROP"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="ASSOCIATED_SOURCE_INSTANCE"/>
+      </xs:sequence>
+      <xs:attribute name="NAME" use="required"/>
+      <xs:attribute name="DESCRIPTION"/>
+      <xs:attribute name="TYPE">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="SOURCE"/>
+            <xs:enumeration value="TARGET"/>
+            <xs:enumeration value="TRANSFORMATION"/>
+            <xs:enumeration value="MAPPLET"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="REUSABLE">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="YES"/>
+            <xs:enumeration value="NO"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="TRANSFORMATION_TYPE"/>
+      <xs:attribute name="TRANSFORMATION_NAME"/>
+      <xs:attribute name="DBDNAME"/>
+      <xs:attribute name="ASSOCIATED_DSQ"/>
+      <xs:attribute name="ASSOCIATED_DSQ_TYPE"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ASSOCIATED_SOURCE_INSTANCE">
+    <xs:complexType>
+      <xs:attribute name="NAME" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CONNECTOR">
+    <xs:complexType>
+      <xs:attribute name="FROMINSTANCE" use="required"/>
+      <xs:attribute name="FROMINSTANCETYPE" use="required"/>
+      <xs:attribute name="FROMFIELD" use="required"/>
+      <xs:attribute name="TOINSTANCE" use="required"/>
+      <xs:attribute name="TOINSTANCETYPE" use="required"/>
+      <xs:attribute name="TOFIELD" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MAPDEPENDENCY">
+    <xs:complexType>
+      <xs:attribute name="FROMINSTANCE" use="required"/>
+      <xs:attribute name="FROMINSTANCETYPE" use="required"/>
+      <xs:attribute name="TOINSTANCE" use="required"/>
+      <xs:attribute name="TOINSTANCETYPE" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TARGETLOADORDER">
+    <xs:complexType>
+      <xs:attribute name="TARGETINSTANCE" use="required"/>
+      <xs:attribute name="ORDER"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SHORTCUT">
+    <xs:complexType>
+      <xs:attribute name="NAME" use="required"/>
+      <xs:attribute name="DBDNAME"/>
+      <xs:attribute name="REPOSITORYNAME" use="required"/>
+      <xs:attribute name="REFOBJECTNAME" use="required"/>
+      <xs:attribute name="REFERENCEDDBD"/>
+      <xs:attribute name="REFERENCETYPE" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="GLOBAL"/>
+            <xs:enumeration value="LOCAL"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="OBJECTTYPE" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="SOURCE"/>
+            <xs:enumeration value="TARGET"/>
+            <xs:enumeration value="TRANSFORMATION"/>
+            <xs:enumeration value="MAPPING"/>
+            <xs:enumeration value="MAPPLET"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="OBJECTSUBTYPE"/>
+      <xs:attribute name="FOLDERNAME" use="required"/>
+      <xs:attribute name="FOLDERVERSIONNAME"/>
+      <xs:attribute name="COMMENTS"/>
+      <xs:attribute name="VERSIONNUMBER"/>
+      <xs:attribute name="TEMPLATEID"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MAPPINGVARIABLE">
+    <xs:complexType>
+      <xs:attribute name="NAME" use="required"/>
+      <xs:attribute name="DESCRIPTION"/>
+      <xs:attribute name="DATATYPE" use="required"/>
+      <xs:attribute name="PRECISION" use="required"/>
+      <xs:attribute name="SCALE"/>
+      <xs:attribute name="DEFAULTVALUE"/>
+      <xs:attribute name="AGGFUNCTION">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="COUNT"/>
+            <xs:enumeration value="MIN"/>
+            <xs:enumeration value="MAX"/>
+            <xs:enumeration value="NONE"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="USERDEFINED">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="YES"/>
+            <xs:enumeration value="NO"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="ISPARAM">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="YES"/>
+            <xs:enumeration value="NO"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="ISEXPRESSIONVARIABLE">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="YES"/>
+            <xs:enumeration value="NO"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ERPINFO">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="SAPFUNCTION"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="SAPSTRUCTURE"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="SAPPROGRAM"/>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element ref="SAPOUTPUTPORT"/>
+          <xs:element ref="SAPVARIABLE"/>
+          <xs:element ref="SAPPROGRAMFLOWOBJECT"/>
+        </xs:choice>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SAPPROGRAM">
+    <xs:complexType>
+      <xs:attribute name="NAME" use="required"/>
+      <xs:attribute name="PROGRAMTYPE" use="required"/>
+      <xs:attribute name="INSTALLTIME"/>
+      <xs:attribute name="HOSTNAME"/>
+      <xs:attribute name="USERNAME"/>
+      <xs:attribute name="CLIENTSPACE"/>
+      <xs:attribute name="ISVALID">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="YES"/>
+            <xs:enumeration value="NO"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SAPPROGRAMFLOWOBJECT">
+    <xs:complexType>
+      <xs:choice minOccurs="0">
+        <xs:element ref="SAPFUNCTIONINSTANCE"/>
+        <xs:element ref="SAPCODEBLOCK"/>
+      </xs:choice>
+      <xs:attribute name="REF_SOURCE_NAME"/>
+      <xs:attribute name="REF_DBD_NAME"/>
+      <xs:attribute name="REF_SOURCEINSTNAME"/>
+      <xs:attribute name="TYPE" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="SOURCE"/>
+            <xs:enumeration value="FUNCTION"/>
+            <xs:enumeration value="CODEBLOCK"/>
+            <xs:enumeration value="NONE"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="JOINBITMAP" use="required"/>
+      <xs:attribute name="ORDER"/>
+      <xs:attribute name="DSQINSTNAME" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SAPFUNCTIONINSTANCE">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="SAPFUNCINSTANCEPARAM"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="SAPTABLEINSTANCEPARAM"/>
+      </xs:sequence>
+      <xs:attribute name="FUNCTIONNAME" use="required"/>
+      <xs:attribute name="DSQINSTNAME" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SAPFUNCINSTANCEPARAM">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="SAPFUNCINSTANCEPARAMFLD"/>
+      </xs:sequence>
+      <xs:attribute name="NAME" use="required"/>
+      <xs:attribute name="TYPE" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="INPUT"/>
+            <xs:enumeration value="OUTPUT"/>
+            <xs:enumeration value="TABLE"/>
+            <xs:enumeration value="CHANGING"/>
+            <xs:enumeration value="NONE"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="VALUE"/>
+      <xs:attribute name="VALUETYPE" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="CONSTANT"/>
+            <xs:enumeration value="VARIABLE"/>
+            <xs:enumeration value="SOURCEFIELD"/>
+            <xs:enumeration value="DEFAULT"/>
+            <xs:enumeration value="NONE"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SAPFUNCINSTANCEPARAMFLD">
+    <xs:complexType>
+      <xs:attribute name="NAME" use="required"/>
+      <xs:attribute name="VALUE"/>
+      <xs:attribute name="VALUETYPE" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="CONSTANT"/>
+            <xs:enumeration value="VARIABLE"/>
+            <xs:enumeration value="SOURCEFIELD"/>
+            <xs:enumeration value="DEFAULT"/>
+            <xs:enumeration value="NONE"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SAPTABLEINSTANCEPARAM">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="SAPFUNCINSTANCEPARAMFLD"/>
+      </xs:sequence>
+      <xs:attribute name="NAME" use="required"/>
+      <xs:attribute name="TYPE" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="INPUT"/>
+            <xs:enumeration value="OUTPUT"/>
+            <xs:enumeration value="TABLE"/>
+            <xs:enumeration value="CHANGING"/>
+            <xs:enumeration value="NONE"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="VALUE"/>
+      <xs:attribute name="VALUETYPE" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="CONSTANT"/>
+            <xs:enumeration value="VARIABLE"/>
+            <xs:enumeration value="SOURCEFIELD"/>
+            <xs:enumeration value="DEFAULT"/>
+            <xs:enumeration value="NONE"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SAPOUTPUTPORT">
+    <xs:complexType>
+      <xs:attribute name="PORTNAME"/>
+      <xs:attribute name="FIELDNAME"/>
+      <xs:attribute name="VARNAME"/>
+      <xs:attribute name="DSQINSTNAME" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SAPVARIABLE">
+    <xs:complexType>
+      <xs:attribute name="NAME" use="required"/>
+      <xs:attribute name="SUBTYPE" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="STRUCTURETYPE"/>
+            <xs:enumeration value="STRUCTUREFIELDTYPE"/>
+            <xs:enumeration value="ABAPTYPE"/>
+            <xs:enumeration value="NONE"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="VARDEF"/>
+      <xs:attribute name="DATATYPE"/>
+      <xs:attribute name="SCALE"/>
+      <xs:attribute name="PRECISION"/>
+      <xs:attribute name="DEFAULTVALUE"/>
+      <xs:attribute name="ISOUTPUTPORT">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="YES"/>
+            <xs:enumeration value="NO"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="DSQINSTNAME" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SAPCODEBLOCK">
+    <xs:complexType>
+      <xs:attribute name="NAME" use="required"/>
+      <xs:attribute name="DESCRIPTION"/>
+      <xs:attribute name="CODEBLOCK"/>
+      <xs:attribute name="DSQINSTNAME" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SAPSTRUCTURE">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="SAPSTRUCTUREFIELD"/>
+      </xs:sequence>
+      <xs:attribute name="NAME" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SAPSTRUCTUREFIELD">
+    <xs:complexType>
+      <xs:attribute name="NAME" use="required"/>
+      <xs:attribute name="DATATYPE" use="required"/>
+      <xs:attribute name="PRECISION"/>
+      <xs:attribute name="SCALE"/>
+      <xs:attribute name="ORDER"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SAPFUNCTION">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="SAPFUNCPARAM"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="SAPTABLEPARAM"/>
+      </xs:sequence>
+      <xs:attribute name="NAME" use="required"/>
+      <xs:attribute name="DESCRIPTION"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SAPFUNCPARAM">
+    <xs:complexType>
+      <xs:attribute name="NAME" use="required"/>
+      <xs:attribute name="TYPE" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="INPUT"/>
+            <xs:enumeration value="OUTPUT"/>
+            <xs:enumeration value="TABLE"/>
+            <xs:enumeration value="CHANGING"/>
+            <xs:enumeration value="NONE"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="ISREFERENCE">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="YES"/>
+            <xs:enumeration value="NO"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="SUBTYPE" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="STRUCTURETYPE"/>
+            <xs:enumeration value="STRUCTUREFIELDTYPE"/>
+            <xs:enumeration value="ABAPTYPE"/>
+            <xs:enumeration value="NONE"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="DEF"/>
+      <xs:attribute name="DATATYPE"/>
+      <xs:attribute name="PRECISION"/>
+      <xs:attribute name="SCALE"/>
+      <xs:attribute name="ISOPTIONAL">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="YES"/>
+            <xs:enumeration value="NO"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="DEFAULTVALUE"/>
+      <xs:attribute name="ORDER"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SAPTABLEPARAM">
+    <xs:complexType>
+      <xs:attribute name="NAME" use="required"/>
+      <xs:attribute name="TYPE" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="INPUT"/>
+            <xs:enumeration value="OUTPUT"/>
+            <xs:enumeration value="TABLE"/>
+            <xs:enumeration value="CHANGING"/>
+            <xs:enumeration value="NONE"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="DEF"/>
+      <xs:attribute name="ISOPTIONAL">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="YES"/>
+            <xs:enumeration value="NO"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="ORDER"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MAPPLET">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="TRANSFORMATION"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="INSTANCE"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="CONNECTOR"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="MAPPINGVARIABLE"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="ERPINFO"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="METADATAEXTENSION"/>
+      </xs:sequence>
+      <xs:attribute name="NAME" use="required"/>
+      <xs:attribute name="DESCRIPTION"/>
+      <xs:attribute name="OBJECTVERSION"/>
+      <xs:attribute name="ISVALID"/>
+      <xs:attribute name="VERSIONNUMBER"/>
+      <xs:attribute name="CRCVALUE"/>
+    </xs:complexType>
+  </xs:element>
+  <!-- Tasks are the excutable objects that can be defined within a workflow -->
+  <xs:element name="TASK">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="ATTRIBUTE"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="EXPRMACRODEPENDENCY"/>
+        <xs:element minOccurs="0" ref="TIMER"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="VALUEPAIR"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="RESOURCEREFERENCE"/>
+      </xs:sequence>
+      <xs:attribute name="NAME" use="required"/>
+      <xs:attribute name="DESCRIPTION"/>
+      <xs:attribute name="TYPE" use="required"/>
+      <xs:attribute name="REUSABLE" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="YES"/>
+            <xs:enumeration value="NO"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="PARENT"/>
+      <xs:attribute name="PARENT_TYPE">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="WORKLET"/>
+            <xs:enumeration value="WORKFLOW"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="VERSIONNUMBER"/>
+    </xs:complexType>
+  </xs:element>
+  <!-- TimerScheduler is the scheduler associated with the Timer Task -->
+  <xs:element name="TIMER">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" ref="STARTOPTIONS"/>
+        <xs:element minOccurs="0" ref="RECURRING"/>
+      </xs:sequence>
+      <xs:attribute name="TIMERTYPE" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="START_AT_ABSOLUTE_TIME"/>
+            <xs:enumeration value="START_AT_ABSOLUTE_VARIABLE"/>
+            <xs:enumeration value="START_RELATIVE_TO_PREVIOUSTASK"/>
+            <xs:enumeration value="START_RELATIVE_TO_PARENT_WORKFLOW"/>
+            <xs:enumeration value="START_RELATIVE_TO_TOPLEVEL_WORKFLOW"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <!-- This object holds the details of the command task -->
+  <xs:element name="VALUEPAIR">
+    <xs:complexType>
+      <xs:attribute name="NAME" use="required"/>
+      <xs:attribute name="COMMENTS"/>
+      <xs:attribute name="VALUE" use="required"/>
+      <xs:attribute name="REVERSEASSIGNMENT">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="YES"/>
+            <xs:enumeration value="NO"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <!--
+     The scheduler object allows the workflow to be scheduled at a particular time.
+    it can either be reusable or non-reusable  need to add this later (SCHEDULERINFO*)
+  -->
+  <xs:element name="SCHEDULER">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="SCHEDULEINFO">
+          <xs:attribute name="NAME" use="required"/>
+          <xs:attribute name="DESCRIPTION"/>
+          <xs:attribute name="REUSABLE" use="required">
+            <xs:simpleType>
+              <xs:restriction base="xs:token">
+                <xs:enumeration value="YES"/>
+                <xs:enumeration value="NO"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:attribute>
+          <xs:attribute name="VERSIONNUMBER"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="SCHEDULEINFO">
+    <xs:sequence>
+      <xs:element ref="SCHEDULEINFO"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SCHEDULEINFO">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" ref="STARTOPTIONS"/>
+        <xs:element minOccurs="0" ref="SCHEDULEOPTIONS"/>
+        <xs:element minOccurs="0" ref="ENDOPTIONS"/>
+      </xs:sequence>
+      <xs:attribute name="SCHEDULETYPE">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="ONDEMAND"/>
+            <xs:enumeration value="CONTINUOUS"/>
+            <xs:enumeration value="ONSERVERINIT"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="STARTOPTIONS">
+    <xs:complexType>
+      <xs:attribute name="STARTDATE"/>
+      <xs:attribute name="STARTTIME"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ENDOPTIONS">
+    <xs:complexType>
+      <xs:attribute name="ENDTYPE" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="ENDON"/>
+            <xs:enumeration value="ENDAFTER"/>
+            <xs:enumeration value="RUNFOREVER"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="ENDON"/>
+      <xs:attribute name="ENDAFTER"/>
+      <xs:attribute name="RUNFOREVER">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="YES"/>
+            <xs:enumeration value="NO"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SCHEDULEOPTIONS">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" ref="RECURRING"/>
+        <xs:element minOccurs="0" ref="CUSTOM"/>
+      </xs:sequence>
+      <xs:attribute name="SCHEDULETYPE" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="ONCE"/>
+            <xs:enumeration value="RECURRING"/>
+            <xs:enumeration value="CUSTOM"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RECURRING">
+    <xs:complexType>
+      <xs:attribute name="DAYS"/>
+      <xs:attribute name="HOURS"/>
+      <xs:attribute name="MINUTES"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CUSTOM">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="DAILYFREQUENCY"/>
+        <xs:element minOccurs="0" ref="REPEAT"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DAILYFREQUENCY">
+    <xs:complexType>
+      <xs:attribute name="HOURS"/>
+      <xs:attribute name="MINUTES"/>
+      <xs:attribute name="RUNONCE">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="YES"/>
+            <xs:enumeration value="NO"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="REPEAT">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="FILTER"/>
+      </xs:sequence>
+      <xs:attribute name="TYPE">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="DAILY"/>
+            <xs:enumeration value="MONTHLY"/>
+            <xs:enumeration value="WEEKLY"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="INTERVAL"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FILTER">
+    <xs:complexType>
+      <xs:attribute name="DAYOFMONTH"/>
+      <xs:attribute name="DAY">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="MONDAY"/>
+            <xs:enumeration value="TUESDAY"/>
+            <xs:enumeration value="WEDNESDAY"/>
+            <xs:enumeration value="THURSDAY"/>
+            <xs:enumeration value="FRIDAY"/>
+            <xs:enumeration value="SATURDAY"/>
+            <xs:enumeration value="SUNDAY"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="OCCURRENCE">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="FIRST"/>
+            <xs:enumeration value="SECOND"/>
+            <xs:enumeration value="THIRD"/>
+            <xs:enumeration value="FOURTH"/>
+            <xs:enumeration value="LAST"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <!-- A worklet is a reusable workflow, which can be used within a workflow -->
+  <!-- worklet can not be used as stand alone object -->
+  <xs:element name="WORKLET">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="TASK"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="SESSION"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="WORKLET"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="TASKINSTANCE"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="WORKFLOWLINK"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="WORKFLOWVARIABLE"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="WORKFLOWEVENT"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="ATTRIBUTE"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="METADATAEXTENSION"/>
+      </xs:sequence>
+      <xs:attribute name="NAME" use="required"/>
+      <xs:attribute name="DESCRIPTION"/>
+      <xs:attribute name="REUSABLE" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="YES"/>
+            <xs:enumeration value="NO"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="ISVALID">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="YES"/>
+            <xs:enumeration value="NO"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="PARENT"/>
+      <xs:attribute name="PARENT_TYPE">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="WORKLET"/>
+            <xs:enumeration value="WORKFLOW"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="VERSIONNUMBER"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ATTRIBUTE">
+    <xs:complexType>
+      <xs:attribute name="NAME" use="required"/>
+      <xs:attribute name="VALUE" use="required"/>
+      <xs:attribute name="PARTITIONNAME"/>
+    </xs:complexType>
+  </xs:element>
+  <!-- Sessions can be reusable or non-reusable -->
+  <xs:element name="SESSION">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="TASK"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="SESSTRANSFORMATIONINST"/>
+        <xs:element minOccurs="0" ref="CONFIGREFERENCE"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="SESSIONCOMPONENT"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="SESSIONEXTENSION"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="ATTRIBUTE"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="METADATAEXTENSION"/>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element ref="RESOURCEREFERENCE"/>
+          <xs:element ref="TRANSFORMRESOURCEREF"/>
+        </xs:choice>
+      </xs:sequence>
+      <xs:attribute name="NAME" use="required"/>
+      <xs:attribute name="DESCRIPTION"/>
+      <xs:attribute name="REUSABLE" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="YES"/>
+            <xs:enumeration value="NO"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="ISVALID">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="YES"/>
+            <xs:enumeration value="NO"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="MAPPINGNAME" use="required"/>
+      <xs:attribute name="MAPPINGVERSION"/>
+      <xs:attribute name="SORTORDER"/>
+      <xs:attribute name="PARENT"/>
+      <xs:attribute name="PARENT_TYPE">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="WORKLET"/>
+            <xs:enumeration value="WORKFLOW"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="VERSIONNUMBER"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CONFIGREFERENCE">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="ATTRIBUTE"/>
+      </xs:sequence>
+      <xs:attribute name="REFOBJECTNAME" use="required"/>
+      <xs:attribute name="TYPE" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <!-- Sinstance identifies the usage and overriden attributes of a transformation instance used within a session task -->
+  <xs:element name="SESSTRANSFORMATIONINST">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="SESSTRANSFORMATIONGROUP"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="PARTITION"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="HASHKEY"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="FLATFILE"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="ATTRIBUTE"/>
+      </xs:sequence>
+      <xs:attribute name="SINSTANCENAME" use="required"/>
+      <xs:attribute name="TRANSFORMATIONNAME" use="required"/>
+      <xs:attribute name="TRANSFORMATIONTYPE" use="required"/>
+      <xs:attribute name="PARTITIONTYPE"/>
+      <xs:attribute name="ISREPARTITIONPOINT">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="YES"/>
+            <xs:enumeration value="NO"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="STAGE"/>
+      <xs:attribute name="PIPELINE"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SESSTRANSFORMATIONGROUP">
+    <xs:complexType>
+      <xs:attribute name="GROUP" use="required"/>
+      <xs:attribute name="PARTITIONTYPE"/>
+    </xs:complexType>
+  </xs:element>
+  <!-- Hash keys are associated with a session instance -->
+  <xs:element name="HASHKEY">
+    <xs:complexType>
+      <xs:attribute name="NAME" use="required"/>
+      <xs:attribute name="GROUP"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PARTITION">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="KEYRANGE"/>
+      </xs:sequence>
+      <xs:attribute name="NAME" use="required"/>
+      <xs:attribute name="DESCRIPTION"/>
+    </xs:complexType>
+  </xs:element>
+  <!-- Key ranges associated with the partition -->
+  <xs:element name="KEYRANGE">
+    <xs:complexType>
+      <xs:attribute name="NAME" use="required"/>
+      <xs:attribute name="STARTRANGE"/>
+      <xs:attribute name="ENDRANGE"/>
+      <xs:attribute name="SRCINSTANCENAME"/>
+      <xs:attribute name="GROUP"/>
+    </xs:complexType>
+  </xs:element>
+  <!-- Config defines a list session properties, it can be reusable or non reusable -->
+  <xs:element name="CONFIG">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="ATTRIBUTE"/>
+      </xs:sequence>
+      <xs:attribute name="NAME" use="required"/>
+      <xs:attribute name="DESCRIPTION"/>
+      <xs:attribute name="ISDEFAULT">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="YES"/>
+            <xs:enumeration value="NO"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="VERSIONNUMBER"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SESSIONCOMPONENT">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" ref="TASK"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="VALUEPAIR"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="ATTRIBUTE"/>
+      </xs:sequence>
+      <xs:attribute name="TYPE" use="required"/>
+      <xs:attribute name="REFOBJECTNAME" use="required"/>
+      <xs:attribute name="REUSABLE" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="YES"/>
+            <xs:enumeration value="NO"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="ISNONE">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="YES"/>
+            <xs:enumeration value="NO"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CONNECTIONREFERENCE">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="ATTRIBUTE"/>
+      </xs:sequence>
+      <xs:attribute name="CNXREFNAME" use="required"/>
+      <xs:attribute name="CONNECTIONTYPE" use="required"/>
+      <xs:attribute name="CONNECTIONSUBTYPE" use="required"/>
+      <xs:attribute name="CONNECTIONNUMBER" use="required"/>
+      <xs:attribute name="CONNECTIONNAME" use="required"/>
+      <xs:attribute name="PARTITIONNAME"/>
+      <xs:attribute name="VARIABLE"/>
+      <xs:attribute name="COMPONENTVERSION"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SESSIONEXTENSION">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="CONNECTIONREFERENCE"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="ATTRIBUTE"/>
+      </xs:sequence>
+      <xs:attribute name="NAME" use="required"/>
+      <xs:attribute name="TYPE" use="required"/>
+      <xs:attribute name="SUBTYPE" use="required"/>
+      <xs:attribute name="SINSTANCENAME" use="required"/>
+      <xs:attribute name="TRANSFORMATIONTYPE" use="required"/>
+      <xs:attribute name="DSQINSTNAME"/>
+      <xs:attribute name="DSQINSTTYPE"/>
+      <xs:attribute name="COMPONENTVERSION"/>
+    </xs:complexType>
+  </xs:element>
+  <!--
+    Specifies a resource required by a session/command task instance, 
+    or a transformation in session instance
+  -->
+  <xs:element name="RESOURCEREFERENCE">
+    <xs:complexType>
+      <xs:attribute name="TYPE" use="required"/>
+      <xs:attribute name="NAME" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TRANSFORMRESOURCEREF">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="RESOURCEREFERENCE"/>
+      </xs:sequence>
+      <xs:attribute name="SINSTANCENAME" use="required"/>
+      <xs:attribute name="TRANSFORMATIONTYPE" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <!--
+    A workflow is a set of actions & rules on how and when to execute those actions. 
+    every action can be defined as an instance of an executable object 
+    workflow consists of reusable & non-reusable object instances
+  -->
+  <xs:element name="WORKFLOW">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" ref="SCHEDULER"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="TASK"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="SESSION"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="WORKLET"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="TASKINSTANCE"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="WORKFLOWLINK"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="WORKFLOWVARIABLE"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="WORKFLOWEVENT"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="ATTRIBUTE"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="METADATAEXTENSION"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="CONWFRUNINFO"/>
+      </xs:sequence>
+      <xs:attribute name="NAME" use="required"/>
+      <xs:attribute name="DESCRIPTION"/>
+      <xs:attribute name="SERVERNAME"/>
+      <xs:attribute name="SERVER_DOMAINNAME"/>
+      <xs:attribute name="SUSPENSION_EMAIL"/>
+      <xs:attribute name="SCHEDULERNAME"/>
+      <xs:attribute name="REUSABLE_SCHEDULER">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="YES"/>
+            <xs:enumeration value="NO"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="ISVALID">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="YES"/>
+            <xs:enumeration value="NO"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="ISENABLED">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="YES"/>
+            <xs:enumeration value="NO"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="SUSPEND_ON_ERROR">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="YES"/>
+            <xs:enumeration value="NO"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="TASKS_MUST_RUN_ON_SERVER">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="YES"/>
+            <xs:enumeration value="NO"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="VERSIONNUMBER"/>
+      <xs:attribute name="ISSERVICE">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="YES"/>
+            <xs:enumeration value="NO"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="ISRUNNABLESERVICE">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="YES"/>
+            <xs:enumeration value="NO"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="SERVICELEVELNAME"/>
+    </xs:complexType>
+  </xs:element>
+  <!--
+    Instance of the task used within a workflow instance has attributes overriden ;
+    if the instance is of type session it has additional overrides as such SESSIONCOMPONENTs 
+    and sessions
+  -->
+  <xs:element name="TASKINSTANCE">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="ATTRIBUTE"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="WORKFLOWVARIABLE"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="VALUEPAIR"/>
+        <xs:element minOccurs="0" ref="CONFIGREFERENCE"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="SESSIONCOMPONENT"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="SESSIONEXTENSION"/>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element ref="RESOURCEREFERENCE"/>
+          <xs:element ref="TRANSFORMRESOURCEREF"/>
+        </xs:choice>
+      </xs:sequence>
+      <xs:attribute name="NAME" use="required"/>
+      <xs:attribute name="DESCRIPTION"/>
+      <xs:attribute name="TASKTYPE" use="required"/>
+      <xs:attribute name="TASKNAME" use="required"/>
+      <xs:attribute name="ISENABLED">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="YES"/>
+            <xs:enumeration value="NO"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="REUSABLE" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="YES"/>
+            <xs:enumeration value="NO"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="TREAT_INPUTLINK_AS_AND">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="YES"/>
+            <xs:enumeration value="NO"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="FAIL_PARENT_IF_INSTANCE_FAILS">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="YES"/>
+            <xs:enumeration value="NO"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="FAIL_PARENT_IF_INSTANCE_DID_NOT_RUN">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="YES"/>
+            <xs:enumeration value="NO"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="SERVER_OVERRIDE"/>
+    </xs:complexType>
+  </xs:element>
+  <!-- A link represents the flow of execution from one object instance to the other -->
+  <xs:element name="WORKFLOWLINK">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="EXPRMACRODEPENDENCY"/>
+      </xs:sequence>
+      <xs:attribute name="FROMTASK" use="required"/>
+      <xs:attribute name="TOTASK" use="required"/>
+      <xs:attribute name="CONDITION"/>
+    </xs:complexType>
+  </xs:element>
+  <!-- Variables are placeholders for recording information like status of an object -->
+  <xs:element name="WORKFLOWVARIABLE">
+    <xs:complexType>
+      <xs:attribute name="NAME" use="required"/>
+      <xs:attribute name="DESCRIPTION"/>
+      <xs:attribute name="USERDEFINED" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="YES"/>
+            <xs:enumeration value="NO"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="DATATYPE"/>
+      <xs:attribute name="DEFAULTVALUE"/>
+      <xs:attribute name="ISPERSISTENT">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="YES"/>
+            <xs:enumeration value="NO"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="ISNULL">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="YES"/>
+            <xs:enumeration value="NO"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <!-- An event is a notification that occurs in response to an action. users may want to -->
+  <!-- start the execution of an object instance based on an event -->
+  <xs:element name="WORKFLOWEVENT">
+    <xs:complexType>
+      <xs:attribute name="NAME" use="required"/>
+      <xs:attribute name="DESCRIPTION"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EXPRMACRO">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="MACROARGUMENT"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="MACRODEPENDENCY"/>
+      </xs:sequence>
+      <xs:attribute name="NAME" use="required"/>
+      <xs:attribute name="DESCRIPTION"/>
+      <xs:attribute name="OBJECTVERSION"/>
+      <xs:attribute name="PROTOTYPE"/>
+      <xs:attribute name="EXPRESSION" use="required"/>
+      <xs:attribute name="MACROTYPE">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="Public"/>
+            <xs:enumeration value="Private"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="RETURNTYPE"/>
+      <xs:attribute name="VERSIONNUMBER"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MACROARGUMENT">
+    <xs:complexType>
+      <xs:attribute name="NAME" use="required"/>
+      <xs:attribute name="DATATYPE"/>
+      <xs:attribute name="PRECISION"/>
+      <xs:attribute name="SCALE"/>
+      <xs:attribute name="ARGORDER"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MACRODEPENDENCY">
+    <xs:complexType>
+      <xs:attribute name="NAME" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EXPRMACRODEPENDENCY">
+    <xs:complexType>
+      <xs:attribute name="NAME" use="required"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

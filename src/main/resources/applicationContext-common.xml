@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:context="http://www.springframework.org/schema/context" 
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+                        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+    
+    <bean id="I2TFlowRegistry" class="de.viadee.i2t.I2TFlowRegistryImpl">
+    	<property name="graphBuilder" ref="I2TGraphBuilder" />
+    </bean>
+    
+    <bean id="I2TMetadataRegistry" class="de.viadee.i2t.I2TMetadataRegistryImpl" />
+    
+    <bean id="I2TGraphBuilder" class="de.viadee.i2t.I2TGraphBuilderImpl">
+    	<property name="flowRegistry" ref="I2TFlowRegistry" />
+    	<property name="graphLayoutOptimization" ref="I2TGraphLayoutOptimization" />
+    </bean>
+    
+    <bean id="I2TPreprocessorVisitor" class="de.viadee.i2t.I2TPreprocessorVisitor" />
+    
+    <bean id="I2TSchemaChangesPreprocessor" class="de.viadee.i2t.preprocessors.I2TSchemaChangesPreprocessor" />
+    
+    <bean id="I2TLookupPreprocessor" class="de.viadee.i2t.preprocessors.I2TLookupPreprocessor" />
+    
+    <bean id="I2TSequencePreprocessor" class="de.viadee.i2t.preprocessors.I2TSequencePreprocessor" />
+    
+    <bean id="I2TRankPreprocessor" class="de.viadee.i2t.preprocessors.I2TRankPreprocessor" />
+    
+    <bean id="I2TUnionPreprocessor" class="de.viadee.i2t.preprocessors.I2TUnionPreprocessor" />
+    
+    <bean 
+    	id="I2TAbstractInformaticaTransformation"     
+    	class="de.viadee.i2t.transformations.I2TAbstractInformaticaTransformation"
+    	abstract="true"
+    	init-method="initRegisteredPreprocessors">    	
+    	<property name="preprocessorVisitor" ref="I2TPreprocessorVisitor" />
+    	<property name="flowRegistry" ref="I2TFlowRegistry" />
+    	<property name="graphBuilder" ref="I2TGraphBuilder" />
+    	<property name="graphLayoutOptimization" ref="I2TGraphLayoutOptimization" />
+    	<property name="talendDocument" ref="I2TTalendDocument" />
+    	
+    	<property name="registeredPreprocessors">
+    	<set>
+    		<ref bean="I2TRankPreprocessor" />
+    		<ref bean="I2TSequencePreprocessor" />
+    		<ref bean="I2TUnionPreprocessor" />
+    		<ref bean="I2TSchemaChangesPreprocessor" />
+    		<ref bean="I2TLookupPreprocessor" />
+    	</set>
+    	</property>
+    </bean>
+    
+    <bean id="I2TTalendDocument" class="de.viadee.i2t.I2TTalendDocumentImpl" />
+    
+    <bean id="I2TPowrmartVisitor" class="de.viadee.i2t.I2TPowrmartVisitor">
+    	<property name="flowRegistry" ref="I2TFlowRegistry" />
+    	<property name="graphBuilder" ref="I2TGraphBuilder" />
+    	<property name="graphLayoutOptimization" ref="I2TGraphLayoutOptimization" />
+    	<property name="metadataRegistry" ref="I2TMetadataRegistry" />
+    	<property name="talendDocument" ref="I2TTalendDocument" />
+    	<property name="registerdTransformations">
+    		<map>
+    			<entry> 
+    				<key>
+    					<value>SOURCEQUALIFIER</value>
+    				</key>
+    				<ref bean="I2TSourceQualifierTransformation" />
+    			</entry>			
+    			<entry> 
+    				<key>
+    					<value>AGGREGATOR</value>
+    				</key>
+    				<ref bean="I2TAggregatorTransformation" />    
+    			</entry>			
+    			<entry> 
+    				<key>
+    					<value>FILTER</value>
+    				</key>
+    				<ref bean="I2TFilterTransformation" />    
+    			</entry>			
+    			<entry> 
+    				<key>
+    					<value>JOINER</value>
+    				</key>
+    				<ref bean="I2TJoinerTransformation" />    
+    			</entry>		
+    			<entry> 
+    				<key>
+    					<value>EXPRESSION</value>
+    				</key>
+    				<ref bean="I2TExpressionTransformation" />    
+    			</entry>		
+    			<entry> 
+    				<key>
+    					<value>SORTER</value>
+    				</key>
+    				<ref bean="I2TSorterTransformation" />    
+    			</entry>		
+    			<entry> 
+    				<key>
+    					<value>ROUTER</value>
+    				</key>
+    				<ref bean="I2TRouterTransformation" />    
+    			</entry>
+    			<entry>
+    				<key>
+    					<value>CUSTOMTRANSFORMATION</value>
+    				</key>
+    				<ref bean="I2TCustomTransformation" />
+    			</entry>
+    			<entry>
+    				<key>
+    					<value>UPDATESTRATEGY</value>
+    				</key>
+    				<ref bean="I2TUpdateStrategyTransformation" />
+    			</entry>
+    		</map>
+    	</property>
+    	
+    </bean>
+    
+  	<bean id="I2TCustomTransformation" 
+  		class="de.viadee.i2t.transformations.I2TCustomTransformation"
+  		parent="I2TAbstractInformaticaTransformation">  		
+  	</bean>
+  	
+  	<bean id="I2TExpressionTransformation" 
+  		class="de.viadee.i2t.transformations.I2TExpressionTransformation" 
+  		parent="I2TAbstractInformaticaTransformation">
+  	</bean>
+    
+  	<bean id="I2TJoinerTransformationAlternative" 
+  		class="de.viadee.i2t.transformations.I2TJoinerTransformationAlternative" 
+  		parent="I2TAbstractInformaticaTransformation">
+  	</bean>
+    
+  	<bean id="I2TJoinerTransformation" 
+  		class="de.viadee.i2t.transformations.I2TJoinerTransformation" 
+  		parent="I2TAbstractInformaticaTransformation">
+  	</bean>
+    
+    <bean id="I2TSourceQualifierTransformation" 
+    	class="de.viadee.i2t.transformations.I2TSourceQualifierTransformation" 
+    	parent="I2TAbstractInformaticaTransformation">
+    </bean>
+    
+    <bean id="I2TAggregatorTransformation" 
+    	class="de.viadee.i2t.transformations.I2TAggregatorTransformation" 
+    	parent="I2TAbstractInformaticaTransformation">
+    </bean>
+    
+    <bean id="I2TFilterTransformation" 
+    	class="de.viadee.i2t.transformations.I2TFilterTransformation"
+    	parent="I2TAbstractInformaticaTransformation">
+    </bean>
+    
+    <bean id="I2TSorterTransformation" 
+    	class="de.viadee.i2t.transformations.I2TSorterTransformation"
+    	parent="I2TAbstractInformaticaTransformation">
+    </bean>
+    
+    <bean id="I2TRouterTransformation" 
+    	class="de.viadee.i2t.transformations.I2TRouterTransformation"
+    	parent="I2TAbstractInformaticaTransformation">
+    </bean>
+    
+    <bean id="I2TUpdateStrategyTransformation" 
+    	class="de.viadee.i2t.transformations.I2TUpdateStrategyTransformation"
+    	parent="I2TAbstractInformaticaTransformation">
+    </bean>
+    
+	<bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor"/> 
+</beans>
