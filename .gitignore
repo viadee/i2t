@@ -4,4 +4,4 @@
 .checkstyle
 /target
 /output
-/src/test/resources/output
+/src/test/resources/output/*
