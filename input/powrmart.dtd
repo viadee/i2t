@@ -1,4 +1,4 @@
-<!-- Informatica Repository DTD Grammar - Version 8.0 -->
+<!-- Informatica Repository DTD Grammar - Version 8.0  -->
 <!ELEMENT POWERMART (REPOSITORY*)>
 <!ATTLIST POWERMART
     CREATION_DATE CDATA #IMPLIED
@@ -114,13 +114,13 @@
         TYPE        (DTD | SCHEMA) #IMPLIED
         TEXT        CDATA          #IMPLIED
 >
-                
+
 <!ELEMENT XMLTEXT EMPTY>
 <!ATTLIST XMLTEXT
         TYPE        (SCHEMA | ADAPTER | TABLE) #REQUIRED
         NAMESPACE   CDATA                      #IMPLIED
         TEXT        CDATA                      #REQUIRED
->       
+>
 
 <!ELEMENT SOURCEFIELD (SOURCEFIELD*, FIELDATTRIBUTE*)>
 <!ATTLIST SOURCEFIELD
@@ -173,14 +173,14 @@
 <!ATTLIST METADATAEXTENSION
     NAME CDATA #REQUIRED
     VENDORNAME CDATA #REQUIRED
-    DOMAINNAME CDATA #REQUIRED 
+    DOMAINNAME CDATA #REQUIRED
     DATATYPE (STRING | NUMERIC | BOOLEAN | XML) #REQUIRED
-    VALUE CDATA #REQUIRED        
-    MAXLENGTH CDATA #IMPLIED    
-    DESCRIPTION CDATA #IMPLIED    
-    ISSHAREREAD (YES | NO) #IMPLIED    
-    ISSHAREWRITE (YES | NO) #IMPLIED    
-    ISCLIENTVISIBLE (YES | NO) #IMPLIED    
+    VALUE CDATA #REQUIRED
+    MAXLENGTH CDATA #IMPLIED
+    DESCRIPTION CDATA #IMPLIED
+    ISSHAREREAD (YES | NO) #IMPLIED
+    ISSHAREWRITE (YES | NO) #IMPLIED
+    ISCLIENTVISIBLE (YES | NO) #IMPLIED
     ISCLIENTEDITABLE (YES | NO) #IMPLIED
     ISREUSABLE (YES | NO) #IMPLIED
     COMPONENTVERSION CDATA #IMPLIED
@@ -263,7 +263,7 @@
         DEFAULTVALUE     CDATA  #IMPLIED
         ORDER            CDATA  #REQUIRED
 >
-        
+
 <!ELEMENT FIELDDEPENDENCY EMPTY>
 <!ATTLIST FIELDDEPENDENCY
         INPUTFIELD      CDATA  #REQUIRED
@@ -567,7 +567,7 @@ it can either be reusable or non-reusable  need to add this later (SCHEDULERINFO
 >
 
 <!ELEMENT SCHEDULEOPTIONS ( RECURRING?, CUSTOM? ) >
-<!ATTLIST SCHEDULEOPTIONS  
+<!ATTLIST SCHEDULEOPTIONS
     SCHEDULETYPE ( ONCE | RECURRING | CUSTOM ) #REQUIRED
 >
 
@@ -596,14 +596,14 @@ it can either be reusable or non-reusable  need to add this later (SCHEDULERINFO
 <!ELEMENT FILTER EMPTY>
 <!ATTLIST FILTER
     DAYOFMONTH CDATA #IMPLIED
-    DAY (MONDAY | TUESDAY | WEDNESDAY | THURSDAY | FRIDAY | SATURDAY | SUNDAY) #IMPLIED 
+    DAY (MONDAY | TUESDAY | WEDNESDAY | THURSDAY | FRIDAY | SATURDAY | SUNDAY) #IMPLIED
     OCCURRENCE (FIRST | SECOND | THIRD | FOURTH | LAST) #IMPLIED
 >
 
 
 <!-- A worklet is a reusable workflow, which can be used within a workflow -->
 <!-- worklet can not be used as stand alone object -->
-<!ELEMENT WORKLET (TASK*, SESSION*, WORKLET*, TASKINSTANCE*, WORKFLOWLINK*, 
+<!ELEMENT WORKLET (TASK*, SESSION*, WORKLET*, TASKINSTANCE*, WORKFLOWLINK*,
                    WORKFLOWVARIABLE*, WORKFLOWEVENT*, ATTRIBUTE*, METADATAEXTENSION*)>
 <!ATTLIST WORKLET
         NAME             CDATA       #REQUIRED
@@ -623,7 +623,7 @@ it can either be reusable or non-reusable  need to add this later (SCHEDULERINFO
 >
 
 <!-- Sessions can be reusable or non-reusable -->
-<!ELEMENT SESSION (TASK*, SESSTRANSFORMATIONINST*, CONFIGREFERENCE?, 
+<!ELEMENT SESSION (TASK*, SESSTRANSFORMATIONINST*, CONFIGREFERENCE?,
                    SESSIONCOMPONENT*, SESSIONEXTENSION*, ATTRIBUTE*, METADATAEXTENSION*,
                    (RESOURCEREFERENCE | TRANSFORMRESOURCEREF)*)>
 <!ATTLIST SESSION
@@ -671,7 +671,7 @@ it can either be reusable or non-reusable  need to add this later (SCHEDULERINFO
 >
 
 <!ELEMENT PARTITION (KEYRANGE*)>
-<!ATTLIST PARTITION 
+<!ATTLIST PARTITION
         NAME            CDATA       #REQUIRED
         DESCRIPTION     CDATA       #IMPLIED
 >
@@ -727,7 +727,7 @@ it can either be reusable or non-reusable  need to add this later (SCHEDULERINFO
         COMPONENTVERSION      CDATA       #IMPLIED
 >
 
-<!-- Specifies a resource required by a session/command task instance, 
+<!-- Specifies a resource required by a session/command task instance,
        or a transformation in session instance -->
 <!ELEMENT RESOURCEREFERENCE EMPTY>
 <!ATTLIST RESOURCEREFERENCE
@@ -741,8 +741,8 @@ it can either be reusable or non-reusable  need to add this later (SCHEDULERINFO
    TRANSFORMATIONTYPE    CDATA       #REQUIRED
 >
 
-<!-- A workflow is a set of actions & rules on how and when to execute those actions. 
-     every action can be defined as an instance of an executable object 
+<!-- A workflow is a set of actions & rules on how and when to execute those actions.
+     every action can be defined as an instance of an executable object
      workflow consists of reusable & non-reusable object instances -->
 <!ELEMENT WORKFLOW (SCHEDULER?, TASK*, SESSION*, WORKLET*, TASKINSTANCE*, WORKFLOWLINK*, WORKFLOWVARIABLE*, WORKFLOWEVENT*, ATTRIBUTE*, METADATAEXTENSION*, CONWFRUNINFO*)>
 <!ATTLIST WORKFLOW
@@ -764,7 +764,7 @@ it can either be reusable or non-reusable  need to add this later (SCHEDULERINFO
 >
 
 <!-- Instance of the task used within a workflow instance has attributes overriden ;
-     if the instance is of type session it has additional overrides as such SESSIONCOMPONENTs 
+     if the instance is of type session it has additional overrides as such SESSIONCOMPONENTs
      and sessions -->
 <!ELEMENT TASKINSTANCE (ATTRIBUTE*, WORKFLOWVARIABLE*, VALUEPAIR*, CONFIGREFERENCE?, SESSIONCOMPONENT*, SESSIONEXTENSION*, (RESOURCEREFERENCE | TRANSFORMRESOURCEREF)*)>
 <!ATTLIST TASKINSTANCE

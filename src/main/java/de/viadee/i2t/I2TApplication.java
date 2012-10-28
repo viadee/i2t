@@ -101,6 +101,7 @@ public class I2TApplication {
         this.preprocessorVisitor = preprocessorVisitor;
         this.powrmartVisitor = powrmartVisitor;
         this.modelName = modelName;
+        // Start
         outputPath = new java.io.File("").getAbsolutePath() + "/output";
         inputPath = new java.io.File("").getAbsolutePath() + "/input";
     }
