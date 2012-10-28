@@ -23,7 +23,7 @@ mvn exec:java -Dexec.args="m_Rank"
 </blockquote>
 
 <p>
-Das migrierte Talend-Projekt befindet sich unter
+Das migrierte Talend-Projekt befindet sich unter dem Ordner
 </p>
 <blockquote>
 /output/m_Rank.item<br>
